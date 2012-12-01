@@ -1,0 +1,225 @@
+<?php
+	session_start();
+?>
+
+<HTML>
+<?php
+	//session_start();
+
+
+	if(isset($_SESSION['username']) && $_SESSION['username'] != '')
+	{
+		include 'includes/loggedin.html';
+	}
+	elseif(!(isset($_SESSION['username'])))
+	{
+		include 'includes/loggedout.html';
+		echo '<meta http-equiv="Refresh" content="1; URL=http://www.mytrive.com">';
+	}
+
+?>
+
+	<BODY>
+		  <div class="scroll"></div>
+		  <?php include 'includes/sidenav.html';?>
+       		
+		
+	
+		<div id="main-content-wrapper">
+
+
+		<style>
+		td:first-child{max-width: 200px;}
+		
+		table{
+			word-wrap: break-word;
+		border-collapse:collapse;
+		
+		}
+		</style>
+
+<?php
+
+require_once('config.php');
+echo "<b>".$_SESSION['username']."'s files:</b></br></br>";
+$link = mysql_connect(DB_HOST, DB_USER, DB_PASSWORD);
+if(!$link)
+{
+	die('Failed to connect to server: '. mysql_error());
+}
+
+$db = mysql_select_db(DB_DATABASE);
+if(!$db)
+{
+	die("Unable to select database");
+}
+
+$username = $_SESSION['username'];
+
+
+
+$qry = "SELECT * FROM files WHERE owner_id = '$username'";
+$result = mysql_query($qry);
+$x = 0;
+
+if($result)
+{
+	if(mysql_num_rows($result) > 0)
+	{
+	echo "<table  width='100%'>";
+		while ($x < mysql_num_rows($result))
+		{
+			$member = mysql_fetch_assoc($result);
+			
+			//echo $member['file_name'];
+		
+			//echo $member['location'];
+			//echo "</br>";
+			
+			
+			echo "<tr>";
+			$ext = end(explode('.', $member['file_name']));
+			//$file_size = round(filesize($member['location']."/".$member['file_name'])/4096,2);
+			
+			if($member['share_with'] != '')
+			{
+				
+				echo "<td width = '50%'>";
+				echo $member['file_name'];
+				echo "</td>";
+				echo "<td>";
+				//echo $file_size."MB";
+				echo "</td>";
+				echo "<td>";
+				echo "Shared: ".$member['share_with'];
+				echo "</td>";
+				echo "<td>";
+				echo "<a href='stop_sharing.php?file=".$member['file_name']."'><img src='images/Stop.png' height='25%'/></a>";
+				echo "</td>";
+			}
+			else
+			{
+				echo "<td>";	
+				echo $member['file_name'];
+				echo "</td>";
+				echo "<td>";
+				//echo $file_size."MB";
+				echo "</td>";
+				echo "<td></td>";
+				echo "<td></td>";
+			}
+			echo "<td>";
+			?>
+			<a href="/<?php echo $member['location'];?>/<?php echo $member['file_name'];?>"><img src="images/Download.png" height="25%"/> </a>
+			 <?php
+			echo "</td>";
+			echo "<td>";
+			echo "<a href='file_delete.php?file=".$member['file_name']."'><img src='images/Delete.png'height='25%'/></a>";
+			echo "</td>";
+			echo "<td>";
+			echo "<a href='share_file.php?file=".$member['file_name']."'><img src='images/Share.png'height='25%'/></a>";
+			echo "</td>";
+			if($ext == 'm4v' || $ext == 'avi' || $ext == 'mkv')
+			{
+				echo "<td><a href='play_video.php?file_id=".$member['file_id']."'><img src='images/Play.png'height='25%'/></a></td>";	
+			}
+			else
+			{
+				echo "<td></td>";
+			}		
+			echo "<td><a href='file_rename.php?file_id=".$member['file_id']."'><img src='images/Rename.png'height='25%'/></a></td>";
+			echo "</tr>";
+
+			
+
+			//echo "/".$member['location']."/".$member['file_name'];
+			
+			//echo $result[$x];
+			
+			//file_put_contents($member['file_name'], file_get_contents("/".$member['location']."/".$member['file_name']))
+			
+			
+			$x++;
+			
+		}
+	}
+
+
+}
+
+?>		
+    </table>
+    <br><br>
+    <b>Shared Files</b>
+<?php
+
+	$qry2 = "SELECT * FROM files WHERE share_with = '$username'";
+	$result2 = mysql_query($qry2);
+	$x = 0;
+	if($result2)
+	{
+	if(mysql_num_rows($result2) > 0)
+	{
+	echo "<table  width='100%'>";
+		while ($x < mysql_num_rows($result2))
+		{
+			$member2 = mysql_fetch_assoc($result2);
+			
+			//echo $member['file_name'];
+		
+			//echo $member['location'];
+			//echo "</br>";
+			$ext = end(explode('.', $member2['file_name']));
+
+			
+			echo "<tr>";
+			echo "<td>";	
+			echo $member2['file_name'];
+			echo "</td>";
+			echo "<td>";	
+			echo "Shared by:	 ".$member2['owner_id'];
+			echo "</td>";
+			echo "<td>";
+			 //echo "<a href=/".$member2['location']."/".$member2['file_name'].">Download </a>";
+			 ?>
+			<a href="/<?php echo $member2['location'];?>/<?php echo $member2['file_name'];?>"><img src='images/Download.png'height='25%'/></a>
+			 <?php
+			echo "</td>";
+			if($ext == 'm4v' || $ext == 'avi' || $ext == 'mkv')
+			{
+				echo "<td><a href='play_video.php?file_id=".$member2['file_id']."'><img src='images/Play.png'height='25%'/></a></td>";	
+			}
+			else
+			{
+				echo "<td></td>";
+			}
+			echo "</tr>";
+
+			//echo "/".$member['location']."/".$member['file_name'];
+			
+			//echo $result[$x];
+			
+			//file_put_contents($member['file_name'], file_get_contents("/".$member['location']."/".$member['file_name']))
+			
+			
+			$x++;
+			
+		}
+	}
+
+
+}
+
+
+?>    
+	</table>
+    <br>
+	<a href ="upload.php">Upload Files</a>
+		</div>     	
+	</div>
+	</div>
+	<?php include 'includes/footer.html'?>
+
+	</body>
+	
+</HTML>
