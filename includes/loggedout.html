@@ -1,0 +1,42 @@
+
+<HEAD>
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<?php
+	include('includes/javascript_includes.html');
+?>
+<TITLE>myTrive.com</TITLE>
+<link rel="icon" 
+      type="image/png" 
+      href="images/favicon.ico">
+
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+
+</HEAD>
+<BODY>
+			<div id="bluebackground"></div>
+			<div id="all-container">
+			<div id="head-container">
+			
+			<div id="logo">
+				<img src = "images/trive.png">
+			</div>
+			
+			<div id="header">
+
+				<form action = "login.php" method ="post">
+				<input type="text" name="username" id="username" class="placeholder" placeholder="username"/>
+				<input type="password" name="password" id="password" class="placeholder" placeholder="password" onkeypress="return submitenter(this,event)"/>
+				<input type="submit" name="login" value="Submit"hidden="true"/>  
+				</form>
+				
+			</div>
+
+			<div id="nav">
+				   <?php include 'includes/navigation.html';?>
+			</div>
+			</div>
+			
+			
+			
+	

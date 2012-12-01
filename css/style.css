@@ -1,0 +1,374 @@
+#all-container
+{
+	margin-left: auto;
+	margin-right: auto;
+	width: 1000px;
+	text-align: left;
+	position: relative;
+}
+#bluebackground
+{
+	height: 85px;
+	background: #4888c7;
+	width: 100%;
+	position: absolute;
+}
+#background-container
+{
+
+height: 85px;
+border-bottom: 2px solid #f2f2f2;
+background:  #4888c7 ;
+
+
+}
+
+#head-container
+{ 
+	height: 85px;	
+	/*position: absolute;*/
+	background:  #4888c7
+	
+}
+#logo
+{
+	position: relative;
+	/*padding: 10px;*/
+}
+
+#header
+{
+	margin-top: -50px;
+	margin-right: 0px;
+	float: right;
+	position: relative;
+	color: white;
+}
+
+
+body
+{
+	background-image:url('../images/background.png');
+	background-repeat: repeat;
+	
+}
+
+#main-content-wrapper
+{
+	height: 800px;
+	
+	background: white;
+	top: -20px;
+	position: relative;
+	
+	padding: 15px;
+	/*Round top corners*/
+	-webkit-border-top-left-radius: 10px;
+	-khtml-border-radius-topleft: 10px;
+	-moz-border-radius-topleft: 10px;
+	border-top-left-radius: 10px;
+	
+	-webkit-border-top-right-radius: 10px;
+	-khtml-border-radius-topright: 10px;
+	-moz-border-radius-topright: 10px;
+	border-top-right-radius: 10px;	
+	
+	
+	/*Bottom-left-corner*/
+	-webkit-border-bottom-left-radius: 10px;
+	-khtml-border-radius-bottomleft: 10px;	
+	-moz-border-radius-bottomleft: 10px;
+	border-bottom-left-radius: 10px;
+	/*Bottom-right-corner*/
+	-webkit-border-bottom-right-radius: 10px;
+	-khtml-border-radius-bottomright: 10px;	
+	-moz-border-radius-bottomright: 10px;
+	border-bottom-right-radius: 10px;
+
+}
+
+#footer-content-wrapper
+{
+	height: 185px;
+	border-top: 2px solid #f2f2f2;
+	background:  #4888c7 ;
+	position: inherit;
+	margin-top: -40px;
+	width: 100%;
+	color: white;
+}
+
+#rounded-bottom
+{
+	/*Bottom-left-corner*/
+	-webkit-border-bottom-left-radius: 10px;
+	-khtml-border-radius-bottomleft: 10px;	
+	-moz-border-radius-bottomleft: 10px;
+	border-bottom-left-radius: 10px;
+	/*Bottom-right-corner*/
+	-webkit-border-bottom-right-radius: 10px;
+	-khtml-border-radius-bottomright: 10px;	
+	-moz-border-radius-bottomright: 10px;
+	border-bottom-right-radius: 10px;
+}
+
+p
+{
+	size: 8px;
+}
+
+
+/*code for menu when logged in*/
+ 
+#nav-logged-in {
+	
+     font-family: arial, sans-serif;
+     position: relative;
+     width: 280px;
+     height:56px;
+     font-size:14px;
+     color:#999;
+     margin: 0px auto;
+     float: right;
+     margin-top: -60px;
+     right: 200px;
+   
+     
+}
+ 
+#nav-logged-in ul {
+     list-style-type: none;
+}
+ 
+#nav-logged-in ul li {
+     float: left;
+     position: relative;
+}
+ 
+#nav-logged-in ul li a {
+     text-align: center;
+   /*  border-right:1px solid #e9e9e9;
+     border-bottom: 1px solid #e9e9e9;
+	  border-left: 1px solid #e9e9e9;*/
+     padding:20px;
+     display:block;
+     text-decoration:none;
+    /* color:#999;*/
+    color: white;
+	
+}
+a:hover{
+	background: #c78647;
+}
+#nav-logged-in ul li ul {
+     display: none
+}
+ 
+#nav-logged-in ul li:hover ul {
+     display: block;
+     position: absolute;
+}
+ 
+#nav-logged-in ul li:hover ul li a {
+     display:block;
+     /*background:#12aeef;*/
+    
+     color:#ffffff;
+     background:#c78647;
+     width: 110px;
+     text-align: center;
+     border-bottom: 1px solid #f2f2f2;
+     border-right: 1px solid #f2f2f2;
+     
+}
+ 
+#nav-logged-in ul li:hover ul li a:hover {
+     background:#6dc7ec;
+     color:#fff;
+}
+
+/*code for menu when not logged in*/
+
+*{ margin:0px; padding: 0px;}
+ 
+#nav {
+	
+     font-family: arial, sans-serif;
+     position: relative;
+     width: 280px;
+     height:56px;
+     font-size:14px;
+     color:#999;
+     margin: 0px auto;
+     float: right;
+     margin-top: -60px;
+     right: 255px;
+
+   
+     
+}   
+ 
+#nav ul {
+     list-style-type: none;
+}
+ 
+#nav ul li {
+     float: left;
+     position: relative;
+}
+ 
+#nav ul li a {
+     text-align: center;
+     /*border-right:1px solid #e9e9e9;*/
+     padding:20px;
+     display:block;
+     text-decoration:none;
+    /* color:#999;*/
+    color: white;
+}
+a:hover{
+	background: #c78647;
+}
+#nav ul li ul {
+     display: none
+}
+ 
+#nav ul li:hover ul {
+     display: block;
+     position: absolute;
+}
+ 
+#nav ul li:hover ul li a {
+     display:block;
+     /*background:#12aeef;*/
+    
+     color:#ffffff;
+     background:#c78647;
+     width: 110px;
+     text-align: center;
+     border-bottom: 1px solid #f2f2f2;
+     border-right: 1px solid #f2f2f2;
+     
+}
+ 
+#nav ul li:hover ul li a:hover {
+     background:#6dc7ec;
+     color:#fff;
+}
+
+
+
+/*Code for login boxes */
+input[type="text"]
+{
+	font-size: 15;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	height: 30px;
+	width: 150px;
+}
+input[type="password"]
+{
+	font-size: 15;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	height: 30px;
+	width: 150px;
+}
+
+
+
+
+
+/*side navigation code*/
+
+ul#navigation {
+    position: fixed;
+    margin: 0px;
+    padding: 0px;
+    top: 105px;
+    left: 0px;
+    list-style: none;
+    z-index:9999;
+}
+ul#navigation li {
+    width: 100px;
+}
+ul#navigation li a {
+    display: block;
+    margin-left: -2px;
+    width: 100px;
+    height: 70px;    
+    background-color:#CFCFCF;
+    background-repeat:no-repeat;
+    background-position:center center;
+    border:1px solid #AFAFAF;
+    -moz-border-radius:0px 10px 10px 0px;
+    -webkit-border-bottom-right-radius: 10px;
+    -webkit-border-top-right-radius: 10px;
+    -khtml-border-bottom-right-radius: 10px;
+    -khtml-border-top-right-radius: 10px;
+    /*-moz-box-shadow: 0px 4px 3px #000;
+    -webkit-box-shadow: 0px 4px 3px #000;
+    */
+    opacity: 0.6;
+    filter:progid:DXImageTransform.Microsoft.Alpha(opacity=60);
+}
+ul#navigation .home a{
+    background-image: url(../images/home.png);
+}
+ul#navigation .upload a      {
+    background-image: url(../images/Upload_Left.png);
+}
+ul#navigation .profile a      {
+    background-image: url(../images/profile.png);
+}
+ul#navigation .share a      {
+    background-image: url(../images/Radar.png);
+}
+ul#navigation .rssfeed a   {
+    background-image: url(../images/rss.png);
+}
+ul#navigation .photos a     {
+    background-image: url(../images/camera.png);
+}
+ul#navigation .contact a    {
+    background-image: url(../images/mail.png);
+}
+
+
+/*END OF SIDE NAVIGATION CODE*/
+
+
+#registration-mascot
+{
+	
+	/*background-image: url(../images/mascot.png);*/
+	/*background: black;*/
+	margin-left: 120px;
+	float: left;
+	width: 300px;
+	height: 300px;
+	position: relative;
+}
+#registration-fields
+{
+		/*background: blue;*/
+	margin-top: 50px;
+	margin-right: 200px;
+	float: right;
+	width: 300px;
+	height: 300px;
+	position: relative;
+}
+
+RF1
+{
+	font-size: 125%;
+}
+RF2
+{
+	font-size: 80%;
+}
+
+

@@ -1,0 +1,29 @@
+ <ul id="navigation">
+            <li class="home"><a href="files.php" title="Home"></a></li>
+            <li class="upload"><a href="upload.php" title="Upload"></a></li>
+            <li class="profile"><a href="profile.php" title="Profile"></a></li>
+            <li class="share"><a href="share.mytrive.com" title="Share"></a></li>
+
+        </ul>
+        
+		<script type="text/javascript">
+            $(function myfunction() {
+                $('#navigation a').stop().animate({'marginLeft':'-85px'},1000);
+
+                $('#navigation > li').hover(
+                    function () {
+                        $('a',$(this)).stop().animate({'marginLeft':'-2px'},200);
+                    },
+                    function () {
+                        $('a',$(this)).stop().animate({'marginLeft':'-85px'},200);
+                    }
+                );
+            });
+            
+            
+            
+            
+            
+            ///////////
+            
+    </script>

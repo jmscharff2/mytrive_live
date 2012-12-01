@@ -1,0 +1,135 @@
+
+<HEAD>
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+
+<?php
+	include('includes/javascript_includes.html');?>
+<TITLE>myTrive.com</TITLE>
+<link rel="icon" 
+      type="image/png" 
+      href="images/favicon.ico">
+
+
+
+      <script type="text/javascript" src="http://bp.yahooapis.com/2.4.21/browserplus-min.js"></script>
+									
+		<script type="text/javascript" src="js/plupload.js"></script>
+		<script type="text/javascript" src="js/plupload.gears.js"></script>
+		<script type="text/javascript" src="js/plupload.silverlight.js"></script>
+		<script type="text/javascript" src="js/plupload.flash.js"></script>
+		<script type="text/javascript" src="js/plupload.browserplus.js"></script>
+		<script type="text/javascript" src="js/plupload.html4.js"></script>
+		<script type="text/javascript" src="js/plupload.html5.js"></script>
+		
+		
+
+</HEAD>
+<BODY>
+
+	<div id="fb-root"></div>
+	<script>
+	  window.fbAsyncInit = function() {
+	    // init the FB JS SDK
+	    FB.init({
+	      appId      : '464392090269325', // App ID from the App Dashboard
+	      channelUrl : '//www.hawkitics.com/mytrive/live/includes/channel.html', // Channel File for x-domain communication
+	      status     : true, // check the login status upon init?
+	      cookie     : true, // set sessions cookies to allow your server to access the session?
+	      xfbml      : true  // parse XFBML tags on this page?
+	    });
+	
+	    // Additional initialization code such as adding Event Listeners goes here
+	     FB.getLoginStatus(function(response) {
+		    if (response.status === 'connected') {
+		        // connected
+		    } else if (response.status === 'not_authorized') {
+		        // not_authorized
+		        login();
+		    } else {
+		        // not_logged_in
+		        login();
+		    }
+		});
+		
+	
+	  };
+	
+	  // Load the SDK's source Asynchronously
+	  // Note that the debug version is being actively developed and might 
+	  // contain some type checks that are overly strict. 
+	  // Please report such bugs using the bugs tool.
+	  (function(d, debug){
+	     var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+	     if (d.getElementById(id)) {return;}
+	     js = d.createElement('script'); js.id = id; js.async = true;
+	     js.src = "//connect.facebook.net/en_US/all" + (debug ? "/debug" : "") + ".js";
+	     ref.parentNode.insertBefore(js, ref);
+	   }(document, /*debug*/ false));
+	   
+	   
+	   function login() {
+		    FB.login(function(response) {
+		        if (response.authResponse) {
+		            // connected
+		        } else {
+		            // cancelled
+		        }
+		    });
+		}
+			 
+		function testAPI() {
+			console.log('Welcome!  Fetching your information.... ');
+		    FB.api('/me', function(response) {
+		        console.log('Good to see you, ' + response.name + '.');
+		    });
+		}
+	   function login() {
+    FB.login(function(response) {
+        if (response.authResponse) {
+            // connected
+                            testAPI();
+        } else {
+            // cancelled
+        }
+    });
+}
+	   
+	</script>
+
+
+	<div id="bluebackground"></div>
+	<div id="all-container">
+	<div id="headbackground-container">
+		<div id="head-container">
+			<div id="logo" style="a:hover {background: #4888c7;}">
+				<a href="files.php"><img src = "images/trive.png"></a>
+			</div>
+			
+			<div id="header">
+				<p>
+				<?php
+				if($_SESSION['first_name'] != '')
+				{
+					echo "Welcome " . $_SESSION['first_name'] . "<br>";
+					echo "<center><a href=logout.php>logout</a></center>";
+				}
+				if($_SESSION['first_name'] == '')
+				{
+					echo "Welcome: " . $_SESSION['username'] . "<br>";
+					echo "<center><a href=logout.php>logout</a></center>";
+				}
+				
+				?>
+				</p>
+			</div>
+
+
+			<div id="nav-logged-in">
+				    <?php include 'includes/navigation.html';?>
+				</div>
+			
+		</div>
+
+
+
