@@ -14,7 +14,7 @@
 	elseif(!(isset($_SESSION['username'])))
 	{
 		include 'includes/loggedout.html';
-		echo '<meta http-equiv="Refresh" content="1; URL=http://www.mytrive.com">';
+		echo '<meta http-equiv="Refresh" content="0; URL=http://www.mytrive.com">';
 	}
 
 ?>
@@ -41,7 +41,7 @@
 <?php
 
 require_once('config.php');
-echo "<b>".$_SESSION['username']."'s files:</b></br></br>";
+
 $link = mysql_connect(DB_HOST, DB_USER, DB_PASSWORD);
 if(!$link)
 {
@@ -57,9 +57,12 @@ if(!$db)
 $username = $_SESSION['username'];
 
 
+if(strlen($username) > 1)
+{
+	echo "<br>".$_SESSION['username']."'s files:<br><br><br>";
+	$qry = "SELECT * FROM files WHERE owner_id = '$username'";
+	$result = mysql_query($qry);
 
-$qry = "SELECT * FROM files WHERE owner_id = '$username'";
-$result = mysql_query($qry);
 $x = 0;
 
 if($result)
@@ -215,7 +218,8 @@ if($result)
 	</table>
     <br>
 	<a href ="upload.php">Upload Files</a>
-		</div>     	
+<?php } ?>
+      		</div>     	
 	</div>
 	</div>
 	<?php include 'includes/footer.html'?>
