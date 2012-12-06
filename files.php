@@ -21,6 +21,9 @@
 <HTML>
 
 	<div class="meny">
+	<div class="bluebackground">
+			<img src="images/trive.png">
+		</div>
 		<H2>Your Files:</H2><br><br>
 		
 		<?php 
@@ -309,7 +312,7 @@ if($result)
 <?php } ?>
       		</div>     	
 	</div>
-	</div></div>
+	</div>
 	<?php include 'includes/footer.html'?>
 	</div>
 	</body>
