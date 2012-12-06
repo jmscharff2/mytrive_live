@@ -31,7 +31,8 @@ require_once('config.php');
 	$file_name = $_POST['file_name'];
 	$want_to_share = $_POST['willing_to_share'];
 	$file_id = $_POST['file_id'];
-		
+	
+	echo $want_to_share;
 		
 	
 	$qry = "UPDATE files SET file_name = '$file_name', want_to_share = '$want_to_share' WHERE file_id = '$file_id'";
