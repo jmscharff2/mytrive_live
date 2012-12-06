@@ -84,7 +84,7 @@
 
 				// The contents that gets pushed aside while Meny is active
 				//contentsElement: document.querySelector( '.contents' ),
-				contentsElement: document.querySelector( 'all-container' ),
+				contentsElement: document.querySelector( '#all-container' ),
 
 				// [optional] The alignment of the menu (top/right/bottom/left)
 				position: 'left',
@@ -307,9 +307,9 @@ if($result)
 <?php } ?>
       		</div>     	
 	</div>
-	
+	</div>
 	<?php include 'includes/footer.html'?>
-	</div></div>
+	</div>
 	</body>
 	
 </HTML>
