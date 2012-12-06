@@ -32,13 +32,8 @@ require_once('config.php');
 	$want_to_share = $_POST['want_to_share'];
 	$file_id = $_POST['file_id'];
 	
-	echo $want_to_share;
-	
-	if($want_to_share == 'no')
-	{
-		$sharing = 0;
-	}
-	elseif($want_to_share == 'yes')
+		
+	if($want_to_share == 'on')
 	{
 		$sharing = 1;
 	}
