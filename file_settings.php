@@ -157,7 +157,14 @@
 						echo "</tr>";
 						echo "<tr>";
 						echo "<td>";
-						echo "Willing to Share?: <input type='checkbox' name='want_to_share'>";
+						if($member['want_to_share'] == 0)
+						{
+							echo "Willing to Share?: <input type='checkbox' name='want_to_share' value='no'>";
+						}
+						elseif($member['want_to_share'] == 1)
+						{
+							echo "Willing to Share?: <input type='checkbox' name='want_to_share' value='yes'>";
+						}
 						echo "</td>";
 						echo "<td>";
 						if ($member['share_with'] != '')
