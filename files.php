@@ -42,7 +42,7 @@
                 		{
 					$member2 = mysql_fetch_assoc($result2);
 					echo "<tr><td>";
-					echo "<a href='file_settings.php?file_id=".$member['file_id']."'>".$member2['file_name']."</a><br><br>";
+					echo "<a href='file_settings.php?file_id=".$member2['file_id']."'>".$member2['file_name']."</a><br><br>";
 					$x++;
 					echo "</td></tr>";
 				}
