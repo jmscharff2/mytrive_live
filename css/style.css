@@ -21,7 +21,7 @@
     width: 200px;
     list-style: none;
     font-size: 20px;
-    padding: 3px 10px;
+    /*padding: 3px 10px;*/
     }
 .meny ul li:before {
     content: '-';
