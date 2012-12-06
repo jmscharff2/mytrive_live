@@ -83,8 +83,7 @@
 				menuElement: document.querySelector( '.meny' ),
 
 				// The contents that gets pushed aside while Meny is active
-				//contentsElement: document.querySelector( '.contents' ),
-				contentsElement: document.querySelector( '#all-container' ),
+				contentsElement: document.querySelector( '.contents' ),
 
 				// [optional] The alignment of the menu (top/right/bottom/left)
 				position: 'left',
