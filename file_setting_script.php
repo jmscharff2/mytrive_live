@@ -29,7 +29,7 @@ require_once('config.php');
 	//setup variables to update the database
 	$username = $_SESSION['username'];		
 	$file_name = $_POST['file_name'];
-	$want_to_share = $_POST['willing_to_share'];
+	$want_to_share = $_POST['want_to_share'];
 	$file_id = $_POST['file_id'];
 	
 	echo $want_to_share;
