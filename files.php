@@ -22,11 +22,17 @@
 
 	<div class="meny">
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 	<div class="bluebackground">
 			<img src="images/trive.png">
 		</div>
 >>>>>>> parent of 6b5b309... asdf
+=======
+		<div class="bluebackground">
+			<img src="images/trive.png">
+		</div>
+>>>>>>> 6b5b30912246c5c9a33ecf47f0aaadbed5006894
 		<H2>Your Files:</H2><br><br>
 		
 		<?php 
@@ -315,7 +321,7 @@ if($result)
 <?php } ?>
       		</div>     	
 	</div>
-	</div></div>
+	</div>
 	<?php include 'includes/footer.html'?>
 	</div>
 	</body>

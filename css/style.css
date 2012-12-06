@@ -1,7 +1,7 @@
 /*****************************SIDE MENU SECTION*****************/
 .meny {
     display: none;
-    padding: 20px;
+   /* padding: 20px;*/
     overflow: auto;
    /* background: #333;
     color: #eee;*/
@@ -21,7 +21,7 @@
     width: 200px;
     list-style: none;
     font-size: 20px;
-    padding: 3px 10px;
+    /*padding: 3px 10px;*/
     }
 .meny ul li:before {
     content: '-';
@@ -86,23 +86,12 @@
 		        transition: opacity 0.2s ease;
 			}
 
+
+
 /**
  * Main contents area
  */
-.contents {
-   /* background: #eee;
-    padding: 20px 40px;*/
-    width: 100%;
-    height: 100%;
-    overflow-y: auto;
-
-    -webkit-overflow-scrolling: touch;
-
-    -webkit-box-sizing: border-box;
-       -moz-box-sizing: border-box;
-               box-sizing: border-box;
-}
-
+/*
 .contents>article {
     max-width: 400px;
     }
@@ -125,7 +114,7 @@
     position: absolute;
     bottom: 20px;
     }
-
+*/
 
 
 
