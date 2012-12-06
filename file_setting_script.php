@@ -42,7 +42,29 @@ require_once('config.php');
 		$sharing = 0;
 	}
 		
-	
+	$qry2 = "SELECT * FROM files WHERE file_id = '$file_id'";
+	$result2 = mysql_query($qry2);
+
+      $x = 0;
+
+      if($result2)
+      {
+	      if(mysql_num_rows($result2) > 0)
+	       	{
+    	       	echo "<table width='100$'>";
+        		while ($x < mysql_num_rows($result2))
+        		{
+            		$member2 = mysql_fetch_assoc($result2);
+            		
+            		$origonal_file_name = $member2['file_name'];
+            		$file_path = $member2['location'];
+            	}
+			}
+		}
+		
+		
+	$old_file_name = $file_path."/".$origional_file_name;
+	$new_file_name = $file_path."/".$file_name;
 	$qry = "UPDATE files SET file_name = '$file_name', want_to_share = '$sharing' WHERE file_id = '$file_id'";
 
 	$result = @mysql_query($qry);
@@ -50,6 +72,7 @@ require_once('config.php');
 	if($result)
 	{
 		//echo "Good";
+		rename($old_file_name, $new_file_name);
 		header("location: files.php");
 	}
 	else
