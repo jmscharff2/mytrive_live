@@ -76,7 +76,7 @@
 	}
 
 ?>	
-		
+	<!--	
 	<script src="js/meny.min.js"></script>
 		
 		<script>
@@ -120,7 +120,7 @@
 			}
 </script>
 
-	
+	-->
 		  <div class="scroll"></div>
 		 <?php include 'includes/sidenav.html';?>
        		
