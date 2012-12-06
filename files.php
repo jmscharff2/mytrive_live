@@ -19,6 +19,7 @@
 ?>
 
 <HTML>
+<!--
 	<div class="meny">
 		<H2>Your Files:</H2><br><br>
 		
@@ -54,7 +55,7 @@
 
 
 	</div>
-
+-->
 	<div class="contents">
 <?php
 	//session_start();
@@ -118,7 +119,7 @@
 
 	
 		  <div class="scroll"></div>
-		  <!--<?php include 'includes/sidenav.html';?>-->
+		  <?php include 'includes/sidenav.html';?>
        		
 		
 	
