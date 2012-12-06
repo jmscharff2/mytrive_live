@@ -122,7 +122,7 @@
 
 	
 		  <div class="scroll"></div>
-		 <!-- <?php include 'includes/sidenav.html';?> -->
+		 <?php include 'includes/sidenav.html';?>
        		
 		
 	
