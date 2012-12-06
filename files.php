@@ -1,10 +1,58 @@
 <?php
 	session_start();
+
+	require_once('config.php');
+
+	$link = mysql_connect(DB_HOST, DB_USER, DB_PASSWORD);
+	if(!$link)
+	{
+	       	 die('Failed to connect to server: '. mysql_error());
+	}
+
+	$db = mysql_select_db(DB_DATABASE);
+	if(!$db)
+	{	
+		die("Unable to select database");
+	}
+
+
 ?>
 
 <HTML>
 	<div class="meny">
-		<H2> Files go here</H2>
+		<H2>Your Files:</H2><br><br>
+		
+		<?php 
+		      $side_user = $_SESSION['username'];
+		      
+		      if(strlen($side_user) > 1)
+		      {
+
+		      $qry2 = "SELECT * FROM files WHERE owner_id = '$side_user'";
+  		      $result2 = mysql_query($qry2);
+
+		      $x = 0;
+
+		      if($result2)
+		      {
+			if(mysql_num_rows($result2) > 0)
+        	       	{
+				echo "<table width='100$'>";
+                		while ($x < mysql_num_rows($result2))
+                		{
+					$member2 = mysql_fetch_assoc($result2);
+					echo "<tr><td>";
+					echo $member2['file_name']."<br><br>";
+					$x++;
+					echo "</td></tr>";
+				}
+			  }
+			}	
+			echo "</table>";
+			}
+		?>
+
+
 	</div>
 
 	<div class="contents">
@@ -70,7 +118,7 @@
 
 	
 		  <div class="scroll"></div>
-		  <?php include 'includes/sidenav.html';?>
+		  <!--<?php include 'includes/sidenav.html';?>-->
        		
 		
 	
@@ -89,19 +137,7 @@
 
 <?php
 
-require_once('config.php');
 
-$link = mysql_connect(DB_HOST, DB_USER, DB_PASSWORD);
-if(!$link)
-{
-	die('Failed to connect to server: '. mysql_error());
-}
-
-$db = mysql_select_db(DB_DATABASE);
-if(!$db)
-{
-	die("Unable to select database");
-}
 
 $username = $_SESSION['username'];
 
