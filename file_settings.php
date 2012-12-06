@@ -20,6 +20,9 @@
 
 <HTML>
 	<div class="meny">
+		<div class="bluebackground">
+		<img src="images/trive.png">
+		</div>
 		<H2>Your Files:</H2><br><br>
 		
 		<?php 
