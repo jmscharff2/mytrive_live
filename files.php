@@ -56,7 +56,7 @@
 
 	</div>
 -->
-	<div class="contents">
+	<!--<div class="contents"> -->
 <?php
 	//session_start();
 	
@@ -309,7 +309,7 @@ if($result)
 	</div>
 	</div>
 	<?php include 'includes/footer.html'?>
-	</div>
+	
 	</body>
 	
 </HTML>
