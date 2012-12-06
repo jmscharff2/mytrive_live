@@ -64,7 +64,7 @@ require_once('config.php');
 		}
 		
 		
-	$old_file_name = $file_path."/".$origional_file_name;
+	$old_file_name = $file_path."/".$origonal_file_name;
 	echo $old_file_name."<br>";
 	$new_file_name = $file_path."/".$file_name;
 	echo $new_file_name;
