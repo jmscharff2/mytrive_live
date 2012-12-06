@@ -29,6 +29,10 @@
 /**
  * Hint graphic that appears while menu is inactive
  */
+  
+.meny a {text-decoration:none;}
+ 
+ 
 .meny-arrow {
     position: absolute;
     z-index: 10;
