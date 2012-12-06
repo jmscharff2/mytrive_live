@@ -127,7 +127,7 @@
 			<?php  
 			$file_id = $_GET['file_id'];
 			$username = $_SESSION['username'];
-			$qry = "SELECT * FROM files WHERE owner_id = '$username'";
+			$qry = "SELECT * FROM files WHERE owner_id = '$username' and file_id = '$file_id'";
 			$result = mysql_query($qry);
 			$x = 0;
 			
