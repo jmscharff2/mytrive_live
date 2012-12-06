@@ -35,17 +35,19 @@ require_once('config.php');
 		
 	
 	$qry = "UPDATE files SET file_name = '$file_name', want_to_share = '$want_to_share' WHERE file_id = '$file_id'";
-	
+	echo $qry;
 	
 	$result = @mysql_query($qry);
 	
 	if($result)
 	{
-		header("location: files.php");
+		echo "Good";
+		//header("location: files.php");
 	}
 	else
 	{
-		header("location: files_error.php");
+		echo "Bad";
+		//header("location: files_error.php");
 	}
 
 ?>
