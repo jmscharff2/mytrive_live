@@ -136,7 +136,7 @@
 				if(mysql_num_rows($result) > 0)
 				{
 				echo "<table  width='100%' border='1'> ";
-				echo "<form action='file_settings_script.php' method='POST'>";
+				echo "<form action='file_setting_script.php' method='POST'>";
 					while ($x < mysql_num_rows($result))
 					{
 						$member = mysql_fetch_assoc($result);
