@@ -21,6 +21,12 @@
 <HTML>
 
 	<div class="meny">
+<<<<<<< HEAD
+=======
+	<div class="bluebackground">
+			<img src="images/trive.png">
+		</div>
+>>>>>>> parent of 6b5b309... asdf
 		<H2>Your Files:</H2><br><br>
 		
 		<?php 
