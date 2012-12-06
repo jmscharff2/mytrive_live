@@ -126,7 +126,68 @@
 
 			<?php  
 			$file_id = $_GET['file_id'];
+			$username = $_SESSION['username'];
+			$qry = "SELECT * FROM files WHERE owner_id = '$username'";
+			$result = mysql_query($qry);
+			$x = 0;
 			
+			if($result)
+			{
+				if(mysql_num_rows($result) > 0)
+				{
+				echo "<table  width='100%' border='1'> ";
+				echo "<form action='update_file_script.php' method='POST'>";
+					while ($x < mysql_num_rows($result))
+					{
+						$member = mysql_fetch_assoc($result);
+						
+						//echo $member['file_name'];
+					
+						//echo $member['location'];
+						//echo "</br>";
+						
+						
+						echo "<tr>";
+						echo "<td>";
+						echo "File Name: <input type='text' name='file_name' value=". $member['file_name'].">";
+						echo "</td>";
+						echo "<td>";
+						echo "File Size: ".$member['size'];
+						echo "</td>";
+						echo "</tr>";
+						echo "<tr>";
+						echo "<td>";
+						echo "Willing to Share?: <input type='checkbox' name='want_to_share'>";
+						echo "</td>";
+						echo "<td>";
+						echo "Shared With: ".$member['share_with'];
+						echo "</td>";
+						echo "</tr>";
+						
+			
+						//echo "/".$member['location']."/".$member['file_name'];
+						
+						//echo $result[$x];
+						
+						//file_put_contents($member['file_name'], file_get_contents("/".$member['location']."/".$member['file_name']))
+						
+						
+						$x++;
+						
+					}
+				}
+			
+			
+			}
+			
+			
+					
+						
+			?>
+		</table>
+		<input type=submit value="Update"/>
+		</form>
+
 			
 			?>
 
