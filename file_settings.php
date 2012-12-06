@@ -160,7 +160,7 @@
 						echo "Willing to Share?: <input type='checkbox' name='want_to_share'>";
 						echo "</td>";
 						echo "<td>";
-						if ($member['share_ith'] != '')
+						if ($member['share_with'] != '')
 						{
 							echo "Shared With: ".$member['share_with'];
 							echo "<br>";
