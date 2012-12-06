@@ -180,6 +180,11 @@ body
 	
 }
 
+a:hover{
+	background: #4888c7;
+	color: white;
+}
+
 #main-content-wrapper
 {
 	height: 800px;
@@ -287,7 +292,6 @@ p
 #nav-logged-in a:hover{
 	background: #c78647;
 }
-
 
 #nav-logged-in ul li ul {
      display: none
