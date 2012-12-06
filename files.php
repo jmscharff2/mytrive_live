@@ -56,7 +56,7 @@
 
 	</div>
 
-	<!--<div class="contents"> -->
+	<div class="contents"> 
 <?php
 	//session_start();
 	
