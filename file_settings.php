@@ -124,6 +124,13 @@
 	
 		<div id="main-content-wrapper">
 
+			<?php  
+			$file_id = $_GET['file_id'];
+			
+			
+			?>
+
+
       	</div>     	
 	</div>
 	</div>
