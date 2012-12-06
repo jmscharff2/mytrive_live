@@ -33,9 +33,18 @@ require_once('config.php');
 	$file_id = $_POST['file_id'];
 	
 	echo $want_to_share;
+	
+	if($want_to_share == 'no')
+	{
+		$sharing = 0;
+	}
+	elseif($want_to_share == 'yes')
+	{
+		$sharing = 1;
+	}
 		
 	
-	$qry = "UPDATE files SET file_name = '$file_name', want_to_share = '$want_to_share' WHERE file_id = '$file_id'";
+	$qry = "UPDATE files SET file_name = '$file_name', want_to_share = '$sharing' WHERE file_id = '$file_id'";
 	echo $qry;
 	
 	$result = @mysql_query($qry);
