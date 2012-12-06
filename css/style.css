@@ -1,10 +1,8 @@
 /*****************************SIDE MENU SECTION*****************/
-.meny {
+/*.meny {
     display: none;
-   /* padding: 20px;*/
+   padding: 20px;
     overflow: auto;
-   /* background: #333;
-    color: #eee;*/
     background-image:url('../images/background.png');
 	background-repeat: repeat;
 
@@ -21,19 +19,19 @@
     width: 200px;
     list-style: none;
     font-size: 20px;
-    /*padding: 3px 10px;*/
+    padding: 3px 10px;
     }
 .meny ul li:before {
     content: '-';
     margin-right: 5px;
     color: rgba( 255, 255, 255, 0.2 );
-    }
+    }*/
 
 /**
  * Hint graphic that appears while menu is inactive
  */
 
-  
+  /*
 .meny a 
 {
 	text-decoration:none;
@@ -86,7 +84,7 @@
 		        transition: opacity 0.2s ease;
 			}
 
-
+*/
 
 /**
  * Main contents area
