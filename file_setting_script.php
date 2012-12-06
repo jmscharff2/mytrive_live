@@ -57,7 +57,8 @@ require_once('config.php');
             		$member2 = mysql_fetch_assoc($result2);
             		
             		$origonal_file_name = $member2['file_name'];
-            		$file_path = $member2['location'];
+            		$file_path = $member2['location']; 
+            		$x++;
             	}
 			}
 		}
