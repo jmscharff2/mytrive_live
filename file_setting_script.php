@@ -42,6 +42,10 @@ require_once('config.php');
 	{
 		$sharing = 1;
 	}
+	else
+	{
+		$sharing = 0;
+	}
 		
 	
 	$qry = "UPDATE files SET file_name = '$file_name', want_to_share = '$sharing' WHERE file_id = '$file_id'";
