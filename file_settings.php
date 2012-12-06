@@ -160,7 +160,17 @@
 						echo "Willing to Share?: <input type='checkbox' name='want_to_share'>";
 						echo "</td>";
 						echo "<td>";
-						echo "Shared With: ".$member['share_with'];
+						if ($member['share_ith'] != '')
+						{
+							echo "Shared With: ".$member['share_with'];
+							echo "<br>";
+							echo "<a href='stop_sharing.php?file=".$member['file_name']."'><img src='images/Stop.png' height='25%'/></a>";
+
+						}
+						else
+						{
+							echo "<a href='share_file.php?file=".$member['file_name']."'><img src='images/Share.png'height='25%'/></a>";
+						}
 						echo "</td>";
 						echo "</tr>";
 						
@@ -189,7 +199,7 @@
 		</form>
 
 			
-			?>
+		
 
 
       	</div>     	
