@@ -1,3 +1,4 @@
+/*****************************SIDE MENU SECTION*****************/
 /*.meny {
     display: none;
     padding: 20px;
@@ -117,7 +118,7 @@
 
 
 
-
+/*END OF SIDE MENU SECTION*/
 
 
 
@@ -283,9 +284,11 @@ p
     color: white;
 	
 }
-a:hover{
+#nav-logged-in a:hover{
 	background: #c78647;
 }
+
+
 #nav-logged-in ul li ul {
      display: none
 }
@@ -352,7 +355,7 @@ a:hover{
     /* color:#999;*/
     color: white;
 }
-a:hover{
+#nav a:hover{
 	background: #c78647;
 }
 #nav ul li ul {
