@@ -190,7 +190,8 @@ if($result)
 			else
 			{
 				echo "<td>";	
-				echo $member['file_name'];
+				//echo $member['file_name'];
+				echo "<a href='file_settings.php?file_id=".$member['file_id']."'>".$member['file_name']."</a>";
 				echo "</td>";
 				echo "<td>";
 				//echo $file_size."MB";
