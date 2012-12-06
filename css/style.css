@@ -1,5 +1,5 @@
 /*****************************SIDE MENU SECTION*****************/
-/*.meny {
+.meny {
     display: none;
     padding: 20px;
     overflow: auto;
@@ -25,35 +25,10 @@
     margin-right: 5px;
     color: rgba( 255, 255, 255, 0.2 );
     }
-*/
+
 /**
  * Hint graphic that appears while menu is inactive
  */
-.meny
-{
-	display: none;
-	padding: 20px;
-	overflow:auto;
-	-webkit-box-sizing: border-box;
-       -moz-box-sizing: border-box;
-               box-sizing: border-box;
-}  
-
-.meny ul {
-    margin-top: 10px;
-    }
-.meny ul li {
-    display: inline-block;
-    width: 200px;
-    list-style: none;
-    font-size: 20px;
-    padding: 3px 10px;
-    }
-.meny ul li:before {
-    content: '-';
-    margin-right: 5px;
-    color: rgba( 255, 255, 255, 0.2 );
-    }
 
   
 .meny a 
