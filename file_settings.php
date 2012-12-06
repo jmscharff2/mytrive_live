@@ -163,7 +163,7 @@
 						}
 						elseif($member['want_to_share'] == 1)
 						{
-							echo "Willing to Share?: <input type='checkbox' name='want_to_share' >";
+							echo "Willing to Share?: <input type='checkbox' name='want_to_share' checked='checked'>";
 						}
 						echo "</td>";
 						echo "<td>";
