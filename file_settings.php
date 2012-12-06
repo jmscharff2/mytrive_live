@@ -173,7 +173,7 @@
 						}
 						echo "</td>";
 						echo "</tr>";
-						echo "<input type='text name='file_id' value=".$member['file_id'].">";
+						echo "<input type='text' name='file_id' value=".$member['file_id'].">";
 						
 			
 						//echo "/".$member['location']."/".$member['file_name'];
