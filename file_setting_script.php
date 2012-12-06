@@ -65,9 +65,9 @@ require_once('config.php');
 		
 		
 	$old_file_name = $file_path."/".$origonal_file_name;
-	echo $old_file_name."<br>";
+	//echo $old_file_name."<br>";
 	$new_file_name = $file_path."/".$file_name;
-	echo $new_file_name;
+	//echo $new_file_name;
 	$qry = "UPDATE files SET file_name = '$file_name', want_to_share = '$sharing' WHERE file_id = '$file_id'";
 
 	$result = @mysql_query($qry);
@@ -76,12 +76,12 @@ require_once('config.php');
 	{
 		//echo "Good";
 		rename($old_file_name, $new_file_name);
-		//header("location: files.php");
+		header("location: files.php");
 	}
 	else
 	{
 		//echo "Bad";
-		//header("location: files_error.php");
+		header("location: files_error.php");
 	}
 
 ?>
