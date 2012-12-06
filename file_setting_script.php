@@ -73,7 +73,7 @@ require_once('config.php');
 	if($result)
 	{
 		//echo "Good";
-		rename($old_file_name, $new_file_name);
+		rename('$old_file_name', '$new_file_name');
 		header("location: files.php");
 	}
 	else
