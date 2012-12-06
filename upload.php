@@ -82,7 +82,8 @@ var uploader = new plupload.Uploader({
 		{title : "Image files", extensions : "jpg,gif,png"},
 		{title : "Zip files", extensions : "zip, gzip, tar.gz, gz"},
 		{title : "Video files", extensions : "m4v,avi,mkv"},
-		{title : "Document Files", extensions : "doc, docx, odt, xls, xlsx, ppt, pptx"}
+		{title : "Document Files", extensions : "doc, docx, odt, xls, xlsx, ppt, pptx"},
+		{title : "Book Files", extensions : "mobi"}
 	]
 });
 

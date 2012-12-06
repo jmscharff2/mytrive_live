@@ -47,8 +47,8 @@
 					//this will need to change once the domain name is fixed
 					//need some way of checking to make sure the user has permission
 					//$play_video = "http://www.mytrive.com/upload/".$member['owner_id']."/".$member['file_name'];
-					//$play_video = "https://s3.amazonaws.com/mytrive_files/testuser2/Hackers_Are_People_Too.m4v";
-					$play_video = "../../../../mnt/s3_mytrive_files/".$member['owner_id']."/".$member['file_name'];
+					$play_video = "https://s3.amazonaws.com/mytrive_files/".$member['owner_id']."/".$member['file_name'];
+					//$play_video = "../../../../mnt/s3_mytrive_files/".$member['owner_id']."/".$member['file_name'];
 					$x++;
 				}
 			}
