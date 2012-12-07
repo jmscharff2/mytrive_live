@@ -26,7 +26,9 @@
 					
 		<div id="main-content-wrapper">
 			
-			<center><RF2>We will add more as questions come in, for now, here is some information about the site that we thought you would like to know!</RF2></center>
+			<center>
+			<img src="images/mascot.png" height="50"/>
+			<RF2>We will add more as questions come in, for now, here is some information about the site that we thought you would like to know!</RF2></center>
 			<br>
 			<br>
 			<p>Where are our files stored?  Well your files are stored on our servers, when you upload them we take them and put them on amazon s3 which is a file drive that we link to our amazon ec2 instance which is our main server</p>
