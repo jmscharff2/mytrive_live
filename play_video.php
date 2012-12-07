@@ -3,6 +3,7 @@
 
 ?>
 <HTML>
+
 <?php
 	
 	if(isset($_SESSION['username']) && $_SESSION['username'] != '')
@@ -47,8 +48,16 @@
 					//this will need to change once the domain name is fixed
 					//need some way of checking to make sure the user has permission
 					//$play_video = "http://www.mytrive.com/upload/".$member['owner_id']."/".$member['file_name'];
-					$play_video = "https://s3.amazonaws.com/mytrive_files/".$member['owner_id']."/".$member['file_name'];
+					//$play_video = "https://s3.amazonaws.com/mytrive_files/".$member['owner_id']."/".$member['file_name'];
 					//$play_video = "../../../../mnt/s3_mytrive_files/".$member['owner_id']."/".$member['file_name'];
+					
+					
+					$file = $member['owner_id']."/".$member['file_name'];
+					$bucket = "mytrive_files";
+					$play_video = gs_prepareS3URL($file, $bucket);
+
+					
+					
 					$x++;
 				}
 			}
