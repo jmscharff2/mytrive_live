@@ -1,7 +1,6 @@
 /*****************************SIDE MENU SECTION*****************/
 .meny {
     display: none;
-   padding: 20px;
     overflow: auto;
     background-image:url('../images/background.png');
 	background-repeat: repeat;
@@ -19,7 +18,7 @@
     width: 200px;
     list-style: none;
     font-size: 20px;
-    padding: 3px 10px;
+   
     }
 .meny ul li:before {
     content: '-';
