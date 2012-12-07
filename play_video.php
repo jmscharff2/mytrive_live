@@ -55,11 +55,9 @@
 					
 					$file = $member['owner_id']."/".$member['file_name'];
 					$bucket = "mytrive_files";
-					echo "test";
+					
 					$play_video = gs_prepareS3URL($file, $bucket);
-					echo $play_video;
-					
-					
+									
 					$x++;
 				}
 			}

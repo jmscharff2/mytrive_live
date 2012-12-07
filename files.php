@@ -204,8 +204,13 @@ if($result)
 				echo "<td></td>";
 			}
 			echo "<td>";
+			
+			
+			$file = $member['owner_id']."/".$member['file_name'];
+			$bucket = "mytrive_files";
+			$download_file_string = gs_prepareS3URL($file, $bucket);
 			?>
-			<a href="/<?php echo $member['location'];?>/<?php echo $member['file_name'];?>"><img src="images/Download.png" height="25"/> </a>
+			<a href="/<?php echo $download_file_string; ?>"><img src="images/Download.png" height="25"/> </a>
 			 <?php
 			echo "</td>";
 			echo "<td>";
