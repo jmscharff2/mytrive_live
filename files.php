@@ -283,8 +283,15 @@ if($result)
 			echo "</td>";
 			echo "<td>";
 			 //echo "<a href=/".$member2['location']."/".$member2['file_name'].">Download </a>";
+			 
+			$file2 = $member2['owner_id']."/".$member2['file_name'];
+			$bucket2 = "mytrive_files";
+			$download_file_string2 = gs_prepareS3URL($file2, $bucket2);
+
+			 
 			 ?>
-			<a href="/<?php echo $member2['location'];?>/<?php echo $member2['file_name'];?>"><img src='images/Download.png'height='25%'/></a>
+			 <a href="<?php echo $download_file_string2; ?>"><img src="images/Download.png" height="25"/> </a>
+
 			 <?php
 			echo "</td>";
 			if($ext == 'm4v' || $ext == 'avi' || $ext == 'mkv')
