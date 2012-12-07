@@ -19,7 +19,7 @@ function gs_prepareS3URL($file, $bucket) {
  
   $file = rawurlencode($file); 
   $file = str_replace('%2F', '/', $file);
-  $path = $bucket .'/'. $file;
+  $path = $bucket ."/". $file;
  
   $expires = strtotime('+3 hour');
  
