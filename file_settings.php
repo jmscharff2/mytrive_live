@@ -198,7 +198,8 @@
 					}
 				}
 			
-			
+			echo "</table><input type=submit value='Update'/></form>";
+
 			}
 			
 			$qry2 = "SELECT * FROM files WHERE share_with = '$username' and file_id = '$file_id'";
@@ -222,10 +223,7 @@
 			
 						
 			?>
-		</table>
-		<input type=submit value="Update"/>
-		</form>
-			<center>
+					<center>
 			<div id="fb-root"></div>
 			<script>(function(d, s, id) {
 			  var js, fjs = d.getElementsByTagName(s)[0];
