@@ -19,7 +19,7 @@
 ?>
 
 <HTML>
-	<!--
+	
 	<div class="meny">
 		<div class="bluebackground">
 			<img src="images/trive.png">
@@ -59,7 +59,7 @@
 
 	</div>
 
-	<div class="contents">   -->
+	<div class="contents">  
 <?php
 	//session_start();
 	
@@ -76,7 +76,7 @@
 	}
 
 ?>	
-	<!--	
+
 	<script src="js/meny.min.js"></script>
 		
 		<script>
@@ -120,9 +120,9 @@
 			}
 </script>
 
-	-->
+	
 		  <div class="scroll"></div>
-		 <?php include 'includes/sidenav.html';?>
+		<!-- <?php include 'includes/sidenav.html';?> -->
        		
 		
 	
@@ -314,7 +314,7 @@ if($result)
 	</div>
 	</div>
 	<?php include 'includes/footer.html'?>
-	
+	</div>
 	</body>
 	
 </HTML>
