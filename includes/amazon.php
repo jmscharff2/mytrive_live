@@ -26,7 +26,7 @@ function gs_prepareS3URL($file, $bucket) {
   $stringToSign = gs_getStringToSign('GET', $expires, "/$path"); 
   $signature = gs_encodeSignature($stringToSign, $awsSecretKey); 
 
-  $url = "http://$bucket.s3.amazonaws.com/$file";
+  $url = "https://$bucket.s3.amazonaws.com/$file";
   $url .= '?AWSAccessKeyId='.$awsKeyId
          .'&Expires='.$expires
          .'&Signature='.$signature;
