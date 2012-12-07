@@ -212,7 +212,7 @@ if($result)
 			$download_file_string = gs_prepareS3URL($file, $bucket);
 			
 			?>
-			<a href="/<?php echo $download_file_string; ?>"><img src="images/Download.png" height="25"/> </a>
+			<a href="<?php echo $download_file_string; ?>"><img src="images/Download.png" height="25"/> </a>
 			 <?php
 			echo "</td>";
 			echo "<td>";
