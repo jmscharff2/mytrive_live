@@ -196,9 +196,10 @@
 						$x++;
 						
 					}
+					echo "</table><input type=submit value='Update'/></form>";
 				}
 			
-			echo "</table><input type=submit value='Update'/></form>";
+			
 
 			}
 			
