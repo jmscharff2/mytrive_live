@@ -55,7 +55,7 @@
 					$file = $member['owner_id']."/".$member['file_name'];
 					$bucket = "mytrive_files";
 					$play_video = gs_prepareS3URL($file, $bucket);
-
+					
 					
 					
 					$x++;
@@ -73,6 +73,7 @@
 	<?php include 'includes/sidenav.html'?>
 	<div id="main-content-wrapper">
 	<center>
+	<?php echo $play_video; ?>
 
 
 	<script src="http://www.onthegosystems.com/mediaplayer/swfobject.js" type="text/javascript"></script>
