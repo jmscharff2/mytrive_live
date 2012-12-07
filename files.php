@@ -276,7 +276,8 @@ if($result)
 			
 			echo "<tr>";
 			echo "<td>";	
-			echo $member2['file_name'];
+			//echo $member2['file_name'];
+			echo "<a href='file_settings.php?file_id=".$member2['file_id']."'>".$member2['file_name']."</a>";
 			echo "</td>";
 			echo "<td>";	
 			echo "Shared by:	 ".$member2['owner_id'];

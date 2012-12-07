@@ -200,6 +200,26 @@
 			
 			
 			}
+			
+			$qry2 = "SELECT * FROM files WHERE share_with = '$username' and file_id = '$file_id'";
+			$result2 = mysql_query($qry2);
+			$x = 0;
+			
+			if($result2)
+			{
+				if(mysql_num_rows($result2) > 0)
+				{
+					while ($x < mysql_num_rows($result2))
+					{
+						$member2 = mysql_fetch_assoc($result2);
+
+						echo "File Name: ".$member2['file_name'];
+						echo "<br>Shared By: ".$member2['owner_id'];
+						$x++;
+					}
+				}
+			}
+			
 						
 			?>
 		</table>
