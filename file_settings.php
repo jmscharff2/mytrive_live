@@ -184,7 +184,7 @@
 						echo "</td>";
 						echo "</tr>";
 						echo "<input type='text' name='file_id' value=".$member['file_id'].">";
-						
+						$file_id = $member['file_id'];
 			
 						//echo "/".$member['location']."/".$member['file_name'];
 						
@@ -215,7 +215,7 @@
 			  fjs.parentNode.insertBefore(js, fjs);
 			}(document, 'script', 'facebook-jssdk'));</script>
 			
-			<div class="fb-comments" data-href="http://mytrive.com/file_settings.php" data-width="470" data-num-posts="2" data-colorscheme="dark"></div>		
+			<div class="fb-comments" data-href="http://mytrive.com/file_settings.php?file_id=<?php echo $file_id; ?>" data-width="470" data-num-posts="2" data-colorscheme="dark"></div>		
 		
 
 
