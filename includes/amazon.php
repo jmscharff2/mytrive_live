@@ -1,3 +1,5 @@
+
+<?php
 function gs_getStringToSign($request_type, $expires, $uri) {
    return "$request_type\n\n\n$expires\n$uri";
 }
@@ -31,3 +33,5 @@ function gs_prepareS3URL($file, $bucket) {
         
   return $url;
 }
+
+?>
