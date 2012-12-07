@@ -27,7 +27,7 @@
 		<div id="main-content-wrapper">
 			
 			<center>
-			<img src="images/mascot.png" height="50"/>
+			<img src="images/mascot.png" height="200"/><br>
 			<RF2>We will add more as questions come in, for now, here is some information about the site that we thought you would like to know!</RF2></center>
 			<br>
 			<br>
