@@ -187,7 +187,7 @@ if($result)
 				echo "Shared: ".$member['share_with'];
 				echo "</td>";
 				echo "<td>";
-				echo "<a href='stop_sharing.php?file=".$member['file_name']."'><img src='images/Stop.png' height='25%'/></a>";
+				echo "<a href='stop_sharing.php?file=".$member['file_name']."'><img src='images/Stop.png' height='25'/></a>";
 				echo "</td>";
 			}
 			else
@@ -204,24 +204,24 @@ if($result)
 			}
 			echo "<td>";
 			?>
-			<a href="/<?php echo $member['location'];?>/<?php echo $member['file_name'];?>"><img src="images/Download.png" height="25%"/> </a>
+			<a href="/<?php echo $member['location'];?>/<?php echo $member['file_name'];?>"><img src="images/Download.png" height="25"/> </a>
 			 <?php
 			echo "</td>";
 			echo "<td>";
-			echo "<a href='file_delete.php?file=".$member['file_name']."'><img src='images/Delete.png'height='25%'/></a>";
+			echo "<a href='file_delete.php?file=".$member['file_name']."'><img src='images/Delete.png'height='25'/></a>";
 			echo "</td>";
 			echo "<td>";
-			echo "<a href='share_file.php?file=".$member['file_name']."'><img src='images/Share.png'height='25%'/></a>";
+			echo "<a href='share_file.php?file=".$member['file_name']."'><img src='images/Share.png'height='25'/></a>";
 			echo "</td>";
 			if($ext == 'm4v' || $ext == 'avi' || $ext == 'mkv')
 			{
-				echo "<td><a href='play_video.php?file_id=".$member['file_id']."'><img src='images/Play.png'height='25%'/></a></td>";	
+				echo "<td><a href='play_video.php?file_id=".$member['file_id']."'><img src='images/Play.png'height='25'/></a></td>";	
 			}
 			else
 			{
 				echo "<td></td>";
 			}		
-			echo "<td><a href='file_rename.php?file_id=".$member['file_id']."'><img src='images/Rename.png'height='25%'/></a></td>";
+			echo "<td><a href='file_rename.php?file_id=".$member['file_id']."'><img src='images/Rename.png'height='25'/></a></td>";
 			echo "</tr>";
 
 			
