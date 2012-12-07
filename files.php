@@ -2,6 +2,7 @@
 	session_start();
 
 	require_once('config.php');
+	require_once('includes/amazon.php');
 
 	$link = mysql_connect(DB_HOST, DB_USER, DB_PASSWORD);
 	if(!$link)
@@ -209,6 +210,7 @@ if($result)
 			$file = $member['owner_id']."/".$member['file_name'];
 			$bucket = "mytrive_files";
 			$download_file_string = gs_prepareS3URL($file, $bucket);
+			
 			?>
 			<a href="/<?php echo $download_file_string; ?>"><img src="images/Download.png" height="25"/> </a>
 			 <?php
