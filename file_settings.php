@@ -200,6 +200,12 @@
 			
 			
 			}
+						
+			?>
+		</table>
+		<input type=submit value="Update"/>
+		</form>
+
 			<div id="fb-root"></div>
 			<script>(function(d, s, id) {
 			  var js, fjs = d.getElementsByTagName(s)[0];
@@ -210,13 +216,6 @@
 			}(document, 'script', 'facebook-jssdk'));</script>
 			
 			<div class="fb-comments" data-href="http://mytrive.com/file_settings.php" data-width="470" data-num-posts="2" data-colorscheme="dark"></div>		
-						
-			?>
-		</table>
-		<input type=submit value="Update"/>
-		</form>
-
-			
 		
 
 
