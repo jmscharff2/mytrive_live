@@ -104,7 +104,7 @@ if($result)
 		<right><a href= "update_profile.php">Edit Profile</a></right>
 		</td>
 		<td>
-		<a href="sendd_invitation.php">Invite a Friend</a>
+		<a href="send_invitation.php">Invite a Friend</a>
 		</td>
 		</tr>
 		</table>
