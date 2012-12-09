@@ -240,7 +240,7 @@ if($security_result)
 		echo '<meta http-equiv="Refresh" content="5; URL=http://www.mytrive.com/profile.php">';
 		
 	}
-			
+	?>		
 		</div>	
 
 	</div>
