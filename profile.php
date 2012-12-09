@@ -224,12 +224,14 @@ if($result)
 		}
 		echo "</table>";
 		echo "<br><br>";
-		echo "<table  border='1'>";
-		echo"<tr><td>Pending Friends</td></tr>";
+		
 		
 		$qry4 = "SELECT * FROM friends WHERE friend1 = '$user_id' OR friend2 = '$user_id' AND accepted = 0";
+		echo $qry4;
 		$result4 = mysql_query($qry4);
 		$x = 0;
+		echo "<table  border='1'>";
+		echo"<tr><td>Pending Friends</td></tr>";
 		echo "<tr>";
 		echo "<td>";
 		if($result4)
