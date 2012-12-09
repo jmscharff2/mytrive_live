@@ -61,7 +61,7 @@ if($security_result)
 	$username = $_SESSION['username'];
 	
 	 
-	$qry = "SELECT * FROM users WHERE username = '$friends_username'";
+	$qry = "SELECT * FROM users WHERE user_id = '$friends_user_id'";
 	$result = mysql_query($qry);
 	$x = 0;
 	
