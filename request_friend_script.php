@@ -36,22 +36,6 @@ session_start();
 		}
 	}
 	
-	/*$qry2 = "SELECT user_id FROM users WHERE username = '$username' LIMIT 1";
-	$result2 = mysql_query($qry2);
-	$x = 0;
-	
-	if($result2)
-	{
-		if(mysql_num_rows($result2) > 0)
-		{
-			while ($x < mysql_num_rows($result2))
-			{
-				$member2 = mysql_fetch_assoc($result2);
-				$user_id = $member2['user_id'];
-				$x++;
-			}
-		}
-	}*/
 	$user_id = $_SESSION['user_id'];
 	
 	$qry3 = "INSERT INTO friends (friend1, friend2) VALUES('$user_id', '$friend_id')";

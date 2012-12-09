@@ -142,7 +142,7 @@ if($result)
 		$x = 0;
 		
 		?><table border="1">
-		<tr><td>Buddy List:</td></tr>
+		<tr><td>Friend List:</td></tr>
 		<?php
 		if($result2)
 		{
@@ -325,7 +325,7 @@ if($result)
 		?>
 		<br><br>
 		</table>
-		Add a new Buddy<br>
+		Add a new Friend<br>
 		<form action = "request_friend_script.php" method = "POST">
 		<input type="text" name="friend_username" placeholder="Friends Username" onkeypress="return submitenter(this,event)">
 		<input type="submit" text="Add Friend">

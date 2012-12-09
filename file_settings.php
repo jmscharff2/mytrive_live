@@ -235,7 +235,7 @@
 						$member3 = mysql_fetch_assoc($result3);
 						
 						echo "File Name: ".$member3['file_name'];
-						
+						echo "<a href=request_file_share.php?file_id=".$file_id.">Request file to be shared from owner</a>";
 						
 						$x++;
 					}
