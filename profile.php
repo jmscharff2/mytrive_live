@@ -136,9 +136,10 @@ if($result)
 		
 		<table border="1">
 		<tr>
-		<td>Buddy List:</td>
+		<td><tr>Buddy List:</tr></td>
 		<?php
 		$user_id = $_SESSION['user_id'];
+		echo $user_id;
 		$qry2 = "SELECT * FROM friends WHERE friend1 = '$user_id' OR friend2 = '$user_id' AND approved = 1";
 		$result2 = mysql_query($qry2);
 		$x = 0;
