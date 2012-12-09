@@ -34,6 +34,11 @@ $friends_user_id = $_GET['friends_user_id'];
 $username = $_SESSION['username'];
 $user_id = $_SESSION['user_id'];
 
+if($friends_user_id == $user_id)
+{
+	echo '<meta http-equiv="Refresh" content="0; URL=http://www.mytrive.com/profile.php">';
+}
+
 $security_qry = "SELECT * FROM friends WHERE (friend1 = '$user_id' OR friend2 = '$user_id') AND (friend1 = '$friends_user_id' OR friend2 = '$friends_user_id') AND accepted = 1";
 $security_result = mysql_query($security_qry);
 
