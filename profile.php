@@ -189,23 +189,23 @@ if($result)
 					elseif($member2['friend2'] != $user_id)
 					{
 						$friend_id = $member2['friend2'];
-						$qry3 = "SELECT username, first_name, last_name FROM users WHERE user_id = '$friend_id'";
-						$result3 = mysql_query($qry3);
+						$qry4 = "SELECT username, first_name, last_name FROM users WHERE user_id = '$friend_id'";
+						$result4 = mysql_query($qry4);
 						$y = 0;
-						if($result3)
+						if($result4)
 						{
-							if(mysql_num_rows($result3) > 0)
+							if(mysql_num_rows($result4) > 0)
 							{
-								while($y < mysql_num_rows($result3))
+								while($y < mysql_num_rows($result4))
 								{
-									$member3 = mysql_fetch_assoc($result3);
-									if($member3['first_name'] != '' && $member3['last_name'] != '')
+									$member4 = mysql_fetch_assoc($result4);
+									if($member4['first_name'] != '' && $member4['last_name'] != '')
 									{
-										echo $member3['first_name']." ".$member3['last_name'];
+										echo $member4['first_name']." ".$member4['last_name'];
 									}
 									else
 									{
-										echo $member3['username'];
+										echo $member4['username'];
 									}
 									$y++;
 								}
