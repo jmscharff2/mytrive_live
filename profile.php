@@ -259,10 +259,14 @@ if($result)
 									if($member5['first_name'] != '' && $member5['last_name'] != '')
 									{
 										echo $member5['first_name']." ".$member5['last_name'];
+										echo "<a href=accept_friend_request_script.php?friendship_id=".$member4['friendship_id'].">Accept</a>";
+										echo "<a href=reject_friend_request_script.php?friendship_id=".$member4['friendship_id'].">Reject</a>";
 									}
 									else
 									{
 										echo $member5['username'];
+										echo "<a href=accept_friend_request_script.php?friendship_id=".$member4['friendship_id'].">Accept</a>";
+										echo "<a href=reject_friend_request_script.php?friendship_id=".$member4['friendship_id'].">Reject</a>";
 									}
 									$y++;
 								}
@@ -317,6 +321,7 @@ if($result)
 		
 
 		?>
+		<br><br>
 		</table>
 		Add a new Buddy<br>
 		<form action = "request_friend_script.php" method = "POST">
