@@ -46,7 +46,6 @@ if($security_result)
 
 	//$security_qry = "SELECT friendship_id, username, user_id FROM friends JOIN users ON friends.friend1 = users.user_id OR friends.friend2 = users.user_id WHERE accepted = 1 AND (friends.friend1 =  '$user_id' OR friends.friend2 = '$user_id') AND (friends.friend1 = '$friend_user_id' OR friends.friend2 = '$friend_user_id')";
 	
-	echo $friends_username."'s user information:</br></br></br>";
 	$link = mysql_connect(DB_HOST, DB_USER, DB_PASSWORD);
 	if(!$link)
 	{
@@ -70,6 +69,8 @@ if($security_result)
 	{
 		if(mysql_num_rows($result) > 0)
 		{
+		$member_username = mysql_fetch_assoc($result);
+		echo $member_username['username']."'s user information:<br><br><br>";
 		echo "<table  width='100%' border='1'> ";
 		echo "<form>";
 			while ($x < mysql_num_rows($result))
