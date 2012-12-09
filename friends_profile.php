@@ -34,7 +34,7 @@ $friends_user_id = $_GET['friends_user_id'];
 $username = $_SESSION['username'];
 $user_id = $_SESSION['user_id'];
 
-$security_qry = "SELECT * FROM friends WHERE (friend1 = '$user_id' OR friend2 = '$user_id') AND (friend1 = '$friend_user_id' OR friend2 = '$friend_user_id') AND accepted = 1";
+$security_qry = "SELECT * FROM friends WHERE (friend1 = '$user_id' OR friend2 = '$user_id') AND (friend1 = '$friends_user_id' OR friend2 = '$friends_user_id') AND accepted = 1";
 echo $security_qry;
 $security_result = mysql_query($security_qry);
 
