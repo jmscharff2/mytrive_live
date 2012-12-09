@@ -117,40 +117,15 @@ if($security_result)
 	
 	}
 	?>
-	
-			</table>
-			<!-- COME BACK TO THIS AREA TO PULL IN FACEBOOK INFORMATION ON THE FRIENDS PROFILE -->
-			</form>
-			<br><br><br>
-			<?php if($member['fb_id'] == 0)
-			{?>
-			We recommend linking your MyTrive account to Facebook so you can use our app there.  To do this please fill out the information below:
-			<center>
-			<fb:registration fields="[
-				 {'name':'name'},
-				 {'name':'email'},
-				 {'name':'location'},
-				 {'name':'gender'},
-				 {'name':'birthday'},
-				 {'name':'force',      'description':'Which side?',              'type':'select',    'options':{'jedi':'Jedi','sith':'Sith'}, 'default':'jedi'},
-				 {'name':'mytrive_username', 'description':'MyTrive Username', 'type':'text'}
-				]"	redirect-uri="https://safe-citadel-5114.herokuapp.com/test.php" fb-xfbml-state="rendered" class="fb_iframe_widget"/>			
 			
-			</center>
-			<?php 
-			}
-			else
-			{
-				echo $member['fb_id'];
-			}?>
 			
 			
 			<?php
 		
 			
-			$friend_user_id = $member['user_id'];
+			
 			echo $user_id."<br>";
-			$qry2 = "SELECT * FROM friends WHERE friend1 = ('$user_id' OR friend2 = '$friend_user_id') AND accepted = 1";
+			$qry2 = "SELECT * FROM friends WHERE (friend1 = '$friends_user_id' OR friend2 = '$friends_user_id') AND accepted = 1";
 			$result2 = mysql_query($qry2);
 			$x = 0;
 			
