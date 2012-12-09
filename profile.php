@@ -133,6 +133,42 @@ if($result)
 			echo $member['fb_id'];
 		}?>
 		</div>
+		
+		<table>
+		<tr>
+		<td>Buddy List:</td>
+		<?php
+		$user_id = $_SESSION['user_id'];
+		$qry2 = "SELECT * FROM friends WHERE friend1 = '$user_id' OR friend2 = '$user_id' AND approved = 1";
+		$result2 = mysql_query($qry2);
+		$x = 0;
+		
+		if($result)
+		{
+			if(mysql_num_rows($result2) > 0)
+			{
+				while ($x < mysql_num_rows($result2))
+				{
+					echo "<tr>";
+					echo "<td>";
+					$member2 = mysql_fetch_assoc($result2);
+					if(member2['friend1'] != $user_id)
+					{
+						echo $member2['friend1'];
+					}
+					elseif(member2['friend2'] != $user_id)
+					{
+						echo $member2['friend2'];
+					}
+					echo "</td>";
+					echo "</tr>";
+					$x++;
+				}
+			}
+		}
+
+		?>
+		</table>
 			
 			
 

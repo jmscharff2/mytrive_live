@@ -51,7 +51,7 @@
 		<RF1>Upload your files below<br></RF1>
 		<RF2>Click on upload to upload multiple files!</RF2><br><br>
 	
-		<div id="container">
+<div id="container">
 	    <div id="filelist">No runtime found.</div>
 	    <br />
 	    <a id="pickfiles" href="javascript:;">[Select files]</a> 
