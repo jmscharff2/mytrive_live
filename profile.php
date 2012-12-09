@@ -259,8 +259,8 @@ if($result)
 									if($member5['first_name'] != '' && $member5['last_name'] != '')
 									{
 										echo $member5['first_name']." ".$member5['last_name'];
-										echo "<a href=accept_friend_request_script.php?friendship_id=".$member4['friendship_id'].">Accept</a>";
-										echo "<a href=reject_friend_request_script.php?friendship_id=".$member4['friendship_id'].">Reject</a>";
+										echo "<a href=accept_friend_request_script.php?friendship_id=".$member4['friendship_id'].">Accept </a>";
+										echo "<a href=reject_friend_request_script.php?friendship_id=".$member4['friendship_id'].">/ Reject</a>";
 									}
 									else
 									{
@@ -294,11 +294,11 @@ if($result)
 									$member5 = mysql_fetch_assoc($result5);
 									if($member5['first_name'] != '' && $member5['last_name'] != '')
 									{
-										echo $member5['first_name']." ".$member5['last_name'];
+										echo $member5['first_name']." ".$member5['last_name']." (Pending)";
 									}
 									else
 									{
-										echo $member5['username'];
+										echo $member5['username']." (Pending)";
 									}
 									$y++;
 								}
