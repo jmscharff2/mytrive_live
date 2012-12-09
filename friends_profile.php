@@ -117,13 +117,13 @@ if($security_result)
 	}
 	?>
 			
-			
+		</table>
 			
 			<?php
 		
 			
 			
-			echo $user_id."<br>";
+			
 			$qry2 = "SELECT * FROM friends WHERE (friend1 = '$friends_user_id' OR friend2 = '$friends_user_id') AND accepted = 1";
 			$result2 = mysql_query($qry2);
 			$x = 0;
