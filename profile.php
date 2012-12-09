@@ -243,6 +243,7 @@ if($result)
 					
 					if($member4['friend1'] != $user_id)
 					{
+						echo "In Friend1 Pending: ";
 						$friend_id = $member4['friend1'];
 						$qry3 = "SELECT username, first_name, last_name FROM users WHERE user_id = '$friend_id'";
 						$result3 = mysql_query($qry3);
@@ -274,6 +275,7 @@ if($result)
 					}
 					elseif($member4['friend2'] != $user_id)
 					{
+						echo "In Friend2 Pending: ";
 						$friend_id = $member4['friend2'];
 						$qry3 = "SELECT username, first_name, last_name FROM users WHERE user_id = '$friend_id'";
 						$result3 = mysql_query($qry3);
