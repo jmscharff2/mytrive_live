@@ -168,11 +168,11 @@ if($result)
 									$member3 = mysql_fetch_assoc($result3);
 									if($member3['first_name'] != '' && $member3['last_name'] != '')
 									{
-										echo $member3['first_name']." ".$member3['last_name'];
+										echo $member3['first_name']." ".$member3['last_name']."<a href='#'>test</a>";
 									}
 									else
 									{
-										echo $member3['username'];
+										echo $member3['username']."<a href='#'>test</a>";
 									}
 									$y++;
 								}
