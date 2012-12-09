@@ -42,11 +42,11 @@ if($friends_user_id == $user_id)
 $security_qry = "SELECT * FROM friends WHERE (friend1 = '$user_id' OR friend2 = '$user_id') AND (friend1 = '$friends_user_id' OR friend2 = '$friends_user_id') AND accepted = 1";
 $security_result = mysql_query($security_qry);
 
-/*
+
 if($security_result)
 {
 	if(mysql_num_rows($result) > 0)
-		{*/
+		{
 
 	//$security_qry = "SELECT friendship_id, username, user_id FROM friends JOIN users ON friends.friend1 = users.user_id OR friends.friend2 = users.user_id WHERE accepted = 1 AND (friends.friend1 =  '$user_id' OR friends.friend2 = '$user_id') AND (friends.friend1 = '$friend_user_id' OR friends.friend2 = '$friend_user_id')";
 	
@@ -75,6 +75,7 @@ if($security_result)
 		{
 		$member = mysql_fetch_assoc($result);
 		echo $member['username']."'s user information:<br><br><br>";
+		$friends_username = $member['username'];
 		echo "<table  width='100%' border='1'> ";
 		echo "<form>";
 			while ($x < mysql_num_rows($result))
@@ -133,7 +134,7 @@ if($security_result)
 			$result2 = mysql_query($qry2);
 			$x = 0;
 			
-			?><table border="1">
+			?><br><br><br><table border ="1"><tr><td><table border="1">
 			<tr><td>Buddy List:</td></tr>
 			<?php
 			if($result2)
@@ -215,16 +216,33 @@ if($security_result)
 					}
 				}
 			}
-			echo "</table>";
+			echo "</table></td><td>";
 			echo "<br><br>";
-		/*}	
+			
+			$friends_files_qry = "SELECT * FROM files WHERE owner_id = '$friends_username'";
+			$friends_files_result = mysql_query($friends_files_qry);
+			
+			if($friends_files_result)
+			{
+				if(mysql_num_rows($result) > 0)
+				{
+					while ($x < mysql_num_rows($result))
+					{
+						$member = mysql_fetch_assoc($result);
+						echo "<a href='file_settings.php?file_id=".$member['file_id']."'>".$member['file_name']."</a><br>";
+					}
+				}
+			}
+			echo "</td></tr></table>";
+
+		}	
 	}
 	else
 	{
 		echo "You are not friends with this person! Redirecting to your profile in 5 seconds.";
 		echo '<meta http-equiv="Refresh" content="15; URL=http://www.mytrive.com/profile.php">';
 		
-	}*/
+	}
 	?>		
 		</div>	
 
