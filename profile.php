@@ -152,7 +152,7 @@ if($result)
 					echo "<tr>";
 					echo "<td>";
 					$member2 = mysql_fetch_assoc($result2);
-					if(member2['friend1'] != $user_id)
+					if($member2['friend1'] != $user_id)
 					{
 						echo $member2['friend1'];
 					}
