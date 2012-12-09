@@ -138,7 +138,6 @@ if($result)
 		$user_id = $_SESSION['user_id'];
 		echo $user_id."<br>";
 		$qry2 = "SELECT * FROM friends WHERE friend1 = '$user_id' OR friend2 = '$user_id' AND accepted = 1";
-		echo $qry2;
 		$result2 = mysql_query($qry2);
 		$x = 0;
 		
