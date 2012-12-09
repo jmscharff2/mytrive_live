@@ -168,12 +168,12 @@ if($result)
 									$member3 = mysql_fetch_assoc($result3);
 									if($member3['first_name'] != '' && $member3['last_name'] != '')
 									{
-										echo "<a href='friends_profile.php?friends_user_id=".$member3['user_id']."'>".$member3['first_name']." ".$member3['last_name']."</a>";
+										?><a href="friends_profile.php?friends_user_id=<?php echo $member3['user_id']:?>"><?php echo $member3['first_name']." ".$member3['last_name'];?></a><?php
 									}
 									else
 									{
-										echo "<a href= 'friends_profile.php?friends_user_id=".$member3['user_id']."'>".$member3['username']."</a>";
-									}
+										?><a href="friends_profile.php?friends_user_id=<?php echo $member3['user_id']:?>"><?php echo $member3['user_name'];?></a><?php
+																			}
 									$y++;
 								}
 							}
