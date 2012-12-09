@@ -141,7 +141,6 @@ if($result)
 		echo $qry2;
 		$result2 = mysql_query($qry2);
 		$x = 0;
-		$y = 0;
 		
 		?><table border="1">
 		<tr>
@@ -161,6 +160,7 @@ if($result)
 						$friend_id = $member2['friend1'];
 						$qry3 = "SELECT username, first_name, last_name FROM users WHERE user_id = '$friend_id'";
 						$result3 = mysql_query($qry3);
+						$y = 0;
 						if($result3)
 						{
 							if(mysql_num_rows($result3) > 0)
@@ -191,6 +191,7 @@ if($result)
 						$friend_id = $member2['friend2'];
 						$qry3 = "SELECT username, first_name, last_name FROM users WHERE user_id = '$friend_id'";
 						$result3 = mysql_query($qry3);
+						$y = 0;
 						if($result3)
 						{
 							if(mysql_num_rows($result3) > 0)
