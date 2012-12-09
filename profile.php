@@ -222,8 +222,8 @@ if($result)
 				}
 			}
 		}
-		echo "<br><br>";
 		echo "</table>";
+		echo "<br><br>";
 		echo "<table  border='1'>";
 		echo"<tr><td>Pending Friends</td></tr>";
 		
