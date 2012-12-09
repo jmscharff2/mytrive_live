@@ -223,7 +223,7 @@
 				}
 			}
 			
-			$qry3 = "SELECT * FROM files JOIN friends on files.owner_user_id = friends.friend1 OR files.owner_user_id = friends.friend2 WHERE ((file_id = '$file_id') AND (accepted = 1) AND (friends.friend1 = '$user_id' OR friends.friend2 = '$user_id'))";
+			$qry3 = "SELECT * FROM files JOIN friends on files.owner_user_id = friends.friend1 OR files.owner_user_id = friends.friend2 WHERE ((file_id = '$file_id') AND (accepted = 1) AND (friends.friend1 = '$user_id' OR friends.friend2 = '$user_id')) LIMIT 1";
 			$result3 = mysql_query($qry3);
 			$x = 0;
 			if($result3)

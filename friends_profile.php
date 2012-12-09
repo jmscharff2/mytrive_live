@@ -42,12 +42,11 @@ if($friends_user_id == $user_id)
 $security_qry = "SELECT * FROM friends WHERE (friend1 = '$user_id' OR friend2 = '$user_id') AND (friend1 = '$friends_user_id' OR friend2 = '$friends_user_id') AND accepted = 1";
 $security_result = mysql_query($security_qry);
 
-/*
-if($security_result)
+
+if(mysql_num_rows($security_result) > 0)
 {
 
-	if(mysql_num_rows($result) > 0)
-		{*/
+	
 
 	//$security_qry = "SELECT friendship_id, username, user_id FROM friends JOIN users ON friends.friend1 = users.user_id OR friends.friend2 = users.user_id WHERE accepted = 1 AND (friends.friend1 =  '$user_id' OR friends.friend2 = '$user_id') AND (friends.friend1 = '$friend_user_id' OR friends.friend2 = '$friend_user_id')";
 	
@@ -237,7 +236,7 @@ if($security_result)
 			}
 			
 
-	/*	}	
+	
 	}
 	else
 	{
