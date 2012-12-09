@@ -134,7 +134,7 @@ if(!$security_result)
 			$result2 = mysql_query($qry2);
 			$x = 0;
 			
-			?><br><br><br><table border ="1"><tr><td><table border="1">
+			?><br><br><br><table border ="1">
 			<tr><td>Buddy List:</td></tr>
 			<?php
 			if($result2)
@@ -216,7 +216,7 @@ if(!$security_result)
 					}
 				}
 			}
-			echo "</table></td><td>";
+			echo "</table>";
 			echo "<br><br>";
 			
 			$friends_files_qry = "SELECT * FROM files WHERE owner_id = '$friends_username'";
@@ -233,7 +233,7 @@ if(!$security_result)
 					}
 				}
 			}
-			echo "</td></tr></table>";
+			
 
 		}	
 	}
