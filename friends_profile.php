@@ -68,13 +68,13 @@ if($security_result)
 	{
 		if(mysql_num_rows($result) > 0)
 		{
-		$member_username = mysql_fetch_assoc($result);
-		echo $member_username['username']."'s user information:<br><br><br>";
+		$member = mysql_fetch_assoc($result);
+		echo $member['username']."'s user information:<br><br><br>";
 		echo "<table  width='100%' border='1'> ";
 		echo "<form>";
 			while ($x < mysql_num_rows($result))
 			{
-				$member = mysql_fetch_assoc($result);
+				//$member = mysql_fetch_assoc($result);
 				
 				//echo $member['file_name'];
 			
