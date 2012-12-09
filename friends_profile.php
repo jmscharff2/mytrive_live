@@ -243,7 +243,7 @@ if($security_result)
 		echo "You are not friends with this person! Redirecting to your profile in 5 seconds.";
 		echo '<meta http-equiv="Refresh" content="5; URL=http://www.mytrive.com/profile.php">';
 		
-	}*/
+	}
 	?>		
 		</div>	
 
