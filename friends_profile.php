@@ -221,15 +221,15 @@ if(!$security_result)
 			
 			$friends_files_qry = "SELECT * FROM files WHERE owner_id = '$friends_username'";
 			$friends_files_result = mysql_query($friends_files_qry);
-			
+			$x = 0;
 			if($friends_files_result)
 			{
-				if(mysql_num_rows($result) > 0)
+				if(mysql_num_rows($friends_files_result) > 0)
 				{
-					while ($x < mysql_num_rows($result))
+					while ($x < mysql_num_rows($friends_files_result))
 					{
-						$member = mysql_fetch_assoc($result);
-						echo "<a href='file_settings.php?file_id=".$member['file_id']."'>".$member['file_name']."</a><br>";
+						$friends_files_member = mysql_fetch_assoc($result);
+						echo "<a href='file_settings.php?file_id=".$friends_files_member['file_id']."'>".$friends_files_member['file_name']."</a><br>";
 					}
 				}
 			}
