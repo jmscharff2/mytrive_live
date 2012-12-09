@@ -143,7 +143,7 @@ if($result)
 		$result2 = mysql_query($qry2);
 		$x = 0;
 		
-		if($result)
+		if($result2)
 		{
 			if(mysql_num_rows($result2) > 0)
 			{
@@ -156,7 +156,7 @@ if($result)
 					{
 						echo $member2['friend1'];
 					}
-					elseif(member2['friend2'] != $user_id)
+					elseif($member2['friend2'] != $user_id)
 					{
 						echo $member2['friend2'];
 					}
