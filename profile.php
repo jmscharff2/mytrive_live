@@ -198,6 +198,7 @@ if($result)
 						{
 							if(mysql_num_rows($result3) > 0)
 							{
+								echo mysql_num_rows($result3);
 								while($y < mysql_num_rows($result3))
 								{
 									$member3 = mysql_fetch_assoc($result3);
