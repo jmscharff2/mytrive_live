@@ -134,16 +134,19 @@ if($result)
 		}?>
 		
 		
-		<table border="1">
-		<tr>
-		<td><tr>Buddy List:</tr></td>
 		<?php
 		$user_id = $_SESSION['user_id'];
-		echo $user_id;
+		echo $user_id."<br>";
 		$qry2 = "SELECT * FROM friends WHERE friend1 = '$user_id' OR friend2 = '$user_id' AND approved = 1";
+		echo $qry2;
 		$result2 = mysql_query($qry2);
 		$x = 0;
 		
+		
+		?><table border="1">
+		<tr>
+		<td><tr>Buddy List:</tr></td>
+		<?php
 		if($result2)
 		{
 			if(mysql_num_rows($result2) > 0)
