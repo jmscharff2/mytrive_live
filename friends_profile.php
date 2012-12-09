@@ -231,6 +231,7 @@ if($security_result)
 					{
 						$friends_files_member = mysql_fetch_assoc($result);
 						echo "<a href='file_settings.php?file_id=".$friends_files_member['file_id']."'>".$friends_files_member['file_name']."</a><br>";
+						$x++;
 					}
 				}
 			}
