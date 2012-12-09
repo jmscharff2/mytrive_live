@@ -168,11 +168,12 @@ if($result)
 									$member3 = mysql_fetch_assoc($result3);
 									if($member3['first_name'] != '' && $member3['last_name'] != '')
 									{
-										echo $member3['first_name']." ".$member3['last_name']."<a href='#'>test</a>";
+										echo "<a href=friends_profile.php?friend_user_id=".$member3['user_id'].">".$member3['first_name']." ".$member3['last_name']."</a>";
 									}
 									else
 									{
-										echo $member3['username']."<a href='#'>test</a>";
+										echo "<a href=friends_profile.php?friend_user_id=".$member3['user_id'].">".$member3['username']."</a>";
+
 									}
 									$y++;
 								}
@@ -200,11 +201,11 @@ if($result)
 									$member3 = mysql_fetch_assoc($result3);
 									if($member3['first_name'] != '' && $member3['last_name'] != '')
 									{
-										echo $member3['first_name']." ".$member3['last_name'];
+										echo "<a href=friends_profile.php?friend_user_id=".$member3['user_id'].">".$member3['first_name']." ".$member3['last_name']."</a>";
 									}
 									else
 									{
-										echo $member3['username'];
+										echo "<a href=friends_profile.php?friend_user_id=".$member3['user_id'].">".$member3['username']."</a>";
 									}
 									$y++;
 								}
