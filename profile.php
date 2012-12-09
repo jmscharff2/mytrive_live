@@ -245,23 +245,23 @@ if($result)
 					{
 						echo "In Friend1 Pending: ";
 						$friend_id = $member4['friend1'];
-						$qry3 = "SELECT username, first_name, last_name FROM users WHERE user_id = '$friend_id'";
-						$result3 = mysql_query($qry3);
+						$qry5 = "SELECT username, first_name, last_name FROM users WHERE user_id = '$friend_id'";
+						$result5 = mysql_query($qry5);
 						$y = 0;
-						if($result3)
+						if($result5)
 						{
-							if(mysql_num_rows($result3) > 0)
+							if(mysql_num_rows($result5) > 0)
 							{
-								while($y < mysql_num_rows($result3))
+								while($y < mysql_num_rows($result5))
 								{
-									$member3 = mysql_fetch_assoc($result3);
-									if($member3['first_name'] != '' && $member3['last_name'] != '')
+									$member5 = mysql_fetch_assoc($result3);
+									if($member5['first_name'] != '' && $member5['last_name'] != '')
 									{
-										echo $member3['first_name']." ".$member3['last_name'];
+										echo $member5['first_name']." ".$member5['last_name'];
 									}
 									else
 									{
-										echo $member3['username'];
+										echo $member5['username'];
 									}
 									$y++;
 								}
@@ -277,24 +277,24 @@ if($result)
 					{
 						echo "In Friend2 Pending: ";
 						$friend_id = $member4['friend2'];
-						$qry3 = "SELECT username, first_name, last_name FROM users WHERE user_id = '$friend_id'";
-						$result3 = mysql_query($qry3);
+						$qry5 = "SELECT username, first_name, last_name FROM users WHERE user_id = '$friend_id'";
+						$result5 = mysql_query($qry5);
 						$y = 0;
-						if($result3)
+						if($result5)
 						{
-							if(mysql_num_rows($result3) > 0)
+							if(mysql_num_rows($result5) > 0)
 							{
 								
-								while($y < mysql_num_rows($result3))
+								while($y < mysql_num_rows($result5))
 								{
-									$member3 = mysql_fetch_assoc($result3);
-									if($member3['first_name'] != '' && $member3['last_name'] != '')
+									$member5 = mysql_fetch_assoc($result5);
+									if($member5['first_name'] != '' && $member5['last_name'] != '')
 									{
-										echo $member3['first_name']." ".$member3['last_name'];
+										echo $member5['first_name']." ".$member5['last_name'];
 									}
 									else
 									{
-										echo $member3['username'];
+										echo $member5['username'];
 									}
 									$y++;
 								}
