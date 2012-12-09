@@ -140,7 +140,7 @@ if($security_result)
 						echo "<tr>";
 						echo "<td>";
 						$member4 = mysql_fetch_assoc($result2);
-						if($member4['friend1'] != $user_id)
+						if($member4['friend1'] != $friends_user_id)
 						{
 							$friend_id = $member4['friend1'];
 							$qry3 = "SELECT username, first_name, last_name FROM users WHERE user_id = '$friend_id'";
@@ -171,7 +171,7 @@ if($security_result)
 							}
 							
 						}
-						elseif($member4['friend2'] != $user_id)
+						elseif($member4['friend2'] != $friends_user_id)
 						{
 							$friend_id = $member4['friend2'];
 							$qry3 = "SELECT username, first_name, last_name FROM users WHERE user_id = '$friend_id'";
