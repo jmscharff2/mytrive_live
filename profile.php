@@ -223,8 +223,8 @@ if($result)
 			}
 		}
 		echo "<br><br>";
-		echo "</table border='1'>";
-		echo "<table>";
+		echo "</table>";
+		echo "<table  border='1'>";
 		echo"<tr><td>Pending Friends</td></tr>";
 		
 		$qry4 = "SELECT * FROM friends WHERE friend1 = '$user_id' OR friend2 = '$user_id' AND accepted = 0";
