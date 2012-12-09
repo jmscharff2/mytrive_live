@@ -20,8 +20,9 @@ session_start();
 	$request_friend = $_GET['friend_username'];
 	
 	$qry = "SELECT user_id FROM users WHERE username = '$request_friend' LIMIT 1";
+	echo $qry;
 	$result = mysql_query($qry);
-	
+	$x = 0;
 	if($result)
 	{
 		if(mysql_num_rows($result) > 0)
@@ -59,11 +60,11 @@ session_start();
 	
 	if($result3)
 	{
-		header("location: profile.php");
+		//header("location: profile.php");
 	}
 	else
 	{
-		header("location: profile_error.php");
+		//header("location: profile_error.php");
 	}
 		
 
