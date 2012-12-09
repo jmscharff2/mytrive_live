@@ -141,7 +141,7 @@ if($result)
 		echo $qry2;
 		$result2 = mysql_query($qry2);
 		$x = 0;
-		
+		$y = 0;
 		
 		?><table border="1">
 		<tr>
@@ -158,11 +158,62 @@ if($result)
 					$member2 = mysql_fetch_assoc($result2);
 					if($member2['friend1'] != $user_id)
 					{
-						echo $member2['friend1'];
+						$friend_id = $member2['friend1'];
+						$qry3 = "SELECT username, first_name, last_name FROM users WHERE user_id = '$friend_id'";
+						$result3 = mysql_query($qry3);
+						if($result3)
+						{
+							if(mysql_num_rows($result3) > 0)
+							{
+								while($y < mysql_num_rows($result3))
+								{
+									$member3 = mysql_fetch_assoc($result3);
+									if($member3['first_name'] != '' && $member3['last_name'] != '')
+									{
+										echo $member3['first_name']." ".$member3['last_name'];
+									}
+									else
+									{
+										echo $member3['username'];
+									}
+									$y++;
+								}
+							}
+						}
+						else
+						{
+							echo "Friend Find Error :(";
+						}
+						
 					}
 					elseif($member2['friend2'] != $user_id)
 					{
-						echo $member2['friend2'];
+						$friend_id = $member2['friend2'];
+						$qry3 = "SELECT username, first_name, last_name FROM users WHERE user_id = '$friend_id'";
+						$result3 = mysql_query($qry3);
+						if($result3)
+						{
+							if(mysql_num_rows($result3) > 0)
+							{
+								while($y < mysql_num_rows($result3))
+								{
+									$member3 = mysql_fetch_assoc($result3);
+									if($member3['first_name'] != '' && $member3['last_name'] != '')
+									{
+										echo $member3['first_name']." ".$member3['last_name'];
+									}
+									else
+									{
+										echo $member3['username'];
+									}
+									$y++;
+								}
+							}
+						}
+						else
+						{
+							echo "Friend Find Error :(";
+						}
 					}
 					echo "</td>";
 					echo "</tr>";
