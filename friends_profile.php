@@ -35,6 +35,7 @@ $username = $_SESSION['username'];
 $user_id = $_SESSION['user_id'];
 
 $security_qry = "SELECT * FROM friends WHERE (friend1 = '$user_id' OR friend2 = '$user_id') AND (friend1 = '$friend_user_id' OR friend2 = '$friend_user_id') AND accepted = 1";
+echo $security_qry;
 $security_result = mysql_query($security_qry);
 
 if($security_result)
@@ -237,7 +238,7 @@ if($security_result)
 	else
 	{
 		echo "You are not friends with this person! Redirecting to your profile in 5 seconds.";
-		echo '<meta http-equiv="Refresh" content="5; URL=http://www.mytrive.com/profile.php">';
+		echo '<meta http-equiv="Refresh" content="15; URL=http://www.mytrive.com/profile.php">';
 		
 	}
 	?>		
