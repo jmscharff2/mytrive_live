@@ -232,8 +232,6 @@ if($result)
 		$x = 0;
 		echo "<table  border='1'>";
 		echo"<tr><td>Pending Friends</td></tr>";
-		echo "<tr>";
-		echo "<td>";
 		if($result4)
 		{
 			if(mysql_num_rows($result4) > 0)
@@ -241,6 +239,8 @@ if($result)
 				
 				while($x < mysql_num_rows($result4))
 				{
+					echo "<tr>";
+					echo "<td>";
 					$member4 = mysql_fetch_assoc($result4);
 					
 					if($member4['friend1'] != $user_id)
