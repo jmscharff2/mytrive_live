@@ -222,7 +222,7 @@
 				}
 			}
 			
-			$qry3 = "SELECT * FROM files JOIN friends on files.owner_user_id = friends.'$user_id' OR files.owner_user_id = friends.'$user_id' WHERE file_id = '$file_id'";
+			$qry3 = "SELECT * FROM files JOIN friends on files.owner_user_id = friends.friend1 OR files.owner_user_id = friends.friend2 WHERE file_id = '$file_id'";
 			echo $qry3;
 			
 						
