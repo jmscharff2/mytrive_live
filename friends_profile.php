@@ -43,7 +43,7 @@ $security_qry = "SELECT * FROM friends WHERE (friend1 = '$user_id' OR friend2 = 
 $security_result = mysql_query($security_qry);
 
 
-if($security_result)
+if(!$security_result)
 {
 	if(mysql_num_rows($result) > 0)
 		{
@@ -240,7 +240,7 @@ if($security_result)
 	else
 	{
 		echo "You are not friends with this person! Redirecting to your profile in 5 seconds.";
-		echo '<meta http-equiv="Refresh" content="15; URL=http://www.mytrive.com/profile.php">';
+		echo '<meta http-equiv="Refresh" content="5; URL=http://www.mytrive.com/profile.php">';
 		
 	}
 	?>		
