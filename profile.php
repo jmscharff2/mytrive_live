@@ -152,10 +152,10 @@ if($result)
 				{
 					echo "<tr>";
 					echo "<td>";
-					$member2 = mysql_fetch_assoc($result2);
-					if($member2['friend1'] != $user_id)
+					$member4 = mysql_fetch_assoc($result2);
+					if($member4['friend1'] != $user_id)
 					{
-						$friend_id = $member2['friend1'];
+						$friend_id = $member4['friend1'];
 						$qry3 = "SELECT username, first_name, last_name FROM users WHERE user_id = '$friend_id'";
 						$result3 = mysql_query($qry3);
 						$y = 0;
@@ -184,9 +184,9 @@ if($result)
 						}
 						
 					}
-					elseif($member2['friend2'] != $user_id)
+					elseif($member4['friend2'] != $user_id)
 					{
-						$friend_id = $member2['friend2'];
+						$friend_id = $member4['friend2'];
 						$qry3 = "SELECT username, first_name, last_name FROM users WHERE user_id = '$friend_id'";
 						$result3 = mysql_query($qry3);
 						$y = 0;
@@ -222,6 +222,93 @@ if($result)
 				}
 			}
 		}
+		
+		$qry4 = "SELECT * FROM friends WHERE friend1 = '$user_id' OR friend2 = '$user_id' AND accepted = 0";
+		$result4 = mysql_query($qry4);
+		$x = 0;
+		echo "<tr>";
+		echo "<td>"
+		if($result4)
+		{
+			if(mysql_num_rows($result4) > 0)
+			{
+				
+				while($x < mysql_num_rows($result4))
+				{
+					$member4 = mysql_fetch_assoc($result4);
+					
+					if($member4['friend1'] != $user_id)
+					{
+						$friend_id = $member4['friend1'];
+						$qry3 = "SELECT username, first_name, last_name FROM users WHERE user_id = '$friend_id'";
+						$result3 = mysql_query($qry3);
+						$y = 0;
+						if($result3)
+						{
+							if(mysql_num_rows($result3) > 0)
+							{
+								while($y < mysql_num_rows($result3))
+								{
+									$member3 = mysql_fetch_assoc($result3);
+									if($member3['first_name'] != '' && $member3['last_name'] != '')
+									{
+										echo $member3['first_name']." ".$member3['last_name'];
+									}
+									else
+									{
+										echo $member3['username'];
+									}
+									$y++;
+								}
+							}
+						}
+						else
+						{
+							echo "Friend Find Error :(";
+						}
+						
+					}
+					elseif($member4['friend2'] != $user_id)
+					{
+						$friend_id = $member4['friend2'];
+						$qry3 = "SELECT username, first_name, last_name FROM users WHERE user_id = '$friend_id'";
+						$result3 = mysql_query($qry3);
+						$y = 0;
+						if($result3)
+						{
+							if(mysql_num_rows($result3) > 0)
+							{
+								
+								while($y < mysql_num_rows($result3))
+								{
+									$member3 = mysql_fetch_assoc($result3);
+									if($member3['first_name'] != '' && $member3['last_name'] != '')
+									{
+										echo $member3['first_name']." ".$member3['last_name'];
+									}
+									else
+									{
+										echo $member3['username'];
+									}
+									$y++;
+								}
+							}
+						}
+						else
+						{
+							echo "Friend Find Error :(";
+						}
+					}
+				
+					$x++;	
+					echo "</td>";
+					echo "</tr>";
+				}
+			}
+		}
+
+
+		
 
 		?>
 		</table>
