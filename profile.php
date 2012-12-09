@@ -227,7 +227,7 @@ if($result)
 		
 		
 		$qry4 = "SELECT * FROM friends WHERE (friend1 = '$user_id' OR friend2 = '$user_id') AND accepted = 0";
-		echo $qry4;
+		//echo $qry4;
 		$result4 = mysql_query($qry4);
 		$x = 0;
 		echo "<table  border='1'>";
@@ -245,7 +245,6 @@ if($result)
 					
 					if($member4['friend1'] != $user_id)
 					{
-						echo "In Friend1 Pending: ";
 						$friend_id = $member4['friend1'];
 						$qry5 = "SELECT username, first_name, last_name FROM users WHERE user_id = '$friend_id'";
 						$result5 = mysql_query($qry5);
@@ -277,7 +276,6 @@ if($result)
 					}
 					elseif($member4['friend2'] != $user_id)
 					{
-						echo "In Friend2 Pending: ";
 						$friend_id = $member4['friend2'];
 						$qry5 = "SELECT username, first_name, last_name FROM users WHERE user_id = '$friend_id'";
 						$result5 = mysql_query($qry5);
