@@ -157,7 +157,6 @@ if($result)
 					$member2 = mysql_fetch_assoc($result2);
 					if($member2['friend1'] != $user_id)
 					{
-						echo "In Friend1 Loop<br>";
 						$friend_id = $member2['friend1'];
 						$qry3 = "SELECT username, first_name, last_name FROM users WHERE user_id = '$friend_id'";
 						$result3 = mysql_query($qry3);
@@ -189,11 +188,8 @@ if($result)
 					}
 					elseif($member2['friend2'] != $user_id)
 					{
-						echo "In Friend2 loop<br>";
 						$friend_id = $member2['friend2'];
-						echo friend_id."<br>";
 						$qry3 = "SELECT username, first_name, last_name FROM users WHERE user_id = '$friend_id'";
-						echo $qry3;
 						$result3 = mysql_query($qry3);
 						$y = 0;
 						if($result3)
