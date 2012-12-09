@@ -255,7 +255,7 @@ if($result)
 							{
 								while($y < mysql_num_rows($result5))
 								{
-									$member5 = mysql_fetch_assoc($result3);
+									$member5 = mysql_fetch_assoc($result5);
 									if($member5['first_name'] != '' && $member5['last_name'] != '')
 									{
 										echo $member5['first_name']." ".$member5['last_name'];
