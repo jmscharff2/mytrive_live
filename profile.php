@@ -191,14 +191,16 @@ if($result)
 					{
 						echo "In Friend2 loop<br>";
 						$friend_id = $member2['friend2'];
+						echo friend_id."<br>";
 						$qry3 = "SELECT username, first_name, last_name FROM users WHERE user_id = '$friend_id'";
+						echo $qry3;
 						$result3 = mysql_query($qry3);
 						$y = 0;
 						if($result3)
 						{
 							if(mysql_num_rows($result3) > 0)
 							{
-								echo mysql_num_rows($result3);
+								
 								while($y < mysql_num_rows($result3))
 								{
 									$member3 = mysql_fetch_assoc($result3);
