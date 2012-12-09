@@ -132,7 +132,7 @@ if($result)
 		{
 			echo $member['fb_id'];
 		}?>
-		</div>
+		
 		
 		<table>
 		<tr>
@@ -170,7 +170,7 @@ if($result)
 		?>
 		</table>
 			
-			
+		</div>	
 
 	</div>
 	</div>
