@@ -17,8 +17,8 @@ session_start();
 	}
 	
 	$username = $_SESSION['username'];
-	$request_friend = $_GET['friend_username'];
-	
+	$request_friend = $_POST['friend_username'];
+	echo $request_friend;
 	$qry = "SELECT user_id FROM users WHERE username = '$request_friend' LIMIT 1";
 	echo $qry;
 	$result = mysql_query($qry);
