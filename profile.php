@@ -142,7 +142,6 @@ if($result)
 		$x = 0;
 		
 		?><table border="1">
-		<tr>
 		<td><tr>Buddy List:</tr></td>
 		<?php
 		if($result2)
