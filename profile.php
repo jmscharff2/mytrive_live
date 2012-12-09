@@ -227,7 +227,7 @@ if($result)
 		$result4 = mysql_query($qry4);
 		$x = 0;
 		echo "<tr>";
-		echo "<td>"
+		echo "<td>";
 		if($result4)
 		{
 			if(mysql_num_rows($result4) > 0)
