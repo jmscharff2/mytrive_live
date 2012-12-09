@@ -28,11 +28,11 @@ session_start();
 	
 	if($result3)
 	{
-		header("location: file_settings.php?file_id='$file_id'");
+		header("location: file_settings.php?file_id=$file_id");
 	}
 	else
 	{
-		header("location: file_settings.php?file_id='$file_id'");
+		header("location: file_settings.php?file_id=$file_id");
 	}
 		
 
