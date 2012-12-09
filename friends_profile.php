@@ -35,7 +35,6 @@ $username = $_SESSION['username'];
 $user_id = $_SESSION['user_id'];
 
 $security_qry = "SELECT * FROM friends WHERE (friend1 = '$user_id' OR friend2 = '$user_id') AND (friend1 = '$friends_user_id' OR friend2 = '$friends_user_id') AND accepted = 1";
-echo $security_qry;
 $security_result = mysql_query($security_qry);
 
 /*
@@ -58,7 +57,7 @@ if($security_result)
 		die("Unable to select database");
 	}
 	
-	$username = $_SESSION['username'];
+	//$username = $_SESSION['username'];
 	
 	 
 	$qry = "SELECT * FROM users WHERE user_id = '$friends_user_id'";
