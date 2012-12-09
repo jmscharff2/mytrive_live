@@ -276,8 +276,7 @@ if($result)
 						{
 							echo "Friend Find Error :(";
 						}
-						echo "</td>";
-						echo "</tr>";	
+							
 					}
 					elseif($member4['friend2'] != $user_id)
 					{
@@ -309,8 +308,7 @@ if($result)
 						{
 							echo "Friend Find Error :(";
 						}
-						echo "</td>";
-						echo "</tr>";
+					
 					}
 				
 					$x++;	
