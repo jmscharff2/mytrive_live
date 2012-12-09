@@ -20,7 +20,7 @@ session_start();
 	$request_friend = $_GET['file_id'];
 	
 	$user_id = $_SESSION['user_id'];
-	
+	echo $request_friend."<br>".$user_id."<br>";
 	//$qry3 = "INSERT INTO friends (friend1, friend2) VALUES('$user_id', '$friend_id')";
 	$qry3 = "INSERT INTO file_request (file_id, request_user_id) VALUES('$file_id', '$user_id')";
 	$result3 = mysql_query($qry3);
@@ -28,11 +28,11 @@ session_start();
 	
 	if($result3)
 	{
-		header("location: file_settings.php?file_id='$file_id'");
+		//header("location: file_settings.php?file_id='$file_id'");
 	}
 	else
 	{
-		header("location: file_settings.php?file_id='$file_id'");
+		//header("location: file_settings.php?file_id='$file_id'");
 	}
 		
 
