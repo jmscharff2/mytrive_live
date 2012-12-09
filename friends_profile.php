@@ -42,7 +42,9 @@ if($friends_user_id == $user_id)
 $security_qry = "SELECT * FROM friends WHERE (friend1 = '$user_id' OR friend2 = '$user_id') AND (friend1 = '$friends_user_id' OR friend2 = '$friends_user_id') AND accepted = 1";
 $security_result = mysql_query($security_qry);
 
-echo mysql_num_rows($security_result);
+$rows = mysql_num_rows($security_result);
+
+echo "Rows: ".$rows."<br>";
 if($security_result)
 {
 
