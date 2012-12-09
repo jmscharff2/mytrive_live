@@ -219,6 +219,7 @@ if($result)
 					echo "</td>";
 					echo "</tr>";
 					$x++;
+					$y=0;
 				}
 			}
 		}
