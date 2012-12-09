@@ -60,11 +60,11 @@ session_start();
 	
 	if($result3)
 	{
-		//header("location: profile.php");
+		header("location: profile.php");
 	}
 	else
 	{
-		//header("location: profile_error.php");
+		header("location: profile_error.php");
 	}
 		
 

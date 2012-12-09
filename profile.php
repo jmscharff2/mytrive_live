@@ -318,6 +318,7 @@ if($result)
 
 		?>
 		</table>
+		Add a new Buddy<br>
 		<form action = "request_friend_script.php" method = "POST">
 		<input type="text" name="friend_username" placeholder="Friends Username" onkeypress="return submitenter(this,event)">
 		<input type="submit" text="Add Friend">
