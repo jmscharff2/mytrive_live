@@ -43,7 +43,7 @@ $security_qry = "SELECT * FROM friends WHERE (friend1 = '$user_id' OR friend2 = 
 $security_result = mysql_query($security_qry);
 
 
-if(!$security_result)
+if($security_result)
 {
 	if(mysql_num_rows($result) > 0)
 		{
