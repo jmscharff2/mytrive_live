@@ -43,12 +43,12 @@ $security_qry = "SELECT * FROM friends WHERE (friend1 = '$user_id' OR friend2 = 
 $security_result = mysql_query($security_qry);
 
 $rows = mysql_num_rows($security_result);
-
+/*
 echo "Rows: ".$rows."<br>";
 if($security_result)
 {
 
-	
+*/	
 
 	//$security_qry = "SELECT friendship_id, username, user_id FROM friends JOIN users ON friends.friend1 = users.user_id OR friends.friend2 = users.user_id WHERE accepted = 1 AND (friends.friend1 =  '$user_id' OR friends.friend2 = '$user_id') AND (friends.friend1 = '$friend_user_id' OR friends.friend2 = '$friend_user_id')";
 	
@@ -237,7 +237,7 @@ if($security_result)
 				}
 			}
 			
-
+			/*
 	
 	}
 	else
@@ -245,7 +245,7 @@ if($security_result)
 		echo "You are not friends with this person! Redirecting to your profile in 5 seconds.";
 		echo '<meta http-equiv="Refresh" content="5; URL=http://www.mytrive.com/profile.php">';
 		
-	}
+	}*/
 	?>		
 		</div>	
 
