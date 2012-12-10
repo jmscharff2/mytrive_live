@@ -328,7 +328,7 @@ if($result)
 		Add a new Friend<br>
 		<form action = "request_friend_script.php" method = "POST">
 		<input type="text" name="friend_username" placeholder="Friends Username" onkeypress="return submitenter(this,event)">
-		<input type="submit" text="Add Friend">
+		<input type="submit" value="Add Friend"/> 
 		</form>
 		
 			
