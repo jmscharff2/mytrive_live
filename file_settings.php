@@ -197,10 +197,30 @@
 						$x++;
 						
 					}
-					echo "</table><input type=submit value='Update'/></form>";
+										
 				}
 			
-			
+				echo "</table><input type=submit value='Update'/></form>";
+				echo "Users who would like to have this file shared to them: <br>";
+				$qry4 = "SELECT * FROM files JOIN file_request ON files.file_id = file_request.file_id WHERE owner_user_id = '$user_id'";
+				$result4 = mysql_query($qry4);
+				$x = 0;
+				
+				if($result4)
+				{
+					if(mysql_num_rows($result4) > 0)
+					{
+						while($x < mysql_num_rows($result4))
+						{
+							$member4 = mysql_fetch_assoc($result4);
+							
+							echo "File Name: ".$member4['file_name'];
+							echo "<a href=approve_file_share_script.php?request_id=".$member4['request_id'].">Approve</a>";
+							echo "<a href=reject_file_share_script.php?request_id=".$member4['request_id'].">Reject</a>";
+							echo "<br>";
+						}
+					}
+				}
 
 			}
 			
@@ -243,7 +263,7 @@
 			}
 						
 			?>
-					<center>
+			<center>
 			<div id="fb-root"></div>
 			<script>(function(d, s, id) {
 			  var js, fjs = d.getElementsByTagName(s)[0];
