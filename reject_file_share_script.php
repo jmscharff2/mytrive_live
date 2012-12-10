@@ -20,13 +20,11 @@ session_start();
 	$user_id = $_SESSION['user_id'];
 	$request_id = $_GET['request_id'];
 
-	$qry = "UPDATE files INNER JOIN file_request ON files.file_id = file_request.file_id SET share_with = 'jon@mytrive.com' WHERE files.owner_user_id = '$user_id' AND file_request.request_id = '$request_id' AND share_with = ''";
+	$qry = "DELETE FROM file_request WHERE request_id = '$request_id'";
 	$result = mysql_query($qry);
 	
 	if($result)
 	{
-		$qry2 = "DELETE FROM file_request WHERE request_id = '$request_id'";
-		$result2 = mysql_query($qry2);
 		header("location: profile.php");
 	}
 	else

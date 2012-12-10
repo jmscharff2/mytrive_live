@@ -297,7 +297,7 @@ if($result)
 			echo "</td>";
 			if($ext == 'm4v' || $ext == 'avi' || $ext == 'mkv')
 			{
-				echo "<td><a href='play_video.php?file_id=".$member2['file_id']."'><img src='images/Play.png'height='25%'/></a></td>";	
+				echo "<td><a href='play_video.php?file_id=".$member2['file_id']."'><img src='images/Play.png'height='25'/></a></td>";	
 			}
 			else
 			{
