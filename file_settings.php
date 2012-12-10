@@ -218,6 +218,7 @@
 							echo "<a href=approve_file_share_script.php?request_id=".$member4['request_id'].">Approve</a>";
 							echo "<a href=reject_file_share_script.php?request_id=".$member4['request_id'].">Reject</a>";
 							echo "<br>";
+							$x++;
 						}
 					}
 				}
