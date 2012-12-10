@@ -46,5 +46,5 @@
 	</div>
 	<?php include 'includes/footer.html'?>
 
-	</BDOY>
+	</BODY>
 </HTML>
