@@ -330,7 +330,7 @@ if($result)
 		<input type="text" name="friend_username" placeholder="Friends Username" onkeypress="return submitenter(this,event)">
 		<input type="submit" value="Add Friend"/> 
 		</form>
-		<br><br>Files Users have Requested to be shared: <br>
+
 		<?php
 		$qry6 = "SELECT * FROM files INNER JOIN file_request ON files.file_id = file_request.file_id INNER JOIN users ON file_request.request_user_id = users.user_id WHERE files.owner_user_id = '$user_id' ORDER BY users.username";
 		$result6 = mysql_query($qry6);
@@ -340,10 +340,12 @@ if($result)
 		{
 			if(mysql_num_rows($result6) > 0)
 			{
+				echo "<br><br>Files Users have Requested to be shared: <br><br>";
 				while($x < mysql_num_rows($result6))
 				{
 					$member6 = mysql_fetch_assoc($result6);
-					echo "File Name: ".$member6['file_name'].", Requested by: ".$member6['username']."<br>";
+					echo "File Name: <a href='file_settings.php?file_id=".$member6['file_id']."'>".$member6['file_name']."</a>, Requested by: <a href=friends_profile.php?friends_user_id=".$member6['user_id'].">".$member6['username']."</a><br>";
+					
 					echo "<a href=approve_file_share_script.php?request_id=".$member6['request_id'].">Approve</a>";
 					echo "<a href=reject_file_share_script.php?request_id=".$member6['request_id'].">Reject</a>";
 					$x++;
