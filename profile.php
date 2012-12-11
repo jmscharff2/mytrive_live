@@ -344,7 +344,7 @@ if($result)
 				while($x < mysql_num_rows($result6))
 				{
 					$member6 = mysql_fetch_assoc($result6);
-					echo "File Name: <a href='file_settings.php?file_id=".$member6['file_id']."'>".$member6['file_name']."</a>, Requested by: <a href=friends_profile.php?friends_user_id=".$member6['user_id'].">".$member6['username']."</a><br>";
+					echo "File Name: <a href='file_settings.php?file_id=".$member6['file_id']."'>".$member6['file_name']."</a>, Requested by: <a href=friends_profile.php?friends_user_id=".$member6['user_id'].">".$member6['username']."</a>       ";
 					
 					echo "<a href=approve_file_share_script.php?request_id=".$member6['request_id'].">Approve</a>";
 					echo "<a href=reject_file_share_script.php?request_id=".$member6['request_id'].">Reject</a>";
