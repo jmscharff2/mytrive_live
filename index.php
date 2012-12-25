@@ -34,7 +34,7 @@
 		<form action = "register.php" method = "POST">
 		<input type="text" name="username" class="placeholder" placeholder="username"><br>
 		<input type="password" name="password" class="placeholder" placeholder="password"><br>
-		<input type="password" name="cpassword" class="placeholder" placeholder="confirm password"><br>
+		<input type="password" name="cpassword" class="placeholder" placeholder="confirm password" onkeypress="return submitenter(this,event)"><br>
 		<input type="text" name="code" class="placeholder" placeholder="registration code" onkeypress="return submitenter(this,event)"><br>
 		<input type="submit" value="Register" hidden = "true">
 		</form>

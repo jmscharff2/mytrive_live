@@ -117,11 +117,6 @@
 				$result4 = mysql_query($qry4);
 			}
 	}
-	else
-	{
-		$errmsg_arr[] = 'Registration code not valid';
-		$errflag = true;
-	}
 	
 	
 	/*if(md5($code) != '71e857c186cf11bf9681133d27d3a21c')
