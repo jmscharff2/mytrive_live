@@ -392,16 +392,16 @@ p
 input[type="text"]
 {
 	font-size: 15px;
-	-webkit-border-radius: 10px;
-	-moz-border-radius: 10px;
+	/*-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;*/
 	height: 30px;
 	width: 150px;
 }
 input[type="password"]
 {
 	font-size: 15px;
-	-webkit-border-radius: 10px;
-	-moz-border-radius: 10px;
+	/*-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;*/
 	height: 30px;
 	width: 150px;
 }
