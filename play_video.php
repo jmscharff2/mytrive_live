@@ -89,6 +89,21 @@
 	so.addVariable('file','<?php echo $play_video; ?>');
 	so.write('mediaspace');
 	// ]]></script>
+	
+	
+	<object width="425" height="344">
+  <param name="movie"
+    value="<?php echo $play_video; ?>">
+  </param>
+  <param name="allowFullScreen" value="true"></param>
+  <param name="allowscriptaccess" value="always"></param>
+  <embed src="<?php echo $play_video ?>"
+    type="application/x-shockwave-flash"
+    allowscriptaccess="always"
+    allowfullscreen="true"
+    width="425" height="344">
+  </embed>
+</object>
 
 </center>
 
