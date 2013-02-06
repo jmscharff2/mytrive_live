@@ -22,15 +22,15 @@
 </HEAD>
 <BODY>
 <nav>
-<a href="#"><img src = "images/trive.png" style="margin-top: -10px;"></a>
+<a href="#" ><img src = "images/trive.png" id="logo"></a>
 <ul>
 <li><a href="#">Profile</a></li>
 <li><a href="#">Files</a></li>
 <li><a href="#">Friends</a></li>
-<form>
+
 <li><input type="text" name="username" placeholder="username"/></li>
 <li><input type="password" name="username" placeholder="password"/></li>
-</form>
+
 </ul>
 </nav>
 

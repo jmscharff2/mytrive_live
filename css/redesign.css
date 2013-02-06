@@ -11,9 +11,14 @@ nav
 	left: 0px;
 	background-color: rgba(0, 0, 0, .6);
 	height: 50px;	
-	float: left;
 	width: 100%;
-	
+	position: fixed;
+}
+
+nav a #logo
+{
+	margin-top: -10px;
+	float: left;
 }
 
 a
@@ -28,21 +33,12 @@ body
 	background: black url(../images/redesign_background.jpg) no-repeat center top;
 }
 
-nav ul
-{
-	list-style-type: none;
-	margin-top: -45;
-	margin-right: 100;
-}
-nav li
-{
-	display: inline;
-	float: right;
-}
 
-nav input
+nav ul li input
 {
+	width: 75px;	
 	float: right;
+
 	-webkit-border-top-left-radius: 10px;
 	-khtml-border-radius-topleft: 10px;
 	-moz-border-radius-topleft: 10px;
@@ -64,6 +60,28 @@ nav input
 	border-bottom-right-radius: 10px;
 }
 
+
+nav ul
+{
+	list-style-type: none;
+	margin-left: 70%;
+	margin-top: 15px;
+
+
+}
+nav ul li
+{
+	display: inline;
+
+}
+
+nav li a
+{
+}
+nav li a:hover
+{
+	color: lightblue;
+}
 
 section label
 {
