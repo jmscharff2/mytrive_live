@@ -36,7 +36,8 @@ body
 
 nav ul li input
 {
-	width: 75px;	
+	width: 100px;
+	height: 20px;	
 	float: right;
 
 	-webkit-border-top-left-radius: 10px;
