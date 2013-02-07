@@ -11,6 +11,7 @@
 <TITLE>mytrive redesign</TITLE>
 
 <link rel="stylesheet" type="text/css" href="css/redesign.css" />
+<script type="text/javascript" src="includes/submitenter.js" language="javascript"></script>
 
 
 <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
@@ -25,18 +26,18 @@
 <nav>
 <a href="#" ><img src = "images/trive.png" id="logo"></a>
 <ul>
-<li><a href="#">Profile</a></li>
-<li><a href="#">Files</a></li>
-<li><a href="#">Friends</a></li>
-
-<li><input type="text" name="username" placeholder="username"/></li>
-<li><input type="password" name="username" placeholder="password"/></li>
-
+<li><a href="#">Signup</a></li>
+<li><a href="#">How it Works</a></li>
+<li><a href="#">Why use myTrive</a></li>
+<form action = "login.php" method ="post">
+<li><input type="text" name="username" placeholder="username" onkeypress="return submitenter(this,event)"/></li>
+<li><input type="password" name="username" placeholder="password" onkeypress="return submitenter(this,event)"/></li>
+</form>
 </ul>
 </nav>
 
 <section>
-<form>
+<form action = "register.php" method = "POST">
 <label>Username</label>
 <input type="text" name="username" placeholder="username"/>
 <label>Email</label>
@@ -44,7 +45,7 @@
 <label>Password</label>
 <input type="password" name="password" placeholder="password"/>
 <label>Confirm Password</label>
-<input type="password" name="cpassword" placeholder="confirm password"/>
+<input type="password" name="cpassword" placeholder="confirm password" onkeypress="return submitenter(this,event)"/>
 </form>
 </section>
 
