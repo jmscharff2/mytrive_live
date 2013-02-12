@@ -23,18 +23,21 @@
 
 </HEAD>
 <BODY>
+<div id="nav-banner">
 <nav>
 <a href="#" ><img src = "images/trive.png" id="logo"></a>
 <ul>
 <li><a href="#">Signup</a></li>
 <li><a href="#">How it Works</a></li>
 <li><a href="#">Why use myTrive</a></li>
-<form action = "login.php" method ="post">
-<li><input type="text" name="username" placeholder="username" onkeypress="return submitenter(this,event)"/></li>
-<li><input type="password" name="username" placeholder="password" onkeypress="return submitenter(this,event)"/></li>
-</form>
 </ul>
+<form action = "login.php" method ="post">
+<input type="text" name="username" placeholder="username" onkeypress="return submitenter(this,event)"/>
+<input type="password" name="username" placeholder="password" onkeypress="return submitenter(this,event)"/>
+</form>
+
 </nav>
+</div>
 
 <section>
 <form action = "register.php" method = "POST">
