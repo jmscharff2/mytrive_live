@@ -37,6 +37,7 @@ nav form
 {
 	margin-top: -40px;
 	margin-right: 3%;
+	float: right;
 }
 
 nav input
