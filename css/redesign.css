@@ -30,7 +30,9 @@ a
 
 body
 {
-	background: black url(../images/redesign_background.jpg) no-repeat center top;
+	/*background: url(../images/redesign_background.jpg) no-repeat center top, -webkit-linear-gradient(rgba(7,11,34,0.92) 60.93%, #0a1c3d 100%);*/
+	background: url(../images/redesign_background.jpg) no-repeat center top, black;
+
 	
 }
 
@@ -121,7 +123,7 @@ section
 	background-color: rgba(0, 0, 0, .6);
 	width: 300px;
 	margin-right: 20%;
-	margin-top: 200px;
+	margin-top: -800px;
 	padding: 10 10 10 10;
 	
 	float: right;
@@ -149,8 +151,10 @@ section
 
 article
 {
-	padding-top: 1000px;
-	padding-bottom: 500px;
+	/*padding-top: 1000px;
+	padding-bottom: 500px;*/
+	margin-top: 1000px;
+	margin-bottom: 500px;
 	margin-right: 30%;
 	margin-left: 30%;
 	color: white;
@@ -160,6 +164,104 @@ article p
 {
 	text-align: justify;
 }
+
+
+
+/*price table stuffs here*/
+
+
+.pricing_table {
+	width: 600px; 
+	color: #fff;
+	font-size: 12px;
+	font-family: arial, verdana;
+	line-height: 150%;
+	text-align: center;
+	margin: 100px auto 0 auto;
+	float: left;
+	margin-top: -800px;
+	margin-left: 5%;
+}
+/*Only the direct LI child, not the .features li*/
+.pricing_table>li {
+	background-color: rgba(0, 0, 0, .6);
+	width: 33.33%;
+	float: left;
+	list-style-type: none;
+	/*For smooth hover effects if .active is replaced by :hover*/
+	transition: all 0.2s;
+}
+.pricing_table>li.active {
+	background-color: rgba(25, 81, 149, 0.8);
+	transform: scale(1.03);
+	box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.5);
+}
+.pricing_table h3 {
+	text-transform: uppercase;
+	padding: 15px 0;
+	font-size: 14px;
+	font-weight: bold;
+}
+.pricing_table .price_body {
+	width: 125px;
+	height: 125px;
+	margin: 0 auto 15px auto;
+	border: 2px solid #fff;
+	border-radius: 100%;
+	display: table;
+}
+.pricing_table .price {
+	font-size: 30px;
+	font-weight: bold;
+	text-transform: uppercase;
+	/*Lets vertically center align the price now*/
+	vertical-align: middle;
+	display: table-cell;
+}
+.pricing_table .price .price_figure {
+	display: block;
+}
+.pricing_table .price .price_term {
+	font-size: 11px;
+	font-weight: normal;
+}
+
+.pricing_table .features li {
+	list-style-type: none;
+	padding: 5px 0;
+}
+
+.pricing_table .footer {
+	padding: 10px;
+	background-color: rgba(0, 0, 0, .6);
+	margin-top: 10px;
+}
+.pricing_table .footer .action_button{
+	color: #fff;
+	font-size: 11px;
+	display: inline-block;
+	text-decoration: none;
+	font-weight: bold;
+	background: #000;
+	padding: 4px 20px;
+	border-radius: 15px;
+	background-color: rgba(25, 81, 149, 0.6);
+}
+.pricing_table li.active .footer .action_button {
+	background-color: rgba(25, 81, 149, 0.6);
+}
+
+.clr {clear: both;}
+
+
+
+
+
+
+
+
+
+/*Media Queries below for nice responsive design stuffs*/
 @media screen {
 	body {
 		width: 100%;

@@ -49,11 +49,11 @@ $(document).ready(function($) {
             window.location.hash = target;
         }); 
         }
-        else
+        
         {
         // Animate the scroll bar action so its smooth instead of a hard jump
         $('html, body').stop().animate({
-            'scrollTop' : $(target).offset().top +800
+            'scrollTop' : $(target).offset().top -100//+800
         }, 900, 'swing', function() {
             window.location.hash = target;
         });
@@ -94,6 +94,82 @@ $(document).ready(function($) {
 <input type="password" name="cpassword" placeholder="confirm password" onkeypress="return submitenter(this,event)"/>
 </form>
 </section>
+
+<!--pricing table-->
+<ul class="pricing_table">
+	<li>
+		<h3>Starter</h3>
+		<div class="price_body">
+			<div class="price">
+				Free
+			</div>
+		</div>
+		<div class="features">
+			<ul>
+				<li>Premium Profile Listing</li>
+				<li>Unlimited File Access</li>
+				<li>Free Appointments</li>
+				<li><strong>5 Bonus Points</strong> every month</li>
+				<li>Customizable Profile Page</li>
+				<li><strong>2 months</strong> support</li>
+			</ul>
+		</div>
+		<div class="footer">
+			<a href="#" class="action_button">Get Started</a>
+		</div>
+	</li>
+	<!-- Active/Hover styles -->
+	<li class="active">
+		<h3>Basic</h3>
+		<div class="price_body">
+			<div class="price">
+				<span class="price_figure">$24</span>
+				<span class="price_term">per month</span>
+			</div>
+		</div>
+		<div class="features">
+			<ul>
+				<li>Premium Profile Listing</li>
+				<li>Unlimited File Access</li>
+				<li>Free Appointments</li>
+				<li><strong>20 Bonus Points</strong> every month</li>
+				<li>Customizable Profile Page</li>
+				<li><strong>6 months</strong> support</li>
+			</ul>
+		</div>
+		<div class="footer">
+			<a href="#" class="action_button">Get Started</a>
+		</div>
+	</li>
+	<li>
+		<h3>Premium</h3>
+		<div class="price_body">
+			<div class="price">
+				<span class="price_figure">$49</span>
+				<span class="price_term">per month</span>
+			</div>
+		</div>
+		<div class="features">
+			<ul>
+				<li>Premium Profile Listing</li>
+				<li>Unlimited File Access</li>
+				<li>Free Appointments</li>
+				<li><strong>50 Bonus Points</strong> every month</li>
+				<li>Customizable Profile Page</li>
+				<li><strong>Lifetime</strong> support</li>
+			</ul>
+		</div>
+		<div class="footer">
+			<a href="#" class="action_button">Get Started</a>
+		</div>
+	</li>
+	<!-- To prevent .pricing_table height collapse(as its children are floated) -->
+	<div class="clr"></div>
+</ul>
+
+<!--pricing table here-->
+
+
 
 
 <article id="how_it_works">
