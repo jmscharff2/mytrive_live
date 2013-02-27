@@ -32,8 +32,9 @@ body
 {
 	/*background: url(../images/redesign_background.jpg) no-repeat center top, -webkit-linear-gradient(rgba(7,11,34,0.92) 60.93%, #0a1c3d 100%);*/
 	background: url(../images/redesign_background.jpg) no-repeat center top, black;
+	-webkit-background-size: cover;
+	background-size: 100% auto;
 
-	
 }
 
 nav form
@@ -268,21 +269,21 @@ article p
 		
 	}
 }
-@media all and(max-width: 800px) and (min-width: 600px)
+
+@media all and  (max-width: 1250px) and (min-width: 975px)
 {
-	nav ul{
-		margin-left: 20%;
+	.pricing_table
+	{
+		/*margin-top: -400px;*/
+		width: 400px;
 	}
-
-
 }
 
-@media all and (max-width: 600px) and (min-width: 400px)
+@media all and (max-width: 975px) and (min-width: 500px)
 {
-	/*body{
-		background: pink;
+	body{
+		background: black;
 	}
-	*/
 	nav ul{
 		display: none;
 	}
@@ -297,6 +298,43 @@ article p
 	{
 		margin-right: 5%;
 		margin-left: 5%;	
+	}
+	.pricing_table
+	{
+		width: 800px;
+		margin-top: -400px;
+
+	}
+}
+
+@media all and (max-width: 500px)
+{
+	body{
+		background: black;
+	}
+	nav ul{
+		display: none;
+	}
+	section
+	{
+		width: 90%;
+		margin-right: 5%;
+		margin-left: 5%;
+	}
+	article
+	{
+		margin-right: 5%;
+		margin-left: 5%;
+	}
+	.pricing_table
+	{
+		width: 400px;
+		margin-top: -400px;
+
+	}
+	.pricing_table .price_body 
+	{
+		border: 0px solid #fff;
 	}
 }
 

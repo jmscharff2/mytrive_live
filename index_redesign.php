@@ -24,48 +24,48 @@
 
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
+
 	<script>
-$(document).ready(function($) {
-    $('a[href^="#"]').bind('click.smoothscroll', function(e) {
-        e.preventDefault();
-        
-        // Get the current target hash
-        var target = this.hash;
-        
-        if(target == '#nav-banner')
-        {
-	         $('html, body').stop().animate({
-            'scrollTop' : 0
-        }, 900, 'swing', function() {
-            window.location.hash = target;
-        });
-
-        }
-        else if(target == '#signup')
-        {
-	         $('html, body').stop().animate({
-            'scrollTop' : $(target).offset().top -100
-        }, 900, 'swing', function() {
-            window.location.hash = target;
-        }); 
-        }
-        
-        {
-        // Animate the scroll bar action so its smooth instead of a hard jump
-        $('html, body').stop().animate({
-            'scrollTop' : $(target).offset().top -100//+800
-        }, 900, 'swing', function() {
-            window.location.hash = target;
-        });
-        }
-    });
-});
+		$(document).ready(function($) {
+		    $('a[href^="#"]').bind('click.smoothscroll', function(e) {
+		        e.preventDefault();
+		        
+		        // Get the current target hash
+		        var target = this.hash;
+		        
+		        if(target == '#nav-banner')
+		        {
+			         $('html, body').stop().animate({
+		            'scrollTop' : 0
+		        }, 900, 'swing', function() {
+		            window.location.hash = target;
+		        });
+		
+		        }
+		        else if(target == '#signup')
+		        {
+			         $('html, body').stop().animate({
+		            'scrollTop' : $(target).offset().top -100
+		        }, 900, 'swing', function() {
+		            window.location.hash = target;
+		        }); 
+		        }
+		        
+		        {
+		        // Animate the scroll bar action so its smooth instead of a hard jump
+		        $('html, body').stop().animate({
+		            'scrollTop' : $(target).offset().top -100//+800
+		        }, 900, 'swing', function() {
+		            window.location.hash = target;
+		        });
+		        }
+		    });
+		});
 	</script>
-
-
-
 </HEAD>
+
 <BODY>
+<!--top banner-->
 <div id="nav-banner">
 <nav>
 <a href="#nav-banner" ><img src = "images/trive.png" id="logo"></a>
@@ -78,10 +78,11 @@ $(document).ready(function($) {
 <input type="text" name="username" placeholder="username" onkeypress="return submitenter(this,event)"/>
 <input type="password" name="username" placeholder="password" onkeypress="return submitenter(this,event)"/>
 </form>
-
 </nav>
 </div>
 
+
+<!--registration form -->
 <section>
 <form action = "register.php" method = "POST" id="signup">
 <label>Username</label>
@@ -91,14 +92,39 @@ $(document).ready(function($) {
 <label>Password</label>
 <input type="password" name="password" placeholder="password"/>
 <label>Confirm Password</label>
-<input type="password" name="cpassword" placeholder="confirm password" onkeypress="return submitenter(this,event)"/>
+<input type="password" name="cpassword" placeholder="confirm password"/>
+<label>Registration Code</label>
+<input type="text" name="code" placeholder="registration code"  onkeypress="return submitenter(this,event)"/>
 </form>
 </section>
 
 <!--pricing table-->
 <ul class="pricing_table">
+	<!-- Active/Hover styles -->
 	<li>
-		<h3>Starter</h3>
+		<h3>More Filez</h3>
+		<div class="price_body">
+			<div class="price">
+				<span class="price_figure">$15</span>
+				<span class="price_term">per month</span>
+			</div>
+		</div>
+		<div class="features">
+			<ul>
+				<li>100Gb Storage</li>
+				<li>50Gb Up/Download Per Month</li>
+				<li>Unlimited Sharing</li>
+				<li><strong>20</strong> invites for friends</li>
+				<li>Customizable Profile Page</li>
+			</ul>
+		</div>
+		<div class="footer">
+			<a href="#" class="action_button">Coming Soon!</a>
+		</div>
+	</li>
+	
+	<li class="active">
+		<h3>Some Filez</h3>
 		<div class="price_body">
 			<div class="price">
 				Free
@@ -106,61 +132,37 @@ $(document).ready(function($) {
 		</div>
 		<div class="features">
 			<ul>
-				<li>Premium Profile Listing</li>
-				<li>Unlimited File Access</li>
-				<li>Free Appointments</li>
-				<li><strong>5 Bonus Points</strong> every month</li>
+				<li>30Gb Free Storage</li>
+				<li>5Gb Up/Download Per Month</li>
+				<li>Unlimited Sharing</li>
+				<li><strong>10</strong> invites for friends</li>
 				<li>Customizable Profile Page</li>
-				<li><strong>2 months</strong> support</li>
 			</ul>
 		</div>
 		<div class="footer">
-			<a href="#" class="action_button">Get Started</a>
+			<a href="#" class="action_button">Signup</a>
 		</div>
 	</li>
-	<!-- Active/Hover styles -->
-	<li class="active">
-		<h3>Basic</h3>
-		<div class="price_body">
-			<div class="price">
-				<span class="price_figure">$24</span>
-				<span class="price_term">per month</span>
-			</div>
-		</div>
-		<div class="features">
-			<ul>
-				<li>Premium Profile Listing</li>
-				<li>Unlimited File Access</li>
-				<li>Free Appointments</li>
-				<li><strong>20 Bonus Points</strong> every month</li>
-				<li>Customizable Profile Page</li>
-				<li><strong>6 months</strong> support</li>
-			</ul>
-		</div>
-		<div class="footer">
-			<a href="#" class="action_button">Get Started</a>
-		</div>
-	</li>
+	
 	<li>
-		<h3>Premium</h3>
+		<h3>Lots of Filez</h3>
 		<div class="price_body">
 			<div class="price">
-				<span class="price_figure">$49</span>
+				<span class="price_figure">$50</span>
 				<span class="price_term">per month</span>
 			</div>
 		</div>
 		<div class="features">
 			<ul>
-				<li>Premium Profile Listing</li>
-				<li>Unlimited File Access</li>
-				<li>Free Appointments</li>
-				<li><strong>50 Bonus Points</strong> every month</li>
+				<li>1Tb Storage</li>
+				<li>Unlimited Bandwidth</li>
+				<li>Unlimited Sharing</li>
+				<li><strong>50</strong> invites for friends</li>
 				<li>Customizable Profile Page</li>
-				<li><strong>Lifetime</strong> support</li>
 			</ul>
 		</div>
 		<div class="footer">
-			<a href="#" class="action_button">Get Started</a>
+			<a href="#" class="action_button">Coming Soon!</a>
 		</div>
 	</li>
 	<!-- To prevent .pricing_table height collapse(as its children are floated) -->
@@ -170,7 +172,7 @@ $(document).ready(function($) {
 <!--pricing table here-->
 
 
-
+<!--information about mytrive -->
 
 <article id="how_it_works">
 <h1>How does mytrive work?</h1>
