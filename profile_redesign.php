@@ -149,7 +149,7 @@ $(document).ready(function(){
 
 	<section id="profile_content">
 		<section id="profile_picture">
-			<img src="../images/placeholder.jpg" height="20%"/>
+			<img src="../images/placeholder.jpg" height="100px"/>
 		</section>
 		Username: Jonathan Scharff<br>
 		Storage: 2Gb/10Gb
