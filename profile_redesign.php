@@ -123,7 +123,7 @@ $(document).ready(function(){
 	<section id="file_content">
 	<h2>Files</h2>
 				<ul id ="file_list">
-				<li class="files" id="Movie">Movie<img src="../images/placeholder.jpg"/></li>
+				<li class="files" id="Movie"><img src="../images/placeholder.jpg"/></li>
 				<li class="files" id="Movie"><img src="../images/placeholder.jpg"/></li>
 				<li class="files" id="Books"><img src="../images/placeholder.jpg"/></li>
 				<li class="files" id="Movie"><img src="../images/placeholder.jpg"/></li>
