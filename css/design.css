@@ -97,6 +97,10 @@ section#content
 	word-wrap: break-word;
 	float: left;
 }
+#content a
+{
+	color: lightblue;
+}
 
 #profile_picture img
 {
@@ -163,7 +167,7 @@ section#content
 	-moz-border-radius-bottomright: 5px;
 	border-bottom-right-radius: 5px;
 
-
+~
 }
 
 #friend_content
@@ -180,6 +184,20 @@ section#content
 }
 
 #filters
+{
+	background-color: rgba(0, 0, 0, .6);
+	color: white;
+	float: right;
+	top: 60px;
+	right: 0px;
+	position: fixed;
+	height: 150px;
+	width: 100px;
+	text-align: center;
+	padding-top: 5px;
+}
+
+#filters_menu
 {
 	background-color: rgba(0, 0, 0, .6);
 	color: white;

@@ -62,10 +62,9 @@ $(document).ready(function(){
 	});
 	
 	/*filtering for files*/
-	
 	var  $files = $('#file_list'),
      $filesAll = $files.find('li'),
-     $filter = $('#filters');
+     $filter = $('#filters_menu');
 
 	$filter.change(function() {
 	
@@ -123,7 +122,7 @@ $(document).ready(function(){
 	<section id="file_content">
 	<h2>Files</h2>
 				<ul id ="file_list">
-				<li class="files" id="Movie"><img src="../images/placeholder.jpg"/></li>
+				<li class="files" id="Movie">Movie<img src="../images/placeholder.jpg"/></li>
 				<li class="files" id="Movie"><img src="../images/placeholder.jpg"/></li>
 				<li class="files" id="Books"><img src="../images/placeholder.jpg"/></li>
 				<li class="files" id="Movie"><img src="../images/placeholder.jpg"/></li>
@@ -158,7 +157,7 @@ $(document).ready(function(){
 </section>
 
 <div id ="filters">
-<select id="filters">
+<select id="filters_menu">
 <option selected> All</option>
 <option>Movie</option>
 <option>Documents</option>
