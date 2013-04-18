@@ -115,7 +115,7 @@ $(document).ready(function(){
 		    }
 		);
 		function upload(files){
-		   /* alert('Upload '+files.length+' File(s).');*/  
+		   alert('Upload '+files.length+' File(s).');  
 		   
 		}
 
