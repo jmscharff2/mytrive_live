@@ -86,6 +86,42 @@ $(document).ready(function(){
 	});
 	
 	
+	/*file drop jquery*/
+	$('#file_drop').on(
+    'dragover',
+    function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+		    }
+		)
+		$('#file_drop').on(
+		    'dragenter',
+		    function(e) {
+		        e.preventDefault();
+		        e.stopPropagation();
+		    }
+		)
+		$('#file_drop').on(
+		    'drop',
+		    function(e){
+		        if(e.originalEvent.dataTransfer){
+		            if(e.originalEvent.dataTransfer.files.length) {
+		                e.preventDefault();
+		                e.stopPropagation();
+		                /*UPLOAD FILES HERE*/
+		                upload(e.originalEvent.dataTransfer.files);
+		            }   
+		        }
+		    }
+		);
+		function upload(files){
+		   /* alert('Upload '+files.length+' File(s).');*/  
+		   
+		}
+
+
+	
+	
 });
 </script>
 
@@ -118,7 +154,9 @@ $(document).ready(function(){
 		Username: Jonathan Scharff<br>
 		Storage: 2Gb/10Gb
 	</section>
-	
+	<section id="file_drop">
+		<h2>Drag and Drop your files here!</h2>
+	</section>
 	<section id="file_content">
 	<h2>Files</h2>
 				<ul id ="file_list">

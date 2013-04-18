@@ -41,7 +41,7 @@
 </div>
 
 <section id="content">
-
+<center>
 <script src="http://www.onthegosystems.com/mediaplayer/swfobject.js" type="text/javascript"></script>
 	
 	<div id="mediaspace">This text will be replaced</div>
@@ -54,8 +54,9 @@
 	so.addParam('bufferlength','30')
 	so.addVariable('file','<?php echo $play_video; ?>');
 	so.write('mediaspace');
-	// ]]></script>
-	
+	// ]]>
+	</script>
+</center>
 </section>
 
 

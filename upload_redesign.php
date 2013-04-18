@@ -52,9 +52,9 @@
 <section id="content">
 
 
-	<div id="registration-fields">
-		<RF1>Upload your files below<br></RF1>
-		<RF2>Click on upload to upload multiple files!</RF2><br><br>
+	<center>
+		<h2>Upload your files below<br></h21>
+		<h3>Click on upload to upload multiple files!</h3><br><br>
 	
 		<div id="container">
 	    <div id="filelist">No runtime found.</div>
@@ -63,7 +63,7 @@
 	    <a id="uploadfiles" href="javascript:;">[Upload files]</a>
 	    </div>
 	</center>
-</div>
+
 
 
 <script type="text/javascript">
