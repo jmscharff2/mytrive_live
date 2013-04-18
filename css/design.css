@@ -1,0 +1,255 @@
+*
+{
+	margin: 0;
+	border: 0;
+	padding: 0;
+}
+
+#nav-banner
+{
+	top: 0px;
+	left: 0px;
+	
+	background-color: rgba(0, 0, 0, .6);
+	height: 50px;	
+	width: 100%;
+	position: fixed;
+}
+
+nav
+{
+	margin-top: -15px;	
+}
+
+nav form
+{
+	margin-top: -40px;
+	margin-right: 3%;
+	float: right;
+}
+
+nav form input
+{
+	width: 100px;
+	padding: 5px;
+	height: 20px;	
+	margin-right: 10px;
+}
+
+
+nav ul
+{
+	list-style-type: none;
+	margin-left: 30%;
+	margin-top: -60px;
+
+
+}
+ul
+{
+	list-style-type: none;
+}
+nav ul li
+{
+	display: inline-block;
+	padding: 20px;
+
+}
+
+nav li a
+{
+}
+nav li a:hover
+{
+	color: lightblue;
+}
+
+a
+{
+	color: white;
+	text-decoration: none;
+	padding: 5 10 10 5;
+}
+
+body
+{
+	background-color: darkgrey;
+	color: black;
+}
+
+section#content
+{
+	border-style: none solid none solid;
+	background-color: white;
+	color: grey;
+	border-width: 1px;
+	margin-right: 10%;
+	margin-left: 10%;
+	height: 100%;
+	margin-top: 50px;
+	padding: 10px;
+}
+
+section#images
+{
+	float: right;
+	width: 50%;
+}
+
+section#info
+{
+	float: left;
+	width: 50%;
+	
+}
+
+
+
+
+section#info li
+{
+	color: lightblue;
+	position: relative;
+	width: 6em;
+	height: .75em;
+	margin: 10px auto 10px 20px;
+	text-align: justify;
+	background-color: black;
+	box-shadow: 5px 5px 5px grey;
+	padding: 10px;
+	border-radius: 5px;
+	z-index: 1;
+	transition: all 2s ease;
+	overflow: hidden;
+}
+
+section#info li:hover
+{
+	color: black;
+	background-color: lightgrey;
+	position: relative;
+	width: 500px;
+	height: 25%;
+	box-shadow: 8px 8px 8px darkgrey;
+	-moz-transform: none;
+	-o-tranform: none;
+	-webkit-transform: none;
+	transform none;
+	-webkit-transition: all 2s ease;
+	z-index: 2;
+	overflow: scroll;
+}
+
+
+
+/*Media Queries below for nice responsive design stuffs*/
+@media screen {
+	body {
+		width: 100%;
+		
+	}
+	nav#small
+	{
+		display: none;	
+	}
+}
+
+@media all and  (max-width: 1250px) and (min-width: 975px)
+{
+	nav#small
+	{
+		display: none;	
+	}
+}
+
+@media all and (max-width: 975px) and (min-width: 780px)
+{
+	nav#small
+	{
+		display: none;	
+	}
+}
+
+@media all and (max-width: 780px) and (min-width: 500px)
+{
+	nav ul{
+		display: none;
+	}
+	nav form
+	{
+		display: none;
+	}
+	nav#small
+	{
+		color: black;
+		display: block;
+		
+	}
+	
+	nav#small a
+	{
+		color: black;
+	}
+	nav#small a:hover
+	{
+		color: lightblue;
+	}
+	nav#small form
+	{
+		display: block;
+		margin-top: 50px;
+		
+	}
+	nav#small form input
+	{
+		width: 100px;
+		padding: 5px;
+		height: 20px;	
+		margin-right: 10px;
+		border: 1px solid black;
+	}
+}
+
+@media all and (max-width: 500px)
+{
+	section#info li:hover
+	{
+		width: 200px;
+	}
+	nav ul{
+		display: none;
+	}
+	nav form
+	{
+		display: none;
+	}
+	nav#small
+	{
+		color: black;
+		display: block;
+		
+	}
+	
+	nav#small a
+	{
+		color: black;
+	}
+	nav#small a:hover
+	{
+		color: lightblue;
+	}
+	nav#small form
+	{
+		display: block;
+		margin-top: 10px;
+		
+	}
+	nav#small form input
+	{
+		width: 100px;
+		padding: 5px;
+		height: 20px;	
+		margin-right: 10px;
+		border: 1px solid black;
+	}
+}

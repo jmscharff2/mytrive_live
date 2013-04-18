@@ -18,8 +18,8 @@
     if (e.keyCode == 13) {
       var name = $('#nameInput').val();
       var text = $('#messageInput').val();
-      var other = 10;
-      messagesRef.push({name:name, text:text, other:other});
+      var other = 10; //how to add different values to the firebase database
+      messagesRef.push({name:name, text:text, other:other});  //other:other to add the other variable to the firedatabase with the description of other.
       $('#messageInput').val('');
     }
   });

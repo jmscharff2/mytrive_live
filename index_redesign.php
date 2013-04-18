@@ -1,14 +1,10 @@
-<?php
-
-	session_start();
-	
-?>
-
-<HTML>
+<!DOCTYPE html>
+<HTML lang="en-us">
 
 <HEAD>
-
-<TITLE>mytrive redesign</TITLE>
+	<meta charset="utf-8"/>
+	
+	<TITLE>mytrive redesign</TITLE>
 
 <link rel="stylesheet" type="text/css" href="css/redesign.css" />
 <script type="text/javascript" src="includes/submitenter.js" language="javascript"></script>
@@ -105,14 +101,14 @@
 		<h3>More Filez</h3>
 		<div class="price_body">
 			<div class="price">
-				<span class="price_figure">$15</span>
+				<span class="price_figure">$$</span>
 				<span class="price_term">per month</span>
 			</div>
 		</div>
 		<div class="features">
 			<ul>
-				<li>100Gb Storage</li>
-				<li>50Gb Up/Download Per Month</li>
+				<li>Storage Size</li>
+				<li>upload/download</li>
 				<li>Unlimited Sharing</li>
 				<li><strong>20</strong> invites for friends</li>
 				<li>Customizable Profile Page</li>
@@ -132,8 +128,8 @@
 		</div>
 		<div class="features">
 			<ul>
-				<li>30Gb Free Storage</li>
-				<li>5Gb Up/Download Per Month</li>
+				<li>Storage Size</li>
+				<li>upload/download</li>
 				<li>Unlimited Sharing</li>
 				<li><strong>10</strong> invites for friends</li>
 				<li>Customizable Profile Page</li>
@@ -148,14 +144,14 @@
 		<h3>Lots of Filez</h3>
 		<div class="price_body">
 			<div class="price">
-				<span class="price_figure">$50</span>
+				<span class="price_figure">$$$</span>
 				<span class="price_term">per month</span>
 			</div>
 		</div>
 		<div class="features">
 			<ul>
-				<li>1Tb Storage</li>
-				<li>Unlimited Bandwidth</li>
+				<li>Storage Size</li>
+				<li>upload/download</li>
 				<li>Unlimited Sharing</li>
 				<li><strong>50</strong> invites for friends</li>
 				<li>Customizable Profile Page</li>
@@ -176,14 +172,16 @@
 
 <article id="how_it_works">
 <h1>How does mytrive work?</h1>
-<p>The site is very simple.  You will create an account, and have a profile page.  Here is what people will see about you along with a list of files that you upload.  You will have the ability to show different files for the ability to share with friends.</p>
-<p>You can have private files and files that you are willing to share.  This is where your online life will reside.  You have facebook for your social life, you will use mytrive for the life of your digital files.</p>
+<p>TLorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam commodo accumsan faucibus. Donec non nisi sed turpis consequat molestie laoreet a mi. Aenean elementum, urna a volutpat ullamcorper, nibh sem tempor elit, ut pharetra elit dolor quis lorem. In hac habitasse platea dictumst. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In hac habitasse platea dictumst. Vivamus consequat diam at sapien ultrices sodales suscipit arcu imperdiet. Curabitur luctus congue erat ut tempus.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam commodo accumsan faucibus. Donec non nisi sed turpis consequat molestie laoreet</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam commodo accumsan faucibus. Donec non nisi sed turpis consequat molestie laoreet a mi. Aenean elementum, urna a volutpat ullamcorper, nibh sem tempor elit, ut pharetra elit dolor quis lorem. In hac habitasse platea dictumst. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In hac habitasse platea dictumst. Vivamus consequat diam at sapien ultrices sodales suscipit arcu imperdiet. Curabitur luctus congue erat ut tempus.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam commodo accumsan faucibus. Donec non nisi sed turpis consequat molestie laoreet</p>
+<center>
+<p><h2><a href="info_redesign.php">Once you sign up what do I do?</a></h2></p>
+</center>
 </article>
 
 <article id="use">
 <h1>Why use mytrive?</h1>
-<p>The idea behind mytrive was first to find a way to store your digital content.  We came by this idea because we all have a lot of movies/files/songs/etc that we want to save in a safe place.  So why not online?  Once we did that while I was in college I always would have people come over and watch movies I had or music for parties...so like facebook why not take this expierence online.  After college I came up with the idea for mytrive to store my files and be able to watch them online if they are the right kind of file.  I then said why cant I "loan" my file like I would do with a DVD.  So I built in the functionality to share with any of your friends your file.  You can only share with one at a time and depending on the file will determine if they can download it.  Obviously if you have pictures that you took on a trip you would want your friends to be able to download it.  If it is a movie then you cannot since you are not allowed to just give away copies of movies, so they will only be able to watch the movie...no different than sharing a DVD.</p>
-<p>This is where mytrive will differ from a traditional social network or a dropbox type site.  It is not only for file storage but also to interact about files that you store online.  You will be able to add friends and interact with them throughout the site.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam commodo accumsan faucibus. Donec non nisi sed turpis consequat molestie laoreet a mi. Aenean elementum, urna a volutpat ullamcorper, nibh sem tempor elit, ut pharetra elit dolor quis lorem. In hac habitasse platea dictumst. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In hac habitasse platea dictumst. Vivamus consequat diam at sapien ultrices sodales suscipit arcu imperdiet. Curabitur luctus congue erat ut tempus.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam commodo accumsan faucibus. Donec non nisi sed turpis consequat molestie laoreetLorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam commodo accumsan faucibus. Donec non nisi sed turpis consequat molestie laoreet a mi. Aenean elementum, urna a volutpat ullamcorper, nibh sem tempor elit, ut pharetra elit dolor quis lorem. In hac habitasse platea dictumst. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In hac habitasse platea dictumst. Vivamus consequat diam at sapien ultrices sodales suscipit arcu imperdiet. Curabitur luctus congue erat ut tempus.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam commodo accumsan faucibus. Donec non nisi sed turpis consequat molestie laoreet</p>
 </article>
 
 </BODY>
