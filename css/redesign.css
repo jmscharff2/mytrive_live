@@ -28,6 +28,11 @@ a
 	padding: 5 10 10 5;
 }
 
+a:hover
+{
+	color: lightblue;
+}
+
 body
 {
 	/*background: url(../images/redesign_background.jpg) no-repeat center top, -webkit-linear-gradient(rgba(7,11,34,0.92) 60.93%, #0a1c3d 100%);*/
@@ -49,7 +54,6 @@ nav form input
 	width: 100px;
 	padding: 5px;
 	height: 20px;	
-	float: right;
 	margin-right: 10px;
 }
 
@@ -167,7 +171,6 @@ article p
 }
 
 
-
 /*price table stuffs here*/
 
 
@@ -279,7 +282,7 @@ article p
 	}
 }
 
-@media all and (max-width: 975px) and (min-width: 500px)
+@media all and (max-width: 975px) and (min-width: 780px)
 {
 	body{
 		background: black;
@@ -304,6 +307,33 @@ article p
 		width: 800px;
 		margin-top: -400px;
 
+	}
+}
+
+@media all and (max-width: 780px) and (min-width: 500px)
+{
+	body{
+		background: black;
+	}
+	nav ul{
+		display: none;
+	}
+	section
+	{
+		width: 90%;
+		margin-right: 5%;
+		margin-left: 5%;
+	}
+	
+	article
+	{
+		margin-right: 5%;
+		margin-left: 5%;	
+	}
+	.pricing_table
+	{
+		width: 500px;
+		margin-top: -400px;
 	}
 }
 

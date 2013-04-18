@@ -20,7 +20,7 @@
 <!--top banner-->
 <div id="nav-banner">
 <nav>
-<a href="#nav-banner" ><img src = "images/trive.png" id="logo"></a>
+<a href="index_redesign.php" ><img src = "images/trive.png" id="logo"></a>
 <ul>
 <li><a href="index_redesign.php">Profile</a></li>
 <li><a href="info_redesign.php">Files</a></li>
@@ -35,11 +35,12 @@
 
 <section id="content">
 
-<section id="profile_content">
-	<section id="profile_picture">
-		<img src="../images/placeholder.jpg" height="20%"/>
+	<section id="profile_content">
+		<section id="profile_picture">
+			<img src="../images/placeholder.jpg" height="20%"/>
+		</section>
+		Username: Jonathan Scharff
 	</section>
-</section>
 
 </section>
 
