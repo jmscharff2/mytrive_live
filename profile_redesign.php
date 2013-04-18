@@ -23,6 +23,22 @@
 
 $(document).ready(function(){
 
+	$(window).scroll(function(){
+		var scrollTop= $(document).scrollTop();
+		if(scrollTop > 100)
+		{
+			$('#file_drop_menu_bar').show("slow");
+			$('#file_drop').hide("fast");
+		}
+		if(scrollTop < 100)
+		{
+			$('#file_drop_menu_bar').hide("fast");
+			$('#file_drop').show("slow");
+		}
+	});
+
+
+
 	var shown = false;
 	
 	$(".files").hover( function() {
@@ -118,7 +134,38 @@ $(document).ready(function(){
 		   alert('Upload '+files.length+' File(s).');  
 		   
 		}
-
+	/*file drop menu bar*/
+		$('#file_drop_menu_bar').on(
+    'dragover',
+    function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+		    }
+		)
+		$('#file_drop_menu_bar').on(
+		    'dragenter',
+		    function(e) {
+		        e.preventDefault();
+		        e.stopPropagation();
+		    }
+		)
+		$('#file_drop_menu_bar').on(
+		    'drop',
+		    function(e){
+		        if(e.originalEvent.dataTransfer){
+		            if(e.originalEvent.dataTransfer.files.length) {
+		                e.preventDefault();
+		                e.stopPropagation();
+		                /*UPLOAD FILES HERE*/
+		                upload(e.originalEvent.dataTransfer.files);
+		            }   
+		        }
+		    }
+		);
+		function upload(files){
+		   alert('Upload '+files.length+' File(s).');  
+		   
+		}
 
 	
 	
@@ -138,10 +185,11 @@ $(document).ready(function(){
 <li><a href="info_redesign.php">Files</a></li>
 <li><a href="faq_redesign.php">Upload</a></li>
 </ul>
-<form action = "login.php" method ="post">
-<input type="text" name="username" placeholder="username" onkeypress="return submitenter(this,event)"/>
-<input type="password" name="username" placeholder="password" onkeypress="return submitenter(this,event)"/>
-</form>
+<div id="file_drop_menu_bar">
+Drag and Drop your files here!
+</div>
+
+
 </nav>
 </div>
 
@@ -182,6 +230,15 @@ $(document).ready(function(){
 	
 	<section id="friend_content">
 	<h2>Friends</h2>  <input type="text" name="add_friend" placeholder="Add New Friends" style="width: 150px; border: 1px solid black;"/><br>
+		<img src="../images/placeholder.jpg"/>
+		<img src="../images/placeholder.jpg"/>
+		<img src="../images/placeholder.jpg"/>
+		<img src="../images/placeholder.jpg"/>
+		<img src="../images/placeholder.jpg"/>
+		<img src="../images/placeholder.jpg"/>
+		<img src="../images/placeholder.jpg"/>
+		<img src="../images/placeholder.jpg"/>
+		<img src="../images/placeholder.jpg"/>
 		<img src="../images/placeholder.jpg"/>
 		<img src="../images/placeholder.jpg"/>
 		<img src="../images/placeholder.jpg"/>

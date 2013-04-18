@@ -64,6 +64,18 @@ nav li a:hover
 	color: lightblue;
 }
 
+nav #file_drop_menu_bar
+{
+	color: white;
+	border: 1px dashed white;
+	width: 200px;
+	height: 38px;
+	float: right;
+	margin-top: -50px;
+	margin-right: 10%;
+	display: none;
+}
+
 a
 {
 	color: white;
@@ -109,6 +121,8 @@ body
 	/*nothing here yet*/
 		
 }
+
+
 
 #file_drop
 {
