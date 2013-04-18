@@ -60,6 +60,33 @@ $(document).ready(function(){
 	        }).show();
 	    }
 	});
+	
+	/*filtering for files*/
+	
+	var  $files = $('#file_list'),
+     $filesAll = $files.find('li'),
+     $filter = $('#filters');
+
+	$filter.change(function() {
+	
+	    //var val1 = $filter.val();
+	    var val1 = $filter.val();
+	        
+	    $files.empty();
+	    
+	    if ( val1 == 'ALL') {
+	        $files.append( $namesAll );
+	    }
+	    else {
+	        $filesAll.filter(function(i, el) {
+	            var $el = $(el);
+	            return ~$el.text().indexOf( val1 );
+	            
+	        }).appendTo( $files );
+	    }
+	});
+	
+	
 });
 </script>
 
@@ -95,15 +122,15 @@ $(document).ready(function(){
 	
 	<section id="file_content">
 	<h2>Files</h2>
-				<ul>
-				<li class="files"><img src="../images/placeholder.jpg"/></li>
-				<li class="files"><img src="../images/placeholder.jpg"/></li>
-				<li class="files"><img src="../images/placeholder.jpg"/></li>
-				<li class="files"><img src="../images/placeholder.jpg"/></li>
-				<li class="files"><img src="../images/placeholder.jpg"/></li>
-				<li class="files"><img src="../images/placeholder.jpg"/></li>
-				<li class="files"><img src="../images/placeholder.jpg"/></li>
-				<li class="files"><img src="../images/placeholder.jpg"/></li>
+				<ul id ="file_list">
+				<li class="files" id="Movie">Movie<img src="../images/placeholder.jpg"/></li>
+				<li class="files" id="Movie"><img src="../images/placeholder.jpg"/></li>
+				<li class="files" id="Books"><img src="../images/placeholder.jpg"/></li>
+				<li class="files" id="Movie"><img src="../images/placeholder.jpg"/></li>
+				<li class="files" id="Documents"><img src="../images/placeholder.jpg"/></li>
+				<li class="files" id="Book"><img src="../images/placeholder.jpg"/></li>
+				<li class="files" id="Documents"><img src="../images/placeholder.jpg"/></li>
+				<li class="files" id="Documents"><img src="../images/placeholder.jpg"/></li>
 
 
 			
@@ -131,7 +158,14 @@ $(document).ready(function(){
 </section>
 
 <div id ="filters">
-<input type ="text" name="filter_box" placeholder="Filters" />
+<select id="filters">
+<option selected> All</option>
+<option>Movie</option>
+<option>Documents</option>
+<option>Books</option>
+<option>Custom Filter</option>
+<option>Custom Filter</option>
+</select>
 </div>
 
 </BODY>

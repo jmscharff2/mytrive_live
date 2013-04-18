@@ -134,11 +134,36 @@ section#content
 #file_information
 {
 	width: 150px;
-	background-color: lightgrey;
+	background-color: rgba(0, 0, 0, .8);
 	color: black;
 	display: none;
 	position: fixed;
 	text-align: center;
+	
+	/*Round top corners*/
+	-webkit-border-top-left-radius: 5px;
+	-khtml-border-radius-topleft: 5px;
+	-moz-border-radius-topleft: 5px;
+	border-top-left-radius: 5px;
+	
+	-webkit-border-top-right-radius: 5px;
+	-khtml-border-radius-topright: 5px;
+	-moz-border-radius-topright: 5px;
+	border-top-right-radius: 5px;	
+	
+	
+	/*Bottom-left-corner*/
+	-webkit-border-bottom-left-radius: 5px;
+	-khtml-border-radius-bottomleft: 5px;	
+	-moz-border-radius-bottomleft: 5px;
+	border-bottom-left-radius: 5px;
+	/*Bottom-right-corner*/
+	-webkit-border-bottom-right-radius: 5px;
+	-khtml-border-radius-bottomright: 5px;	
+	-moz-border-radius-bottomright: 5px;
+	border-bottom-right-radius: 5px;
+
+
 }
 
 #friend_content
