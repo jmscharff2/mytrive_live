@@ -88,61 +88,94 @@ section#content
 	height: 100%;
 	margin-top: 50px;
 	padding: 10px;
-}
-
-section#images
-{
-	float: right;
-	width: 50%;
-}
-
-section#info
-{
 	float: left;
-	width: 50%;
-	
+}
+
+#profile_content
+{
+	width: 30%;
+	word-wrap: break-word;
+	float: left;
+}
+
+#profile_picture img
+{
+	/*nothing here yet*/
+		
+}
+
+#file_content
+{
+	width: 70%;
+	float: right;
+	height: 50%;
 }
 
 
 
-
-section#info li
+#file_content img
 {
-	color: lightblue;
-	position: relative;
-	width: 6em;
-	height: .75em;
-	margin: 10px auto 10px 20px;
-	text-align: justify;
-	background-color: black;
-	box-shadow: 5px 5px 5px grey;
-	padding: 10px;
-	border-radius: 5px;
-	z-index: 1;
-	transition: all 2s ease;
-	overflow: hidden;
+	width: 20%;
+	height: 20%;
+}  
+
+#file_content ul
+{
+	list-style:none;	
+
+}
+#file_content li
+{
+	display: inline;
 }
 
-section#info li:hover
+
+
+#file_information
 {
-	color: black;
+	width: 150px;
 	background-color: lightgrey;
-	position: relative;
-	width: 500px;
-	height: 25%;
-	box-shadow: 8px 8px 8px darkgrey;
-	-moz-transform: none;
-	-o-tranform: none;
-	-webkit-transform: none;
-	transform none;
-	-webkit-transition: all 2s ease;
-	z-index: 2;
-	overflow: scroll;
+	color: black;
+	display: none;
+	position: fixed;
+	text-align: center;
 }
 
+#friend_content
+{
+	width: 70%;
+	float: right;
+	padding-top: 20px;
+}
+
+#friend_content img
+{
+	width: 20%;
+	height: 20%;
+}
+
+#filters
+{
+	background-color: rgba(0, 0, 0, .6);
+	color: white;
+	float: right;
+	top: 60px;
+	right: 0px;
+	position: fixed;
+	height: 150px;
+	width: 100px;
+	text-align: center;
+	padding-top: 5px;
+}
+
+#filters input
+{
+	width: 90px;
+}
 
 
 /*Media Queries below for nice responsive design stuffs*/
+/*
 @media screen {
 	body {
 		width: 100%;
@@ -253,3 +286,5 @@ section#info li:hover
 		border: 1px solid black;
 	}
 }
+
+*/s

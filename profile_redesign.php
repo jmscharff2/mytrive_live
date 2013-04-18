@@ -1,11 +1,15 @@
-<HTML>
+<!DOCTYPE html>
+<HTML lang="en-us">
 
 <HEAD>
-
-<TITLE>mytrive profile redesign</TITLE>
+	<meta charset="utf-8"/>
+	
+	<TITLE>mytrive profile redesign</TITLE>
 
 <link rel="stylesheet" type="text/css" href="css/design.css" />
 <script type="text/javascript" src="includes/submitenter.js" language="javascript"></script>
+	<script src="js/jquery.js"></script>
+	<script src="js/jquery-ui.js"></script>
 
 
 <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
@@ -13,6 +17,52 @@
 <link rel="icon" 
       type="image/png" 
       href="images/favicon.ico">
+
+
+<script>
+
+$(document).ready(function(){
+
+	var shown = false;
+	
+	$(".files").hover( function() {
+	    if ( shown === false ) {
+	        var that = $(this),
+	            offset = that.offset(),
+	            tooltipElement = $("#file_information");
+	            
+	        tooltipElement.css({
+	            top: offset.top + that.height()-5,
+	            left: offset.left + that.width()/2 - tooltipElement.width()/2
+	        }).show();
+	    }
+	}, function() {
+	    if ( shown === false ) {   
+	        $("#file_information").hide();
+	    }
+	}).bind('click', function() {
+	    var tooltipElement = $("#file_information"),
+	        that = $(this);
+	    
+	    if ( shown === that.index() ) {
+	        tooltipElement.hide();
+	        shown = false;
+	    } else {
+	        shown = $(this).index();
+	        
+	        var that = $(this),
+	            offset = that.offset(),
+	            tooltipElement = $("#file_information");
+	            
+	        tooltipElement.css({
+	            top: offset.top + that.height()-5,
+	            left: offset.left + that.width()/2 - tooltipElement.width()/2
+	        }).show();
+	    }
+	});
+});
+</script>
+
 
 </HEAD>
 
@@ -39,11 +89,50 @@
 		<section id="profile_picture">
 			<img src="../images/placeholder.jpg" height="20%"/>
 		</section>
-		Username: Jonathan Scharff
+		Username: Jonathan Scharff<br>
+		Storage: 2Gb/10Gb
 	</section>
+	
+	<section id="file_content">
+	<h2>Files</h2>
+				<ul>
+				<li class="files"><img src="../images/placeholder.jpg"/></li>
+				<li class="files"><img src="../images/placeholder.jpg"/></li>
+				<li class="files"><img src="../images/placeholder.jpg"/></li>
+				<li class="files"><img src="../images/placeholder.jpg"/></li>
+				<li class="files"><img src="../images/placeholder.jpg"/></li>
+				<li class="files"><img src="../images/placeholder.jpg"/></li>
+				<li class="files"><img src="../images/placeholder.jpg"/></li>
+				<li class="files"><img src="../images/placeholder.jpg"/></li>
 
+
+			
+				</ul>
+<div id="file_information"> 
+	<img src="images/Stop.png" height="5%"/>
+	<img src="images/Delete.png"height="20%"/>
+	<img src="images/Share.png"height="20%"/>
+	<img src="images/Play.png"height="20%"/>	
+</div>
+	</section>
+	
+	<section id="friend_content">
+	<h2>Friends</h2>  <input type="text" name="add_friend" placeholder="Add New Friends" style="width: 150px; border: 1px solid black;"/><br>
+		<img src="../images/placeholder.jpg"/>
+		<img src="../images/placeholder.jpg"/>
+		<img src="../images/placeholder.jpg"/>
+		<img src="../images/placeholder.jpg"/>
+		<img src="../images/placeholder.jpg"/>
+		
+
+	
+	</section>
+	
 </section>
 
+<div id ="filters">
+<input type ="text" name="filter_box" placeholder="Filters" />
+</div>
 
 </BODY>
 
