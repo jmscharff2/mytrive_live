@@ -675,12 +675,7 @@ Drag and Drop your files here!
 					</ul>
 					
 					
-			<div id="file_information"> 
-				<img src="images/Stop.png" height="5%"/>
-				<img src="images/Delete.png"height="20%"/>
-				<img src="images/Share.png"height="20%"/>
-				<img src="images/Play.png"height="20%"/>	
-			</div>
+			
 		</section>
 
 	
