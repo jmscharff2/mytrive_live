@@ -222,7 +222,6 @@ if($security_result)
 			echo "<br><br>";
 			echo "Current Files that ".$friends_username." is willing to share with friends: <br>";
 			$friends_files_qry = "SELECT * FROM files WHERE owner_id = '$friends_username' AND want_to_share = 1";
-			echo $friends_files_qry."<br>";
 			$friends_files_result = mysql_query($friends_files_qry);
 			$x = 0;
 			if($friends_files_result)
