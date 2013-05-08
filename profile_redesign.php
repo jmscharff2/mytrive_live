@@ -238,7 +238,6 @@ $(document).ready(function(){
 			 function showDiv(section) {
 			if(section == "friend_content")
 			{
-				Console.log("Friend Content");
 				document.getElementById(section).style.display = "block";
 				document.getElementById('file_content').style.display = "none";
 				document.getElementById('friend_files').style.display = "none";
@@ -246,7 +245,6 @@ $(document).ready(function(){
 			}
 			if(section == "file_content")
 			{
-				console.log("File Content");
 				document.getElementById(section).style.display = "block";
 				document.getElementById('friend_content').style.display = "none";
 				document.getElementById('friend_files').style.display = "none";
@@ -254,7 +252,6 @@ $(document).ready(function(){
 			}
 			if(section == "friend_files")
 			{
-				Console.log("Friend Files");
 				document.getElementById(section).style.display = "block";
 				document.getElementById('friend_content').style.display = "none";
 				document.getElementById('file_content').style.display = "none";
@@ -262,7 +259,6 @@ $(document).ready(function(){
 			}
 			if(section == "upload")
 			{
-				Console.log("upload");
 				document.getElementById(section).style.display = "block";
 				document.getElementById('friend_content').style.display = "none";
 				document.getElementById('file_content').style.display = "none";
