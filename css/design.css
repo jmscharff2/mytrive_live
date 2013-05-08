@@ -14,6 +14,7 @@
 	height: 50px;	
 	width: 100%;
 	position: fixed;
+	z-index: 1000;
 }
 
 nav
@@ -85,6 +86,9 @@ a
 
 body
 {
+	background-image:url('../images/jon@mytrive_background.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
 	background-color: darkgrey;
 	color: black;
 }
@@ -126,7 +130,7 @@ body
 
 #file_drop
 {
-	width: 69%;
+	width: 50%;
     height:100px;
     line-height:100px;
     border:3px dashed #CCC;
@@ -134,6 +138,7 @@ body
     font-family:Verdana;
     text-align:center;
   	float: right;
+  	margin-right:15%;
 
 }
 
@@ -197,7 +202,23 @@ body
 	-moz-border-radius-bottomright: 5px;
 	border-bottom-right-radius: 5px;
 
-~
+
+}
+
+#friend_files
+{
+	padding-top: 10px;
+	width: 70%;
+	float: right;
+	height: 50%;
+}
+
+#upload
+{
+	padding-top: 10px;
+	width: 70%;
+	float: right;
+	height: 50%;
 }
 
 #friend_content
@@ -206,7 +227,17 @@ body
 	float: right;
 	padding-top: 20px;
 }
+#upload img
+{
+	width: 20%;
+	height: 20%;
+}
 
+#friend_files img
+{
+	width: 20%;
+	height: 20%;
+}
 #friend_content img
 {
 	width: 20%;

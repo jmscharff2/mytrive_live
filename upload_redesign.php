@@ -18,7 +18,7 @@
 		<script type="text/javascript" src="js/plupload.html4.js"></script>
 		<script type="text/javascript" src="js/plupload.html5.js"></script>
 		
-		s
+	
 
 
 <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>

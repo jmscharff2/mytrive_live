@@ -124,7 +124,6 @@ if (strpos($contentType, "multipart") !== false) {
 if (!$chunks || $chunk == $chunks - 1) {
 	// Strip the temp .part suffix off 
 	rename("{$filePath}.part", $filePath);
-	
 	//add file info to database
 	$date_added = date('Y-m-d H:i:s'); 
 	$qry = "INSERT INTO files (file_name, location, owner_id, date_added) VALUES ('$fileName', '$targetDir', '$username', '$date_added')";

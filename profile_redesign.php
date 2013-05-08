@@ -10,6 +10,18 @@
 <script type="text/javascript" src="includes/submitenter.js" language="javascript"></script>
 	<script src="js/jquery.js"></script>
 	<script src="js/jquery-ui.js"></script>
+	<script type="text/javascript" src="js/plupload.js"></script>
+	<script type="text/javascript" src="js/plupload.gears.js"></script>
+	<script type="text/javascript" src="js/plupload.silverlight.js"></script>
+	<script type="text/javascript" src="js/plupload.flash.js"></script>
+	<script type="text/javascript" src="js/plupload.browserplus.js"></script>
+	<script type="text/javascript" src="js/plupload.html4.js"></script>
+	<script type="text/javascript" src="js/plupload.html5.js"></script>
+
+<script type="text/javascript" src="http://bp.yahooapis.com/2.4.21/browserplus-min.js"></script>
+<script type="text/javascript" src="/js/jquery.plupload.queue/jquery.plupload.queue.js"></script>
+<script type="text/javascript" src="/js/plupload.full.js"></script>
+
 
 
 <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
@@ -28,14 +40,16 @@ $(document).ready(function(){
 		if(scrollTop > 100)
 		{
 			$('#file_drop_menu_bar').show("slow");
-			$('#file_drop').hide("fast");
+			/*$('#file_drop').hide("fast");*/
 		}
 		if(scrollTop < 100)
 		{
 			$('#file_drop_menu_bar').hide("fast");
-			$('#file_drop').show("slow");
-		}
+			/*$('#file_drop').show("slow");*/
+		}	
+		
 	});
+	
 
 
 
@@ -164,12 +178,77 @@ $(document).ready(function(){
 		);
 		function upload(files){
 		   alert('Upload '+files.length+' File(s).');  
-		   
 		}
+		
+		
 
 	
 	
 });
+
+
+
+		function showDiv(section) {
+			if(section == "friend_content")
+			{
+				document.getElementById(section).style.display = "block";
+				document.getElementById('file_content').style.display = "none";
+				document.getElementById('friend_files').style.display = "none";
+				document.getElementById('upload').style.display = "none";
+				document.getElementById('file_drop').style.display = "block";
+			}
+			if(section == "file_content")
+			{
+				document.getElementById(section).style.display = "block";
+				document.getElementById('friend_content').style.display = "none";
+				document.getElementById('friend_files').style.display = "none";
+				document.getElementById('upload').style.display = "none";
+				document.getElementById('file_drop').style.display = "block";
+			}
+			if(section == "friend_files")
+			{
+				document.getElementById(section).style.display = "block";
+				document.getElementById('friend_content').style.display = "none";
+				document.getElementById('file_content').style.display = "none";
+				document.getElementById('upload').style.display = "none";
+				document.getElementById('file_drop').style.display = "block";
+			}
+			if(section == "upload")
+			{
+				document.getElementById(section).style.display = "block";
+				document.getElementById('friend_content').style.display = "none";
+				document.getElementById('file_content').style.display = "none";
+				document.getElementById('friend_files').style.display = "none";
+				document.getElementById('file_drop').style.display = "none";
+			}
+		}
+		
+		
+		
+		$(function() {
+
+	$("#html5_uploader").pluploadQueue({
+	
+	     // General settings
+	     runtimes : 'html5',
+	     url : 'upload_files.php',
+	     max_file_size : '10mb',
+	     chunk_size : '1mb',
+	     unique_names : true,
+	     // Resize images on clientside if we can
+	     resize : {width : 320, height : 240, quality : 90},
+	     // Specify what files to browse for
+	     filters : [	
+	        {title : "Image files", extensions : "jpg,gif,png"},
+			{title : "Zip files", extensions : "zip, gzip, tar.gz, gz"},
+			{title : "Video files", extensions : "m4v,avi,mkv, mp4"},
+			{title : "Document Files", extensions : "doc, docx, odt, xls, xlsx, ppt, pptx"},
+			{title : "Book Files", extensions : "mobi"}	
+	     ]	
+	 });
+ 
+ 
+ });
 </script>
 
 
@@ -181,9 +260,10 @@ $(document).ready(function(){
 <nav>
 <a href="index_redesign.php" ><img src = "images/trive.png" id="logo"></a>
 <ul>
-<li><a href="index_redesign.php">Profile</a></li>
-<li><a href="info_redesign.php">Files</a></li>
-<li><a href="faq_redesign.php">Upload</a></li>
+<li><a href="#profile" onclick="showDiv('file_content')">Profile</a></li>
+<li><a href="#friends" onclick="showDiv('friend_content')">Friends</a></li>
+<li><a href="#friends_files" onclick="showDiv('friend_files')">Friends Files</a></li>
+<li><a href="#upload" onclick="showDiv('upload')">Upload</a></li>
 </ul>
 <div id="file_drop_menu_bar">
 Drag and Drop your files here!
@@ -200,54 +280,82 @@ Drag and Drop your files here!
 			<img src="../images/placeholder.jpg" height="100px"/>
 		</section>
 		Username: Jonathan Scharff<br>
-		Storage: 2Gb/10Gb
+		Storage: 2Gb/10Gb<br>
+		<a href="#">Settings</a>
 	</section>
 	<section id="file_drop">
 		<h2>Drag and Drop your files here!</h2>
 	</section>
-	<section id="file_content">
-	<h2>Files</h2>
-				<ul id ="file_list">
-				<li class="files" id="Movie"><img src="../images/placeholder.jpg"/></li>
-				<li class="files" id="Movie"><img src="../images/placeholder.jpg"/></li>
-				<li class="files" id="Books"><img src="../images/placeholder.jpg"/></li>
-				<li class="files" id="Movie"><img src="../images/placeholder.jpg"/></li>
-				<li class="files" id="Documents"><img src="../images/placeholder.jpg"/></li>
-				<li class="files" id="Book"><img src="../images/placeholder.jpg"/></li>
-				<li class="files" id="Documents"><img src="../images/placeholder.jpg"/></li>
-				<li class="files" id="Documents"><img src="../images/placeholder.jpg"/></li>
-
-
-			
-				</ul>
-<div id="file_information"> 
-	<img src="images/Stop.png" height="5%"/>
-	<img src="images/Delete.png"height="20%"/>
-	<img src="images/Share.png"height="20%"/>
-	<img src="images/Play.png"height="20%"/>	
-</div>
-	</section>
 	
-	<section id="friend_content">
-	<h2>Friends</h2>  <input type="text" name="add_friend" placeholder="Add New Friends" style="width: 150px; border: 1px solid black;"/><br>
-		<img src="../images/placeholder.jpg"/>
-		<img src="../images/placeholder.jpg"/>
-		<img src="../images/placeholder.jpg"/>
-		<img src="../images/placeholder.jpg"/>
-		<img src="../images/placeholder.jpg"/>
-		<img src="../images/placeholder.jpg"/>
-		<img src="../images/placeholder.jpg"/>
-		<img src="../images/placeholder.jpg"/>
-		<img src="../images/placeholder.jpg"/>
-		<img src="../images/placeholder.jpg"/>
-		<img src="../images/placeholder.jpg"/>
-		<img src="../images/placeholder.jpg"/>
-		<img src="../images/placeholder.jpg"/>
-		<img src="../images/placeholder.jpg"/>
+		<section id="file_content">
+		<h2>Files</h2>
+					<ul id ="file_list">
+					<li class="files" id="Movie"><h3 style="display:none;">Movies</h3><img src="../images/document.png"/></li>
+					<li class="files" id="Movie"><h3 style="display:none;">Movies</h3><img src="../images/document.png"/></li>
+					<li class="files" id="Books"><h3 style="display:none;">Books</h3><img src="../images/movie.png"/></li>
+					<li class="files" id="Movie"><h3 style="display:none;">Movies</h3><img src="../images/movie.png"/></li>
+					<li class="files" id="Documents"><h3 style="display:none;">Documents</h3><img src="../images/placeholder.jpg"/></li>
+					<li class="files" id="Book"><h3 style="display:none;">Books</h3><img src="../images/placeholder.jpg"/></li>
+					<li class="files" id="Documents"><h3 style="display:none;">Documents</h3><img src="../images/placeholder.jpg"/></li>
+					<li class="files" id="Documents"><h3 style="display:none;">Documents</h3><img src="../images/placeholder.jpg"/></li>
+					</ul>
+					
+					
+			<div id="file_information"> 
+				<img src="images/Stop.png" height="5%"/>
+				<img src="images/Delete.png"height="20%"/>
+				<img src="images/Share.png"height="20%"/>
+				<img src="images/Play.png"height="20%"/>	
+			</div>
+		</section>
+
+
+		<section id="friend_content" style="display: none;">
+		<h2>Friends</h2>  <input type="text" name="add_friend" placeholder="Add New Friends" style="width: 150px; border: 1px solid black;"/><br>
+			<img src="../images/placeholder.jpg"/>
+			<img src="../images/placeholder.jpg"/>
+			<img src="../images/placeholder.jpg"/>
+			<img src="../images/placeholder.jpg"/>
+			<img src="../images/placeholder.jpg"/>
+			<img src="../images/placeholder.jpg"/>
+			<img src="../images/placeholder.jpg"/>
+			<img src="../images/placeholder.jpg"/>
+			<img src="../images/placeholder.jpg"/>
+			<img src="../images/placeholder.jpg"/>
+			<img src="../images/placeholder.jpg"/>
+			<img src="../images/placeholder.jpg"/>
+			<img src="../images/placeholder.jpg"/>
+			<img src="../images/placeholder.jpg"/>
+		</section>
 		
+		<section id="friend_files" style="display: none;">
+		<h2>Friends Files</h2>
+			<img src="../images/placeholder.jpg"/>
+			<img src="../images/placeholder.jpg"/>
+			<img src="../images/placeholder.jpg"/>
+			<img src="../images/placeholder.jpg"/>
+			<img src="../images/placeholder.jpg"/>
+			<img src="../images/placeholder.jpg"/>
+			<img src="../images/placeholder.jpg"/>
+			<img src="../images/placeholder.jpg"/>
+		</section>
+		
+		<section id="upload" style="display: none;">
+		<style type="text/css">@import url(/js/jquery.plupload.queue/css/jquery.plupload.queue.css);</style>
+		<div id="html5_uploader">You browser doesn't support native upload. Try Firefox 3 or Safari 4.</div>
 
-	
-	</section>
+	    </div>
+	    
+	    
+	    
+<script type="text/javascript">
+
+
+ 
+<script>
+
+		
+		</section>
 	
 </section>
 
