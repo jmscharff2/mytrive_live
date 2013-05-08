@@ -470,7 +470,6 @@ Drag and Drop your files here!
 												echo "<a href=friends_profile.php?friends_user_id=".$friend_id.">".$member3['first_name']." ".$member3['last_name']."</a>";
 												//Display friends files willing to share
 												$friends_files_qry = "SELECT * FROM files WHERE owner_user_id = '$friend_id' AND want_to_share = 1";
-												echo $friends_files_qry."<br>";
 													$friends_files_result = mysql_query($friends_files_qry);
 													$z = 0;
 													if($friends_files_result)
@@ -493,7 +492,6 @@ Drag and Drop your files here!
 												echo "<a href=friends_profile.php?friends_user_id=".$friend_id.">".$member3['username']."</a>";
 												//Display friends files willing to share
 												$friends_files_qry = "SELECT * FROM files WHERE owner_user_id = '$friend_id' AND want_to_share = 1";
-												echo $friends_files_qry."<br>";
 													$friends_files_result = mysql_query($friends_files_qry);
 													$z = 0;
 													if($friends_files_result)
@@ -541,7 +539,6 @@ Drag and Drop your files here!
 												echo "<a href=friends_profile.php?friends_user_id=".$friend_id.">".$member3['first_name']." ".$member3['last_name']."</a>";
 												//Display friends files willing to share
 												$friends_files_qry = "SELECT * FROM files WHERE owner_user_id = '$friend_id' AND want_to_share = 1";
-												echo $friends_files_qry."<br>";
 													$friends_files_result = mysql_query($friends_files_qry);
 													$z = 0;
 													if($friends_files_result)
@@ -564,7 +561,6 @@ Drag and Drop your files here!
 												echo "<a href=friends_profile.php?friends_user_id=".$friend_id.">".$member3['username']."</a>";
 												//Display friends files willing to share
 												$friends_files_qry = "SELECT * FROM files WHERE owner_user_id = '$friend_id' AND want_to_share = 1";
-												echo $friends_files_qry."<br>";
 													$friends_files_result = mysql_query($friends_files_qry);
 													$z = 0;
 													if($friends_files_result)
