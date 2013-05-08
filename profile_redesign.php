@@ -1,4 +1,8 @@
 <!DOCTYPE html>
+<?php
+	session_start();
+?>
+
 <HTML lang="en-us">
 
 <HEAD>
@@ -289,6 +293,9 @@ Drag and Drop your files here!
 	
 		<section id="file_content">
 		<h2>Files</h2>
+		<?php
+		echo $_SESSION['username'];
+		?>
 					<ul id ="file_list">
 					<li class="files" id="Movie"><h3 style="display:none;">Movies</h3><img src="../images/document.png"/></li>
 					<li class="files" id="Movie"><h3 style="display:none;">Movies</h3><img src="../images/document.png"/></li>
