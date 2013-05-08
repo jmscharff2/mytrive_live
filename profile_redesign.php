@@ -335,19 +335,19 @@ Drag and Drop your files here!
 						{
 							echo "<li class='files'>";
 							echo $member['file_name'];
-							echo $ext."<img src='../images/placeholder.jpg'/></li>";
+							echo $ext."<br><img src='../images/placeholder.jpg'/></li>";
 						}
 						elseif($ext == 'mov' || $ext == 'm4v' || $ext == 'avi' || $ext == 'mkv')
 						{
 							echo "<li class='files'>";
 							echo $member['file_name'];
-							echo $ext."<img src='../images/movie.png'/></li>";							
+							echo $ext."<br><img src='../images/movie.png'/></li>";							
 						}
 						else
 						{
 							echo "<li class='files'>";
 							echo $member['file_name'];
-							echo $ext."<img src='../images/document.png'/></li>";
+							echo $ext."<br><img src='../images/document.png'/></li>";
 						}
 						
 						$x++;
