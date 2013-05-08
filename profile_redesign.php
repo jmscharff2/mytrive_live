@@ -511,10 +511,12 @@ Drag and Drop your files here!
 													$z = 0;
 													if($friends_files_result)
 													{
+														echo "in result<br>";
 														if(mysql_num_rows($friends_files_result) > 0)
 														{
 															while ($z < mysql_num_rows($friends_files_result))
 															{
+																echo "in loop<br>";
 																$friends_files_member = mysql_fetch_assoc($friends_files_result);
 																echo "<a href='file_settings.php?file_id=".$friends_files_member['file_id']."'>".$friends_files_member['file_name']."</a><br>";
 																$z++;
