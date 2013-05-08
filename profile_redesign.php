@@ -214,29 +214,28 @@ $(document).ready(function(){
 		
 		$(function() {
 
-	$("#html5_uploader").pluploadQueue({
-	
-	     // General settings
-	     runtimes : 'html5',
-	     url : 'upload_files.php',
-	     max_file_size : '10mb',
-	     chunk_size : '1mb',
-	     unique_names : true,
-	     // Resize images on clientside if we can
-	     resize : {width : 320, height : 240, quality : 90},
-	     // Specify what files to browse for
-	     filters : [	
-	        {title : "Image files", extensions : "jpg,gif,png"},
-			{title : "Zip files", extensions : "zip, gzip, tar.gz, gz"},
-			{title : "Video files", extensions : "m4v,avi,mkv, mp4"},
-			{title : "Document Files", extensions : "doc, docx, odt, xls, xlsx, ppt, pptx"},
-			{title : "Book Files", extensions : "mobi"}	
-	     ]	
-	 });
-	 
-	 
-	 
-	 function showDiv(section) {
+			$("#html5_uploader").pluploadQueue({
+			
+			     // General settings
+			     runtimes : 'html5',
+			     url : 'upload_files.php',
+			     max_file_size : '10mb',
+			     chunk_size : '1mb',
+			     unique_names : true,
+			     // Resize images on clientside if we can
+			     resize : {width : 320, height : 240, quality : 90},
+			     // Specify what files to browse for
+			     filters : [	
+			        {title : "Image files", extensions : "jpg,gif,png"},
+					{title : "Zip files", extensions : "zip, gzip, tar.gz, gz"},
+					{title : "Video files", extensions : "m4v,avi,mkv, mp4"},
+					{title : "Document Files", extensions : "doc, docx, odt, xls, xlsx, ppt, pptx"},
+					{title : "Book Files", extensions : "mobi"}	
+			     ]	
+			     });
+			 });
+			 
+			 function showDiv(section) {
 			if(section == "friend_content")
 			{
 				Console.log("Friend Content");
@@ -272,9 +271,6 @@ $(document).ready(function(){
 			}
 		}
 
- 
- 
- });
 </script>
 
 
