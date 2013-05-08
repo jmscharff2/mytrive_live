@@ -293,59 +293,7 @@ Drag and Drop your files here!
 
 <section id="content">
 
-	<section id="profile_content">
-		<section id="profile_picture">
-			<img src="../images/placeholder.jpg" height="100px"/>
-		</section>
-		Username: Jonathan Scharff<br>
-		Storage: 2Gb/10Gb<br>
-		<a href="#">Settings</a>
-	</section>
-	<section id="file_drop">
-		<h2>Drag and Drop your files here!</h2>
-	</section>
-	
-		
-
-
-		<section id="friend_content" style="display: none;">
-		<h2>Friends</h2>  <input type="text" name="add_friend" placeholder="Add New Friends" style="width: 150px; border: 1px solid black;"/><br>
-			<img src="../images/placeholder.jpg"/>
-			<img src="../images/placeholder.jpg"/>
-			<img src="../images/placeholder.jpg"/>
-			<img src="../images/placeholder.jpg"/>
-			<img src="../images/placeholder.jpg"/>
-			<img src="../images/placeholder.jpg"/>
-			<img src="../images/placeholder.jpg"/>
-			<img src="../images/placeholder.jpg"/>
-			<img src="../images/placeholder.jpg"/>
-			<img src="../images/placeholder.jpg"/>
-			<img src="../images/placeholder.jpg"/>
-			<img src="../images/placeholder.jpg"/>
-			<img src="../images/placeholder.jpg"/>
-			<img src="../images/placeholder.jpg"/>
-		</section>
-		
-		<section id="friend_files" style="display: none;">
-		<h2>Friends Files</h2>
-			<img src="../images/placeholder.jpg"/>
-			<img src="../images/placeholder.jpg"/>
-			<img src="../images/placeholder.jpg"/>
-			<img src="../images/placeholder.jpg"/>
-			<img src="../images/placeholder.jpg"/>
-			<img src="../images/placeholder.jpg"/>
-			<img src="../images/placeholder.jpg"/>
-			<img src="../images/placeholder.jpg"/>
-		</section>
-		
-		<section id="upload" style="display: none;">
-		<style type="text/css">@import url(/js/jquery.plupload.queue/css/jquery.plupload.queue.css);</style>
-		<div id="html5_uploader">You browser doesn't support native upload. Try Firefox 3 or Safari 4.</div>		
-		</section>
-		
-		
-		
-		<section id="file_content">
+			<section id="file_content">
 		<h2>Files</h2>
 		
 		<ul id ="file_list">
@@ -420,6 +368,62 @@ Drag and Drop your files here!
 				<img src="images/Play.png"height="20%"/>	
 			</div>
 		</section>
+
+
+
+	<section id="profile_content">
+		<section id="profile_picture">
+			<img src="../images/placeholder.jpg" height="100px"/>
+		</section>
+		Username: Jonathan Scharff<br>
+		Storage: 2Gb/10Gb<br>
+		<a href="#">Settings</a>
+	</section>
+	<section id="file_drop">
+		<h2>Drag and Drop your files here!</h2>
+	</section>
+	
+		
+
+
+		<section id="friend_content" style="display: none;">
+		<h2>Friends</h2>  <input type="text" name="add_friend" placeholder="Add New Friends" style="width: 150px; border: 1px solid black;"/><br>
+			<img src="../images/placeholder.jpg"/>
+			<img src="../images/placeholder.jpg"/>
+			<img src="../images/placeholder.jpg"/>
+			<img src="../images/placeholder.jpg"/>
+			<img src="../images/placeholder.jpg"/>
+			<img src="../images/placeholder.jpg"/>
+			<img src="../images/placeholder.jpg"/>
+			<img src="../images/placeholder.jpg"/>
+			<img src="../images/placeholder.jpg"/>
+			<img src="../images/placeholder.jpg"/>
+			<img src="../images/placeholder.jpg"/>
+			<img src="../images/placeholder.jpg"/>
+			<img src="../images/placeholder.jpg"/>
+			<img src="../images/placeholder.jpg"/>
+		</section>
+		
+		<section id="friend_files" style="display: none;">
+		<h2>Friends Files</h2>
+			<img src="../images/placeholder.jpg"/>
+			<img src="../images/placeholder.jpg"/>
+			<img src="../images/placeholder.jpg"/>
+			<img src="../images/placeholder.jpg"/>
+			<img src="../images/placeholder.jpg"/>
+			<img src="../images/placeholder.jpg"/>
+			<img src="../images/placeholder.jpg"/>
+			<img src="../images/placeholder.jpg"/>
+		</section>
+		
+		<section id="upload" style="display: none;">
+		<style type="text/css">@import url(/js/jquery.plupload.queue/css/jquery.plupload.queue.css);</style>
+		<div id="html5_uploader">You browser doesn't support native upload. Try Firefox 3 or Safari 4.</div>		
+		</section>
+		
+		
+		
+
 
 	
 </section>
