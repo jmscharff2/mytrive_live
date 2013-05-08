@@ -616,6 +616,7 @@ Drag and Drop your files here!
 		
 		
 			$qry = "SELECT * FROM files WHERE owner_id = '$username'";
+			echo $qry."<br>";
 			$result = mysql_query($qry);
 			
 			$x = 0;
