@@ -101,9 +101,9 @@
 			exit();
 		}else {
 			//Login failed
-			//echo "error: " . $result . "num_rows: " . mysql_num_rows($result);
+			echo "error: " . $result . "num_rows: " . mysql_num_rows($result);
 			//header("location: login.html");
-			header("location: index.php");
+			//header("location: index.php");
 			exit();
 		}
 	}else {
