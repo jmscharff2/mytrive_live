@@ -467,43 +467,11 @@ Drag and Drop your files here!
 											$member3 = mysql_fetch_assoc($result3);
 											if($member3['first_name'] != '' && $member3['last_name'] != '')
 											{
-												echo "<a href=friends_profile.php?friends_user_id=".$friend_id.">".$member3['first_name']." ".$member3['last_name']."</a>";
-												//Display friends files willing to share
-												$friends_files_qry = "SELECT * FROM files WHERE owner_id = '$friend_id' AND want_to_share = 1";
-													$friends_files_result = mysql_query($friends_files_qry);
-													$z = 0;
-													if($friends_files_result)
-													{
-														if(mysql_num_rows($friends_files_result) > 0)
-														{
-															while ($x < mysql_num_rows($friends_files_result))
-															{
-																$friends_files_member = mysql_fetch_assoc($friends_files_result);
-																echo "<a href='file_settings.php?file_id=".$friends_files_member['file_id']."'>".$friends_files_member['file_name']."</a><br>";
-																$z++;
-															}
-														}
-													}
+												echo "<a href=friends_profile.php?friends_user_id=".$friend_id.">".$member3['first_name']." ".$member3['last_name']."</a> blah!";
 											}
 											else
 											{
-												echo "<a href=friends_profile.php?friends_user_id=".$friend_id.">".$member3['username']."</a>";
-												//Display friends files willing to share
-												$friends_files_qry = "SELECT * FROM files WHERE owner_id = '$friend_id' AND want_to_share = 1";
-													$friends_files_result = mysql_query($friends_files_qry);
-													$z = 0;
-													if($friends_files_result)
-													{
-														if(mysql_num_rows($friends_files_result) > 0)
-														{
-															while ($x < mysql_num_rows($friends_files_result))
-															{
-																$friends_files_member = mysql_fetch_assoc($friends_files_result);
-																echo "<a href='file_settings.php?file_id=".$friends_files_member['file_id']."'>".$friends_files_member['file_name']."</a><br>";
-																$z++;
-															}
-														}
-													}
+												echo "<a href=friends_profile.php?friends_user_id=".$friend_id.">".$member3['username']."</a> blah2";
 		
 											}
 											$y++;
@@ -533,42 +501,10 @@ Drag and Drop your files here!
 											if($member3['first_name'] != '' && $member3['last_name'] != '')
 											{
 												echo "<a href=friends_profile.php?friends_user_id=".$friend_id.">".$member3['first_name']." ".$member3['last_name']."</a>";
-												//Display friends files willing to share
-												$friends_files_qry = "SELECT * FROM files WHERE owner_id = '$friend_id' AND want_to_share = 1";
-													$friends_files_result = mysql_query($friends_files_qry);
-													$z = 0;
-													if($friends_files_result)
-													{
-														if(mysql_num_rows($friends_files_result) > 0)
-														{
-															while ($x < mysql_num_rows($friends_files_result))
-															{
-																$friends_files_member = mysql_fetch_assoc($friends_files_result);
-																echo "<a href='file_settings.php?file_id=".$friends_files_member['file_id']."'>".$friends_files_member['file_name']."</a><br>";
-																$z++;
-															}
-														}
-													}
 											}
 											else
 											{
 												echo "<a href=friends_profile.php?friends_user_id=".$friend_id.">".$member3['username']."</a>";
-												//Display friends files willing to share
-												$friends_files_qry = "SELECT * FROM files WHERE owner_id = '$friend_id' AND want_to_share = 1";
-													$friends_files_result = mysql_query($friends_files_qry);
-													$z = 0;
-													if($friends_files_result)
-													{
-														if(mysql_num_rows($friends_files_result) > 0)
-														{
-															while ($x < mysql_num_rows($friends_files_result))
-															{
-																$friends_files_member = mysql_fetch_assoc($friends_files_result);
-																echo "<a href='file_settings.php?file_id=".$friends_files_member['file_id']."'>".$friends_files_member['file_name']."</a><br>";
-																$z++;
-															}
-														}
-													}
 											}
 											$y++;
 										}
