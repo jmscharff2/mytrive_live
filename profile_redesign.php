@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <?php
 	session_start();
+	$username = $_SESSION['username'];
 ?>
 
 <HTML lang="en-us">
@@ -293,9 +294,38 @@ Drag and Drop your files here!
 	
 		<section id="file_content">
 		<h2>Files</h2>
+		
+		
 		<?php
-		echo $_SESSION['username'];
+		
+		
+			$qry = "SELECT * FROM files WHERE owner_id = '$username'";
+			$result = mysql_query($qry);
+			
+			$x = 0;
+			
+			if($result)
+			{
+				if(mysql_num_rows($result) > 0)
+				{
+				echo "<table  width='100%'>";
+					while ($x < mysql_num_rows($result))
+					{
+						$member = mysql_fetch_assoc($result);
+						$ext = end(explode('.', $member['file_name']));
+						echo $member['file_name']."<br>";
+						$x++;
+					}
+				}
+			}
+		
+		
 		?>
+		
+		
+		
+		
+		
 					<ul id ="file_list">
 					<li class="files" id="Movie"><h3 style="display:none;">Movies</h3><img src="../images/document.png"/></li>
 					<li class="files" id="Movie"><h3 style="display:none;">Movies</h3><img src="../images/document.png"/></li>
