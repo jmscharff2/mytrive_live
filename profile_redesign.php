@@ -218,7 +218,7 @@ $(document).ready(function(){
 			
 			     // General settings
 			     runtimes : 'html5',
-			     url : 'upload_files.php',
+			     url : 'upload_file.php',
 			     max_file_size : '10mb',
 			     chunk_size : '1mb',
 			     unique_names : true,
