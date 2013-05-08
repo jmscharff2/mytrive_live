@@ -71,8 +71,9 @@
 <li><a href="#use">Why use myTrive</a></li>
 </ul>
 <form action = "login.php" method ="post">
-<input type="text" name="username" placeholder="username" onkeypress="return submitenter(this,event)"/>
-<input type="password" name="username" placeholder="password" onkeypress="return submitenter(this,event)"/>
+	<input type="text" name="username" id="username" class="placeholder" placeholder="username"/>
+	<input type="password" name="password" id="password" class="placeholder" placeholder="password" onkeypress="return submitenter(this,event)"/>
+	<input type="submit" name="login" value="Submit"hidden="true"/>  
 </form>
 </nav>
 </div>
