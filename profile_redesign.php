@@ -309,8 +309,110 @@ Drag and Drop your files here!
 		<h2>Friends</h2>  <input type="text" name="add_friend" placeholder="Add New Friends" style="width: 150px; border: 1px solid black;"/><br>
 		
 			<?php
-			echo "test";
-			
+				$user_id = $_SESSION['user_id'];
+				echo $user_id."<br>";
+				$qry2 = "SELECT * FROM friends WHERE (friend1 = '$user_id' OR friend2 = '$user_id') AND accepted = 1";
+				$result2 = mysql_query($qry2);
+				$x = 0;
+				
+				
+				
+				if($result2)
+				{
+					if(mysql_num_rows($result2) > 0)
+					{
+						while ($x < mysql_num_rows($result2))
+						{
+							$member4 = mysql_fetch_assoc($result2);
+							if($member4['friend1'] != $user_id)
+							{
+								$friend_id = $member4['friend1'];
+								$qry3 = "SELECT username, first_name, last_name FROM users WHERE user_id = '$friend_id'";
+								$result3 = mysql_query($qry3);
+								$y = 0;
+								if($result3)
+								{
+									if(mysql_num_rows($result3) > 0)
+									{
+										while($y < mysql_num_rows($result3))
+										{
+											$member3 = mysql_fetch_assoc($result3);
+											if($member3['first_name'] != '' && $member3['last_name'] != '')
+											{
+												echo "<a href=friends_profile.php?friends_user_id=".$friend_id.">".$member3['first_name']." ".$member3['last_name']."</a>";
+											}
+											else
+											{
+												echo "<a href=friends_profile.php?friends_user_id=".$friend_id.">".$member3['username']."</a>";
+		
+											}
+											$y++;
+										}
+									}
+								}
+								else
+								{
+									echo "Friend Find Error :(";
+								}
+								
+							}
+							elseif($member4['friend2'] != $user_id)
+							{
+								$friend_id = $member4['friend2'];
+								$qry3 = "SELECT username, first_name, last_name FROM users WHERE user_id = '$friend_id'";
+								$result3 = mysql_query($qry3);
+								$y = 0;
+								if($result3)
+								{
+									if(mysql_num_rows($result3) > 0)
+									{
+										
+										while($y < mysql_num_rows($result3))
+										{
+											$member3 = mysql_fetch_assoc($result3);
+											if($member3['first_name'] != '' && $member3['last_name'] != '')
+											{
+												echo "<a href=friends_profile.php?friends_user_id=".$friend_id.">".$member3['first_name']." ".$member3['last_name']."</a>";
+											}
+											else
+											{
+												echo "<a href=friends_profile.php?friends_user_id=".$friend_id.">".$member3['username']."</a>";
+											}
+											$y++;
+										}
+									}
+								}
+								else
+								{
+									echo "Friend Find Error :(";
+								}
+							}
+							$x++;	
+						}
+					}
+				}
+
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+							
 			?>
 		
 			<!--
