@@ -467,11 +467,11 @@ Drag and Drop your files here!
 											$member3 = mysql_fetch_assoc($result3);
 											if($member3['first_name'] != '' && $member3['last_name'] != '')
 											{
-												echo "<a href=friends_profile.php?friends_user_id=".$friend_id.">".$member3['first_name']." ".$member3['last_name']."</a> blah!";
+												echo "<a href=friends_profile.php?friends_user_id=".$friend_id.">".$member3['first_name']." ".$member3['last_name']."</a>";
 											}
 											else
 											{
-												echo "<a href=friends_profile.php?friends_user_id=".$friend_id.">".$member3['username']."</a> blah2";
+												echo "<a href=friends_profile.php?friends_user_id=".$friend_id.">".$member3['username']."</a>";
 		
 											}
 											$y++;
@@ -500,11 +500,11 @@ Drag and Drop your files here!
 											$member3 = mysql_fetch_assoc($result3);
 											if($member3['first_name'] != '' && $member3['last_name'] != '')
 											{
-												echo "<a href=friends_profile.php?friends_user_id=".$friend_id.">".$member3['first_name']." ".$member3['last_name']."</a>";
+												echo "<a href=friends_profile.php?friends_user_id=".$friend_id.">".$member3['first_name']." ".$member3['last_name']."</a> blah";
 											}
 											else
 											{
-												echo "<a href=friends_profile.php?friends_user_id=".$friend_id.">".$member3['username']."</a>";
+												echo "<a href=friends_profile.php?friends_user_id=".$friend_id.">".$member3['username']."</a> blah2";
 											}
 											$y++;
 										}
