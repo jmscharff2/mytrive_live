@@ -310,7 +310,6 @@ Drag and Drop your files here!
 		
 			<?php
 				$user_id = $_SESSION['user_id'];
-				echo $user_id."<br>";
 				$qry2 = "SELECT * FROM friends WHERE (friend1 = '$user_id' OR friend2 = '$user_id') AND accepted = 1";
 				$result2 = mysql_query($qry2);
 				$x = 0;
@@ -435,6 +434,129 @@ Drag and Drop your files here!
 		
 		<section id="friend_files" style="display: none;">
 		<h2>Friends Files</h2>
+		
+		
+		<?php
+		
+		
+		$qry2 = "SELECT * FROM friends WHERE (friend1 = '$user_id' OR friend2 = '$user_id') AND accepted = 1";
+				$result2 = mysql_query($qry2);
+				$x = 0;
+				
+				
+				
+				if($result2)
+				{
+					if(mysql_num_rows($result2) > 0)
+					{
+						while ($x < mysql_num_rows($result2))
+						{
+							$member4 = mysql_fetch_assoc($result2);
+							if($member4['friend1'] != $user_id)
+							{
+								$friend_id = $member4['friend1'];
+								$qry3 = "SELECT username, first_name, last_name FROM users WHERE user_id = '$friend_id'";
+								$result3 = mysql_query($qry3);
+								$y = 0;
+								if($result3)
+								{
+									if(mysql_num_rows($result3) > 0)
+									{
+										while($y < mysql_num_rows($result3))
+										{
+											$member3 = mysql_fetch_assoc($result3);
+											if($member3['first_name'] != '' && $member3['last_name'] != '')
+											{
+												echo "<a href=friends_profile.php?friends_user_id=".$friend_id.">".$member3['first_name']." ".$member3['last_name']."</a>";
+											}
+											else
+											{
+												echo "<a href=friends_profile.php?friends_user_id=".$friend_id.">".$member3['username']."</a>";
+		
+											}
+											$y++;
+										}
+									}
+									//Display friends files willing to share
+												$friends_files_qry = "SELECT * FROM files WHERE owner_id = '$friend_id' AND want_to_share = 1";
+													$friends_files_result = mysql_query($friends_files_qry);
+													$z = 0;
+													if($friends_files_result)
+													{
+														if(mysql_num_rows($friends_files_result) > 0)
+														{
+															while ($x < mysql_num_rows($friends_files_result))
+															{
+																$friends_files_member = mysql_fetch_assoc($friends_files_result);
+																echo "<a href='file_settings.php?file_id=".$friends_files_member['file_id']."'>".$friends_files_member['file_name']."</a><br>";
+																$z++;
+															}
+														}
+													}
+								}
+								else
+								{
+									echo "Friend Find Error :(";
+								}
+								
+							}
+							elseif($member4['friend2'] != $user_id)
+							{
+								$friend_id = $member4['friend2'];
+								$qry3 = "SELECT username, first_name, last_name FROM users WHERE user_id = '$friend_id'";
+								$result3 = mysql_query($qry3);
+								$y = 0;
+								if($result3)
+								{
+									if(mysql_num_rows($result3) > 0)
+									{
+										
+										while($y < mysql_num_rows($result3))
+										{
+											$member3 = mysql_fetch_assoc($result3);
+											if($member3['first_name'] != '' && $member3['last_name'] != '')
+											{
+												echo "<a href=friends_profile.php?friends_user_id=".$friend_id.">".$member3['first_name']." ".$member3['last_name']."</a>";
+											}
+											else
+											{
+												echo "<a href=friends_profile.php?friends_user_id=".$friend_id.">".$member3['username']."</a>";
+											}
+											$y++;
+										}
+									}
+									//Display friends files willing to share
+												$friends_files_qry = "SELECT * FROM files WHERE owner_id = '$friend_id' AND want_to_share = 1";
+													$friends_files_result = mysql_query($friends_files_qry);
+													$z = 0;
+													if($friends_files_result)
+													{
+														if(mysql_num_rows($friends_files_result) > 0)
+														{
+															while ($x < mysql_num_rows($friends_files_result))
+															{
+																$friends_files_member = mysql_fetch_assoc($friends_files_result);
+																echo "<a href='file_settings.php?file_id=".$friends_files_member['file_id']."'>".$friends_files_member['file_name']."</a><br>";
+																$z++;
+															}
+														}
+													}
+								}
+								else
+								{
+									echo "Friend Find Error :(";
+								}
+							}
+							$x++;	
+						}
+					}
+				}
+
+		
+		?>
+		
+		
+		
 			<img src="../images/placeholder.jpg"/>
 			<img src="../images/placeholder.jpg"/>
 			<img src="../images/placeholder.jpg"/>
