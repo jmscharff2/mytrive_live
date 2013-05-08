@@ -329,20 +329,25 @@ Drag and Drop your files here!
 					{
 						$member = mysql_fetch_assoc($result);
 						$ext = end(explode('.', $member['file_name']));
-						echo $member['file_name']."<br>";
 						
 						
 						if($ext == 'png' || $ext == 'jpg' || $ext == 'gif' || $ext == 'psd')
 						{
-							echo "<li class='files'>".$ext."<img src='../images/placeholder.png'/></li>";
+							echo "<li class='files'>";
+							echo $member['file_name'];
+							echo $ext."<img src='../images/placeholder.jpg'/></li>";
 						}
 						elseif($ext == 'mov' || $ext == 'm4v' || $ext == 'avi' || $ext == 'mkv')
 						{
-							echo "<li class='files'>".$ext."<img src='../images/movie.png'/></li>";							
+							echo "<li class='files'>";
+							echo $member['file_name'];
+							echo $ext."<img src='../images/movie.png'/></li>";							
 						}
 						else
 						{
-							echo "<li class='files'>".$ext."<img src='../images/document.png'/></li>";
+							echo "<li class='files'>";
+							echo $member['file_name'];
+							echo $ext."<img src='../images/document.png'/></li>";
 						}
 						
 						$x++;
