@@ -148,6 +148,7 @@ body
 	width: 70%;
 	float: right;
 	height: 50%;
+	column-count: 2;
 }
 
 

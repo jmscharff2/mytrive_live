@@ -361,7 +361,7 @@ Drag and Drop your files here!
 		
 		
 		
-		
+					<!--
 					
 					<li class="files" id="Movie"><h3 style="display:none;">Movies</h3><img src="../images/document.png"/></li>
 					<li class="files" id="Movie"><h3 style="display:none;">Movies</h3><img src="../images/document.png"/></li>
@@ -371,6 +371,7 @@ Drag and Drop your files here!
 					<li class="files" id="Book"><h3 style="display:none;">Books</h3><img src="../images/placeholder.jpg"/></li>
 					<li class="files" id="Documents"><h3 style="display:none;">Documents</h3><img src="../images/placeholder.jpg"/></li>
 					<li class="files" id="Documents"><h3 style="display:none;">Documents</h3><img src="../images/placeholder.jpg"/></li>
+					-->
 					</ul>
 					
 					
