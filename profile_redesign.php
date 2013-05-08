@@ -309,6 +309,7 @@ Drag and Drop your files here!
 		<h2>Files</h2>
 		
 		<ul id ="file_list">
+		<!--
 		<?php
 		
 		
@@ -358,7 +359,7 @@ Drag and Drop your files here!
 		
 		
 		
-					<!--
+					-->
 					
 					<li class="files" id="Movie"><h3 style="display:none;">Movies</h3><img src="../images/document.png"/></li>
 					<li class="files" id="Movie"><h3 style="display:none;">Movies</h3><img src="../images/document.png"/></li>
@@ -368,7 +369,7 @@ Drag and Drop your files here!
 					<li class="files" id="Book"><h3 style="display:none;">Books</h3><img src="../images/placeholder.jpg"/></li>
 					<li class="files" id="Documents"><h3 style="display:none;">Documents</h3><img src="../images/placeholder.jpg"/></li>
 					<li class="files" id="Documents"><h3 style="display:none;">Documents</h3><img src="../images/placeholder.jpg"/></li>
-					-->
+				
 					</ul>
 					
 					
@@ -379,6 +380,7 @@ Drag and Drop your files here!
 				<img src="images/Play.png"height="20%"/>	
 			</div>
 		</section>
+
 
 
 		<section id="friend_content" style="display: none;">
