@@ -208,10 +208,54 @@ $(document).ready(function(){
 });
 
 
+function $(id) {
+	return document.getElementById(id);	
+}
 
+
+var uploader = new plupload.Uploader({
+	runtimes : 'gears,html5,flash,silverlight,browserplus',
+	browse_button : 'pickfiles',
+	container: 'container',
+	max_file_size : '10000mb',
+	chunk_size : '10mb',
+	url : 'upload_file.php',
+	resize : {width : 320, height : 240, quality : 90},
+	flash_swf_url : 'js/plupload.flash.swf',
+	silverlight_xap_url : 'js/plupload.silverlight.xap',
+	filters : [
+		{title : "Image files", extensions : "jpg,gif,png"},
+		{title : "Zip files", extensions : "zip, gzip, tar.gz, gz"},
+		{title : "Video files", extensions : "m4v,avi,mkv, mp4"},
+		{title : "Document Files", extensions : "doc, docx, odt, xls, xlsx, ppt, pptx"},
+		{title : "Book Files", extensions : "mobi"}
+	]
+});
+
+uploader.bind('Init', function(up, params) {
+	$('filelist').innerHTML = "<div>Current runtime: " + params.runtime + "</div>";
+});
+
+uploader.bind('FilesAdded', function(up, files) {
+	for (var i in files) {
+		$('filelist').innerHTML += '<div id="' + files[i].id + '">' + files[i].name + ' (' + plupload.formatSize(files[i].size) + ') <b></b></div>';
+	}
+});
+
+uploader.bind('UploadProgress', function(up, file) {
+	$(file.id).getElementsByTagName('b')[0].innerHTML = '<span>' + file.percent + "%</span>";
+});
+
+
+$('uploadfiles').onclick = function() {
+	uploader.start();
+	return false;
+};
+
+uploader.init();
 				
 		
-		
+		/*
 		$(function() {
 
 			$("#html5_uploader").pluploadQueue({
@@ -233,7 +277,7 @@ $(document).ready(function(){
 					{title : "Book Files", extensions : "mobi"}	
 			     ]	
 			     });
-			 });
+			 });*/
 			 
 			 function showDiv(section) {
 			if(section == "friend_content")
@@ -602,7 +646,16 @@ Drag and Drop your files here!
 		
 		<section id="upload" style="display: none;">
 		<style type="text/css">@import url(/js/jquery.plupload.queue/css/jquery.plupload.queue.css);</style>
-		<div id="html5_uploader">You browser doesn't support native upload. Try Firefox 3 or Safari 4.</div>		
+		<!--<div id="html5_uploader">You browser doesn't support native upload. Try Firefox 3 or Safari 4.</div>-->
+		<div id="container">
+	    <div id="filelist">No runtime found.</div>
+	    <br />
+	    <a id="pickfiles" href="javascript:;">[Select files]</a> 
+	    <a id="uploadfiles" href="javascript:;">[Upload files]</a>
+	    </div>
+	</center>
+</div>
+		
 		</section>
 		
 		
