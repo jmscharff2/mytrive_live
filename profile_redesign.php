@@ -307,6 +307,13 @@ Drag and Drop your files here!
 	
 		<section id="friend_content" style="display: none;">
 		<h2>Friends</h2>  <input type="text" name="add_friend" placeholder="Add New Friends" style="width: 150px; border: 1px solid black;"/><br>
+		
+			<?php
+			echo "test";
+			
+			?>
+		
+			<!--
 			<img src="../images/placeholder.jpg"/>
 			<img src="../images/placeholder.jpg"/>
 			<img src="../images/placeholder.jpg"/>
@@ -321,6 +328,7 @@ Drag and Drop your files here!
 			<img src="../images/placeholder.jpg"/>
 			<img src="../images/placeholder.jpg"/>
 			<img src="../images/placeholder.jpg"/>
+			-->
 		</section>
 		
 		<section id="friend_files" style="display: none;">
