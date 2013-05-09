@@ -432,8 +432,9 @@ File Drop
 											$member3 = mysql_fetch_assoc($result3);
 											if($member3['first_name'] != '' && $member3['last_name'] != '')
 											{
-												echo "<a href=friends_profile.php?friends_user_id=".$friend_id.">".$member3['first_name']." ".$member3['last_name']."</a>";
+												echo "<a href=friends_profile.php?friends_user_id=".$friend_id.">".$member3['first_name']." ".$member3['last_name']."</a><br>";
 												$file3 = $member3['profile_picture'];
+												echo $file3;
 												$bucket3 = "mytrive_files";
 												$download_file_string3 = gs_prepareS3URL($file3, $bucket3);
 												
@@ -450,7 +451,7 @@ File Drop
 											}
 											else
 											{
-												echo "<a href=friends_profile.php?friends_user_id=".$friend_id.">".$member3['username']."</a>";
+												echo "<a href=friends_profile.php?friends_user_id=".$friend_id.">".$member3['username']."</a><br>";
 												$file3 = $member3['profile_picture'];
 												$bucket3 = "mytrive_files";
 												$download_file_string3 = gs_prepareS3URL($file3, $bucket3);
