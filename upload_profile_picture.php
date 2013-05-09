@@ -18,7 +18,8 @@ if(!db)
 }
 $username = $_SESSION['username'];
 
-$uploaddir = '/mnt/s3_mytrive_files/'.$username;
+//$uploaddir = '/mnt/s3_mytrive_files/'.$username;
+$uploaddir = '/var/www/';
 $uploadfile = $uploaddir . basename($_FILES['userfile']['name']);
 
 
