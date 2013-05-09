@@ -192,7 +192,7 @@ $(document).ready(function(){
 	
 });
 
-				
+		/*		
 		
 		
 		$(function() {
@@ -216,7 +216,7 @@ $(document).ready(function(){
 					{title : "Book Files", extensions : "mobi"}	
 			     ]	
 			     });
-			 });
+			 });*/
 			 
 			 function showDiv(section) {
 			if(section == "friend_content")
@@ -342,7 +342,6 @@ $(document).ready(function(){
 	<section id="file_drop">
 		<style type="text/css">@import url(/js/jquery.plupload.queue/css/jquery.plupload.queue.css);</style>
 <div id="html5_uploader">You browser doesn't support native upload. Try Firefox 3 or Safari 4.</div>	
-
 	</section>
 	
 		<section id="friend_content" style="display: none;">
@@ -835,7 +834,7 @@ $(document).ready(function(){
 		<!--<style type="text/css">@import url(/js/jquery.plupload.queue/css/jquery.plupload.queue.css);</style>
 		<div id="html5_uploader">You browser doesn't support native upload. Try Firefox 3 or Safari 4.</div>	
 		-->
-		<!--
+		
 		<div id="container">
 	    <div id="filelist">No runtime found.</div>
 	    <br />
@@ -898,7 +897,7 @@ uploader.init();
 			
 		</section>
 		
-		-->
+		
 		
 	<section id="file_content">
 		<h2>Files</h2>
