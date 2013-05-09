@@ -1,64 +1,137 @@
 <?php
 	session_start();
-	
+
 	require_once('config.php');
 
 	$link = mysql_connect(DB_HOST, DB_USER, DB_PASSWORD);
 	if(!$link)
 	{
-		die('Failed to connect to server: '. mysql_error());
+	       	 die('Failed to connect to server: '. mysql_error());
 	}
-	
+
 	$db = mysql_select_db(DB_DATABASE);
 	if(!$db)
-	{
+	{	
 		die("Unable to select database");
 	}
-	
-	$username = $_SESSION['username'];
+
 
 ?>
 
 <HTML>
+	<div class="meny">
+		<div class="bluebackground">
+			<img src="images/trive.png">
+		</div>
+		<H2>Your Files:</H2><br><br>
+		
+		<?php 
+		      $side_user = $_SESSION['username'];
+		      
+		      if(strlen($side_user) > 1)
+		      {
 
-<HEAD>
+		      $qry2 = "SELECT * FROM files WHERE owner_id = '$side_user'";
+  		      $result2 = mysql_query($qry2);
 
-<TITLE>mytrive redesign</TITLE>
+		      $x = 0;
 
-<link rel="stylesheet" type="text/css" href="css/design.css" />
-<script type="text/javascript" src="includes/submitenter.js" language="javascript"></script>
+		      if($result2)
+		      {
+			if(mysql_num_rows($result2) > 0)
+        	       	{
+				echo "<table width='100$'>";
+                		while ($x < mysql_num_rows($result2))
+                		{
+					$member2 = mysql_fetch_assoc($result2);
+					echo "<tr><td>";
+					echo $member2['file_name']."<br><br>";
+					$x++;
+					echo "</td></tr>";
+				}
+			  }
+			}	
+			echo "</table>";
+			}
+		?>
 
 
-<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+	</div>
 
-<link rel="icon" 
-      type="image/png" 
-      href="images/favicon.ico">
-
-</HEAD>
-
-<BODY>
-<!--top banner-->
-<div id="nav-banner">
-<nav>
-<a href="index_redesign.php" ><img src = "images/trive.png" id="logo"></a>
-<ul>
-<li><a href="profile.php">Profile</a></li>
-<li><a href="profile.php#friends">Friends</a></li>
-<li><a href="profile.php#friends_files">Friends Files</a></li>
-<li><a href="profile.php#upload" >Upload</a></li>
-</ul>
-</div>
-
-<section id="content">
-	<section id="settings_edit">
+	<div class="contents">
+<?php
+	//session_start();
 	
-	<?php  
+	
+
+	if(isset($_SESSION['username']) && $_SESSION['username'] != '')
+	{
+		include 'includes/loggedin.html';
+	}
+	elseif(!(isset($_SESSION['username'])))
+	{
+		include 'includes/loggedout.html';
+		echo '<meta http-equiv="Refresh" content="0; URL=http://www.mytrive.com">';
+	}
+
+?>	
+		
+	<script src="js/meny.min.js"></script>
+		
+		<script>
+		
+// Create an instance of Meny
+			var meny = Meny.create({
+				// The element that will be animated in from off screen
+				menuElement: document.querySelector( '.meny' ),
+
+				// The contents that gets pushed aside while Meny is active
+				contentsElement: document.querySelector( '.contents' ),
+
+				// [optional] The alignment of the menu (top/right/bottom/left)
+				position: 'left',
+
+				// [optional] The height of the menu (when using top/bottom position)
+				height: 200,
+
+				// [optional] The width of the menu (when using left/right position)
+				width: 260,
+
+				// [optional] Distance from mouse (in pixels) when menu should open
+				threshold: 40
+			});
+			
+			
+			// API Methods:
+			// meny.open();
+			// meny.close();
+			// meny.isOpen();
+			
+			// Events:
+			// meny.addEventListener( 'open', function(){ console.log( 'open' ); } );
+			// meny.addEventListener( 'close', function(){ console.log( 'close' ); } );
+
+			// Embed an iframe if a URL is passed in
+			if( Meny.getQuery().u && Meny.getQuery().u.match( /^http/gi ) ) {
+				var contents = document.querySelector( '.contents' );
+				contents.style.padding = '0px';
+				contents.innerHTML = '<div class="cover"></div><iframe src="'+ Meny.getQuery().u +'" style="width: 100%; height: 100%; border: 0; position: absolute;"></iframe>';
+			}
+</script>
+
+	
+		  <div class="scroll"></div>
+		  <!--<?php include 'includes/sidenav.html';?>-->
+       		
+		
+	
+		<div id="main-content-wrapper">
+
+			<?php  
 			$file_id = $_GET['file_id'];
 			$username = $_SESSION['username'];
 			$user_id = $_SESSION['user_id'];
 			$qry = "SELECT * FROM files WHERE owner_id = '$username' and file_id = '$file_id'";
-			echo $qry."<br>";
 			$result = mysql_query($qry);
 			$x = 0;
 			
@@ -124,9 +197,11 @@
 						$x++;
 						
 					}
-					echo "</table><input type=submit value='Update'/></form><br><br>";
+										
 				}
 			
+				echo "</table><input type=submit value='Update'/></form>";
+				echo "Users who would like to have this file shared to them: <br>";
 				$qry4 = "SELECT * FROM files JOIN file_request ON files.file_id = file_request.file_id WHERE owner_user_id = '$user_id'";
 				$result4 = mysql_query($qry4);
 				$x = 0;
@@ -135,8 +210,6 @@
 				{
 					if(mysql_num_rows($result4) > 0)
 					{
-						echo "Users who would like to have this file shared to them: <br>";
-
 						while($x < mysql_num_rows($result4))
 						{
 							$member4 = mysql_fetch_assoc($result4);
@@ -181,27 +254,35 @@
 					while($x < mysql_num_rows($result3))
 					{
 						$member3 = mysql_fetch_assoc($result3);
-						if($member3['owner_user_id'] != $user_id)
-						{
+						
 						echo "File Name: ".$member3['file_name']."<br>";
 						echo "<a href=request_file_share.php?file_id=".$file_id.">Request file to be shared from owner</a>";
-						}
+
 						$x++;
 					}
 				}
 			}
 						
 			?>
-	
-	
-	
-	
-	
-	</section>
-</section>
-	
+			<center>
+			<div id="fb-root"></div>
+			<script>(function(d, s, id) {
+			  var js, fjs = d.getElementsByTagName(s)[0];
+			  if (d.getElementById(id)) return;
+			  js = d.createElement(s); js.id = id;
+			  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+			  fjs.parentNode.insertBefore(js, fjs);
+			}(document, 'script', 'facebook-jssdk'));</script>
+			
+			<div class="fb-comments" data-href="http://mytrive.com/file_settings.php?file_id=<?php echo $file_id; ?>" data-width="470" data-num-posts="2" data-colorscheme="light"></div>		
+		
+			</center>
 
-
-
-</BODY>
+      	</div>     	
+	</div>
+	</div>
+	<?php include 'includes/footer.html'?>
+	</div>
+	</body>
+	
 </HTML>

@@ -1,64 +1,69 @@
-<?php
-	session_start();
-?>
+<!DOCTYPE html>
+<HTML lang="en-us">
 
-<HTML>
-<?php
-	//session_start();
-
-
-	if(isset($_SESSION['username']) && $_SESSION['username'] != '')
-	{
-		include 'includes/loggedin.html';
-	}
-	elseif(!(isset($_SESSION['username'])))
-	{
-		include 'includes/loggedout.html';
-		echo '<meta http-equiv="Refresh" content="1; URL=http://www.mytrive.com">';
-
-	}
+<HEAD>
+	<meta charset="utf-8"/>
 	
+	<TITLE>mytrive profile redesign</TITLE>
+
+<link rel="stylesheet" type="text/css" href="css/design.css" />
+<script type="text/javascript" src="includes/submitenter.js" language="javascript"></script>
+	<script src="js/jquery.js"></script>
+	<script src="js/jquery-ui.js"></script>
+	<script type="text/javascript" src="js/plupload.js"></script>
+		<script type="text/javascript" src="js/plupload.gears.js"></script>
+		<script type="text/javascript" src="js/plupload.silverlight.js"></script>
+		<script type="text/javascript" src="js/plupload.flash.js"></script>
+		<script type="text/javascript" src="js/plupload.browserplus.js"></script>
+		<script type="text/javascript" src="js/plupload.html4.js"></script>
+		<script type="text/javascript" src="js/plupload.html5.js"></script>
+		
 	
-	require_once('config.php');
-
-	$link = mysql_connect(DB_HOST, DB_USER, DB_PASSWORD);
-	if(!link)
-	{
-		die('Failed to connect to server: ' . mysql_error());
-	}
-	
-	$db = mysql_select_db(DB_DATABASE);
-	if(!db)
-	{
-		die("Unable to select database");
-	}
-	$username = $_SESSION['username'];
 
 
-?>
-<body>
-<div class="scroll"></div>
-        <?php include 'includes/sidenav.html';?>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
 
-<div id="main-content-wrapper">
+<link rel="icon" 
+      type="image/png" 
+      href="images/favicon.ico">
 
-	<div id="registration-mascot">
-		<img src = "images/mascot.png" height="100%">
 
-	</div>
+
+
+</HEAD>
+
+<BODY>
+<!--top banner-->
+<div id="nav-banner">
+<nav>
+<a href="index_redesign.php" ><img src = "images/trive.png" id="logo"></a>
+<ul>
+<li><a href="index_redesign.php">Profile</a></li>
+<li><a href="info_redesign.php">Files</a></li>
+<li><a href="faq_redesign.php">Upload</a></li>
+</ul>
+<form action = "login.php" method ="post">
+<input type="text" name="username" placeholder="username" onkeypress="return submitenter(this,event)"/>
+<input type="password" name="username" placeholder="password" onkeypress="return submitenter(this,event)"/>
+</form>
+</nav>
+</div>
+
+<section id="content">
+
+
 	<center>
-	<div id="registration-fields">
-		<RF1>Upload your files below<br></RF1>
-		<RF2>Click on upload to upload multiple files!</RF2><br><br>
+		<h2>Upload your files below<br></h21>
+		<h3>Click on upload to upload multiple files!</h3><br><br>
 	
-<div id="container">
+		<div id="container">
 	    <div id="filelist">No runtime found.</div>
 	    <br />
 	    <a id="pickfiles" href="javascript:;">[Select files]</a> 
 	    <a id="uploadfiles" href="javascript:;">[Upload files]</a>
 	    </div>
 	</center>
-</div>
+
 
 
 <script type="text/javascript">
@@ -108,18 +113,15 @@ $('uploadfiles').onclick = function() {
 };
 
 uploader.init();
-
-            
-            
-            
-            
-    
+  
 	</script>
-    </div>			
-	</div>
-	</div>
 	
-	<?php include 'includes/footer.html'?>
-</body>
+	
+</section>
 
-</html>
+
+</BODY>
+
+
+</HTML>
+

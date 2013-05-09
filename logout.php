@@ -1,72 +1,59 @@
 <?php
-//destroy session when they logout
-session_start();
+	session_start();
+	
+	require_once('config.php');
+
+	$link = mysql_connect(DB_HOST, DB_USER, DB_PASSWORD);
+	if(!$link)
+	{
+		die('Failed to connect to server: '. mysql_error());
+	}
+	
+	$db = mysql_select_db(DB_DATABASE);
+	if(!$db)
+	{
+		die("Unable to select database");
+	}
+	
+	$username = $_SESSION['username'];
 
 ?>
 
 <HTML>
+
+<HEAD>
+
+<TITLE>mytrive redesign</TITLE>
+
+<link rel="stylesheet" type="text/css" href="css/design.css" />
+<script type="text/javascript" src="includes/submitenter.js" language="javascript"></script>
+
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+
+<link rel="icon" 
+      type="image/png" 
+      href="images/favicon.ico">
+
+</HEAD>
+
+<BODY>
+<!--top banner-->
+<div id="nav-banner">
+<nav>
+<a href="index_redesign.php" ><img src = "images/trive.png" id="logo"></a>
+<ul>
+<li><a href="profile_redesign.php">Profile</a></li>
+<li><a href="profile_redesign.php#friends">Friends</a></li>
+<li><a href="profile_redesign.php#friends_files">Friends Files</a></li>
+<li><a href="profile_redesign.php#upload" >Upload</a></li>
+</ul>
+</div>
+
+<section id="content">
+<section id="settings_edit">
 <?php
-	//session_start();
-
-
-	if(isset($_SESSION['username']) && $_SESSION['username'] != '')
-	{
-		include 'includes/loggedin.html';
-	}
-	elseif(!(isset($_SESSION['username'])))
-	{
-		include 'includes/loggedout.html';
-	}
-
-?>
-	<BODY>
-		</div>
-		  <div class="scroll"></div>
-       
-        <?php include 'includes/sidenav.html';?>
-       		
-
-	
-		<div id="main-content-wrapper">
-		
-
-<?php
-	
-	
-	//Include database connection details
-	require_once('config.php');
-	
-	//Array to store validation errors
-	$errmsg_arr = array();
-	
-	//Validation error flag
-	$errflag = false;
-	
-	//Connect to mysql server
-	$link = mysql_connect(DB_HOST, DB_USER, DB_PASSWORD);
-	if(!$link) {
-		die('Failed to connect to server: ' . mysql_error());
-	}
-	
-	//Select database
-	$db = mysql_select_db(DB_DATABASE);
-	if(!$db) {
-		die("Unable to select database");
-	}
-	
-	//Function to sanitize values received from the form. Prevents SQL injection
-	function clean($str) {
-		$str = @trim($str);
-		if(get_magic_quotes_gpc()) {
-			$str = stripslashes($str);
-		}
-		return mysql_real_escape_string($str);
-	}
-	
-	
-		$username = $_SESSION['username'];
-		
-		$DateOfRequest = date('Y-m-d H:i:s'); 
+$DateOfRequest = date('Y-m-d H:i:s'); 
 
 		
 		$qry2 = "UPDATE users SET last_logged_out = '$DateOfRequest',loggedin = 0 WHERE username = '$username'";
@@ -74,9 +61,7 @@ session_start();
 		$result2 = 	mysql_query($qry2);
 		
 		
-		echo "<div id='registration-mascot'><img src = 'images/mascot.png' height='100%'></div>";
-		echo "<div id='registration-fields'>";
-		echo "<center><RF1>";
+		echo "<center>";
 		echo $_SESSION['username'] . " ";
 
 
@@ -92,12 +77,21 @@ session_start();
 		  }
 		  echo "</div>";
 		
-		echo '<meta http-equiv="Refresh" content="5; URL=http://www.mytrive.com">';
+		echo '<meta http-equiv="Refresh" content="5; URL=http://www.mytrive.com/index_redesign.php">';
 
 		
 		
 		?>	
-		</div>    	
-	</div>
-	</body>	
+
+
+
+
+</section>
+
+	</section>
+	
+
+
+
+</BODY>
 </HTML>
