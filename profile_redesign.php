@@ -400,7 +400,10 @@ File Drop
 	</section>
 	
 		<section id="friend_content" style="display: none;">
-		<h2>Friends</h2>  <input type="text" name="add_friend" placeholder="Add New Friends" style="width: 150px; border: 1px solid black;"/><br>
+		<h2>Friends</h2>
+		<form action = "request_friend_script.php" method = "POST">
+		<input type="text" name="friend_username" placeholder="Add New Friends" onkeypress="return submitenter(this,event)" style="width: 150px; border: 1px solid black;">
+		</form>
 		
 			<?php
 				$user_id = $_SESSION['user_id'];
@@ -730,6 +733,98 @@ File Drop
 						}
 					}
 				}
+				
+				
+				
+		$qry4 = "SELECT * FROM friends WHERE (friend1 = '$user_id' OR friend2 = '$user_id') AND accepted = 0";
+		$result4 = mysql_query($qry4);
+		$x = 0;
+		echo"<h2>Pending Friends</h2>";
+		if($result4)
+		{
+			if(mysql_num_rows($result4) > 0)
+			{
+				
+				while($x < mysql_num_rows($result4))
+				{
+					$member4 = mysql_fetch_assoc($result4);
+					
+					if($member4['friend1'] != $user_id)
+					{
+						$friend_id = $member4['friend1'];
+						$qry5 = "SELECT username, first_name, last_name FROM users WHERE user_id = '$friend_id'";
+						$result5 = mysql_query($qry5);
+						$y = 0;
+						if($result5)
+						{
+							if(mysql_num_rows($result5) > 0)
+							{
+								while($y < mysql_num_rows($result5))
+								{
+									$member5 = mysql_fetch_assoc($result5);
+									if($member5['first_name'] != '' && $member5['last_name'] != '')
+									{
+										echo $member5['first_name']." ".$member5['last_name'];
+										echo "<a href=accept_friend_request_script.php?friendship_id=".$member4['friendship_id'].">Accept </a>";
+										echo "<a href=reject_friend_request_script.php?friendship_id=".$member4['friendship_id'].">/ Reject</a>";
+									}
+									else
+									{
+										echo $member5['username'];
+										echo "<a href=accept_friend_request_script.php?friendship_id=".$member4['friendship_id'].">Accept</a>";
+										echo "<a href=reject_friend_request_script.php?friendship_id=".$member4['friendship_id'].">Reject</a>";
+									}
+									$y++;
+								}
+							}
+						}
+						else
+						{
+							echo "Friend Find Error :(";
+						}
+							
+					}
+					elseif($member4['friend2'] != $user_id)
+					{
+						$friend_id = $member4['friend2'];
+						$qry5 = "SELECT username, first_name, last_name FROM users WHERE user_id = '$friend_id'";
+						$result5 = mysql_query($qry5);
+						$y = 0;
+						if($result5)
+						{
+							if(mysql_num_rows($result5) > 0)
+							{
+								
+								while($y < mysql_num_rows($result5))
+								{
+									$member5 = mysql_fetch_assoc($result5);
+									if($member5['first_name'] != '' && $member5['last_name'] != '')
+									{
+										echo $member5['first_name']." ".$member5['last_name']." (Pending)";
+									}
+									else
+									{
+										echo $member5['username']." (Pending)";
+									}
+									$y++;
+								}
+							}
+						}
+						else
+						{
+							echo "Friend Find Error :(";
+						}
+					
+					}
+				
+					$x++;	
+				}
+			}
+		}
+		
+				
+				
+				
 
 		
 		?>
@@ -820,6 +915,31 @@ File Drop
 					}
 				}
 			}
+		
+		
+				<?php
+		$qry6 = "SELECT * FROM files INNER JOIN file_request ON files.file_id = file_request.file_id INNER JOIN users ON file_request.request_user_id = users.user_id WHERE files.owner_user_id = '$user_id' ORDER BY users.username";
+		$result6 = mysql_query($qry6);
+		$x = 0;
+		
+		if($result6)
+		{
+			if(mysql_num_rows($result6) > 0)
+			{
+				echo "<br><br>Files Users have Requested to be shared: <br><br>";
+				while($x < mysql_num_rows($result6))
+				{
+					$member6 = mysql_fetch_assoc($result6);
+					echo "File Name: <a href='file_settings.php?file_id=".$member6['file_id']."'>".$member6['file_name']."</a>, Requested by: <a href=friends_profile.php?friends_user_id=".$member6['user_id'].">".$member6['username']."</a>       ";
+					
+					echo "<a href=approve_file_share_script.php?request_id=".$member6['request_id'].">Approve</a>";
+					echo "<a href=reject_file_share_script.php?request_id=".$member6['request_id'].">Reject</a>";
+					$x++;
+				}
+			}
+		}
+		?>
+		
 		
 		
 		?>
