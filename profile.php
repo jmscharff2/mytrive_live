@@ -88,7 +88,7 @@ $(document).ready(function(){
 	
 
 
-
+	/*
 	var shown = false;
 	
 	$(".files").hover( function() {
@@ -125,7 +125,7 @@ $(document).ready(function(){
 	            left: offset.left + that.width()/2 - tooltipElement.width()/2
 	        }).show();
 	    }
-	});
+	});*/
 	
 	/*filtering for files*/
 	var  $files = $('#file_list'),
