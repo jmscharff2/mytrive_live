@@ -39,6 +39,7 @@
 					{
 						$background_image = $download_file_string4;
 					}
+					$x++;
 				}
 			}
 		}
