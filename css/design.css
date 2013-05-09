@@ -299,8 +299,13 @@ body
 
 @media all and (max-width: 400px)
 {
-	#file_drop{
+	#file_drop
+	{
 		display: none;
+	}
+	#nav-banner
+	{
+		height: 75px;
 	}
 }
 /*
