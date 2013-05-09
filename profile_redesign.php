@@ -938,7 +938,7 @@ File Drop
 			$ext = end(explode('.', $member2['file_name']));
 
 			
-			echo "<a href='file_settings.php?file_id=".$member2['file_id']."'>".$member2['file_name']."</a><br>";
+			echo "<a href='file_settings.php?file_id=".$member2['file_id']."'>".$member2['file_name']."</a>";
 			 
 			$file2 = $member2['owner_id']."/".$member2['file_name'];
 			$bucket2 = "mytrive_files";
@@ -953,6 +953,7 @@ File Drop
 			{
 				echo "<td><a href='play_video.php?file_id=".$member2['file_id']."'><img src='images/Play.png'height='25'/></a>";	
 			}
+			echo "<br>";
 			echo "Shared by:	 ".$member2['owner_id'];
 			echo "<br>";	
 			$x++;
