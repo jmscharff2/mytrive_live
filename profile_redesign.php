@@ -393,7 +393,7 @@ File Drop
 		Username: <?php echo $username; ?><br>
 		
 		<a href="settings_redesign.php">Settings</a><br>
-		<a href=logout.php>logout</a>
+		<a href=logout_redesign.php>logout</a>
 		</section>
 	<section id="file_drop">
 		<h2>Drag and Drop your files here!</h2>
