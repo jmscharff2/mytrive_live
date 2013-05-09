@@ -22,7 +22,7 @@ $user_id = $_SESSION['user_id'];
 $uploaddir = '/mnt/s3_mytrive_files/'.$username.'/';
 $uploadfile = $uploaddir . basename($_FILES['userfile']['name']);
 
-$file_info = $username.'.'.basename($_FILES['userfile']['name']);
+$file_info = $username.'/'.basename($_FILES['userfile']['name']);
 
 $ext = end(explode('.', $uploadfile));
 echo $ext;
