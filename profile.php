@@ -279,11 +279,9 @@ $(document).ready(function(){
 <li><a href="#friends_files" onclick="showDiv('friend_files')">Friends Files</a></li>
 <li><a href="#upload" onclick="showDiv('upload')">Upload</a></li>
 </ul>
-<div id="file_drop_menu_bar">
- <style type="text/css">@import url(/js/jquery.plupload.queue/css/jquery.plupload.queue.css);</style>
-		<div id="html5_uploader">You browser doesn't support native upload. Try Firefox 3 or Safari 4.</div>	
+
 	
-</div>
+
 
 
 </nav>
@@ -342,7 +340,9 @@ $(document).ready(function(){
 		<a href=logout.php>logout</a>
 		</section>
 	<section id="file_drop">
-		<h2>Drag and Drop your files here!</h2>
+		<style type="text/css">@import url(/js/jquery.plupload.queue/css/jquery.plupload.queue.css);</style>
+<div id="html5_uploader">You browser doesn't support native upload. Try Firefox 3 or Safari 4.</div>	
+
 	</section>
 	
 		<section id="friend_content" style="display: none;">
