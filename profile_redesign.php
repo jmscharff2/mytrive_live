@@ -313,9 +313,14 @@ Drag and Drop your files here!
 				while ($x < mysql_num_rows($result))
 				{
 					$member = mysql_fetch_assoc($result);
+					
+					$file2 = $member2['owner_id']."/".$member2['file_name'];
+					$bucket2 = "mytrive_files";
+					$download_file_string2 = gs_prepareS3URL($file2, $bucket2);
+					
 					if($member['profile_picture'] != '')
 					{
-						echo "<img src='".$member['profile_picture']."' height='100px'/>";
+						echo "<img src='".$download_file_string2."' height='100px'/>";
 					}
 					else
 					{
