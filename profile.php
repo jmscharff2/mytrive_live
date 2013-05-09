@@ -88,6 +88,9 @@ $("#filter").bind("keyup",function(){
 	var text = $(this).val().toLowerCase();
 	var items = $(".file_type");
 	
+	    items.parent().hide();
+
+	
 	items.filter(function(){
 		return
 		$(this).text().toLowerCase().indexOf(text) == 0;
