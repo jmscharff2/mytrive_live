@@ -242,6 +242,7 @@ $(document).ready(function(){
 				document.getElementById('file_content').style.display = "none";
 				document.getElementById('friend_files').style.display = "none";
 				document.getElementById('upload').style.display = "none";
+				document.getElementById('file_drop').style.display = "block";
 			}
 			if(section == "file_content")
 			{
@@ -249,6 +250,7 @@ $(document).ready(function(){
 				document.getElementById('friend_content').style.display = "none";
 				document.getElementById('friend_files').style.display = "none";
 				document.getElementById('upload').style.display = "none";
+				document.getElementById('file_drop').style.display = "block";
 			}
 			if(section == "friend_files")
 			{
@@ -256,6 +258,8 @@ $(document).ready(function(){
 				document.getElementById('friend_content').style.display = "none";
 				document.getElementById('file_content').style.display = "none";
 				document.getElementById('upload').style.display = "none";
+				document.getElementById('file_drop').style.display = "block";
+
 			}
 			if(section == "upload")
 			{
@@ -630,7 +634,9 @@ Drag and Drop your files here!
 						$member = mysql_fetch_assoc($result);
 						$ext = end(explode('.', $member['file_name']));
 						
+						echo "<li class='files'>".$member['file_name']."<li><br>";
 						
+						/*
 						if($ext == 'png' || $ext == 'jpg' || $ext == 'gif' || $ext == 'psd')
 						{
 							echo "<li class='files'>";
@@ -649,7 +655,7 @@ Drag and Drop your files here!
 							echo $member['file_name'];
 							echo "<br><img src='../images/document.png'/></li><br>";
 						}
-						
+						*/
 						$x++;
 					}
 				}
