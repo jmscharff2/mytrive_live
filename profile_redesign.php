@@ -19,7 +19,7 @@
 	}
 	
 	
-	$qry = "SELECT * FROM users WHERE username = '$username'";
+	$qry = "SELECT background_image FROM users WHERE username = '$username'";
 		$result = mysql_query($qry);
 		$x = 0;
 		

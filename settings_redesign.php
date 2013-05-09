@@ -122,7 +122,7 @@ if($result)
 		</form>
 
 		<form enctype="multipart/form-data" action="upload_profile_picture.php" method="POST">
-	    <input type="hidden" name="MAX_FILE_SIZE" value="512000" />
+	    <input type="hidden" name="MAX_FILE_SIZE" value="5120000" />
 	    Upload Picture <input name="userfile" type="file" />
 	    <input type="submit" value="Upload" />
 	    </form>
@@ -130,7 +130,7 @@ if($result)
 		</form>
 
 		<form enctype="multipart/form-data" action="upload_background_image.php" method="POST">
-	    <input type="hidden" name="MAX_FILE_SIZE" value="512000" />
+	    <input type="hidden" name="MAX_FILE_SIZE" value="5120000" />
 	    Upload Picture <input name="userfile" type="file" />
 	    <input type="submit" value="Upload" />
 	    </form>
