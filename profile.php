@@ -84,7 +84,16 @@
 
 $(document).ready(function(){
 
+$("#filter").bind("keyup",function(){
+	var text = $(this).val().toLowerCase();
+	var items = $(".file_type");
 	
+	items.filter(function(){
+		return
+		$(this).text().toLowerCase().indexOf(text) == 0;
+	}).parent().show();
+});
+
 	
 
 
@@ -1053,17 +1062,7 @@ uploader.init();
 <input id="filer" type="text" name="fname" /><br>
 </div>
 
-<script>
-$("#filter").bind("keyup",function(){
-	var text = $(this).val().toLowerCase();
-	var items = $(".file_type");
-	
-	items.filter(function(){
-		return
-		$(this).text().toLowerCase().indexOf(text) == 0;
-	}).parent().show();
-});
-</script>
+
 
 </BODY>
 
