@@ -485,7 +485,7 @@ File Drop
 											$member3 = mysql_fetch_assoc($result3);
 											if($member3['first_name'] != '' && $member3['last_name'] != '')
 											{
-												echo "<a href=friends_profile.php?friends_user_id=".$friend_id.">".$member3['first_name']." ".$member3['last_name']."</a>";
+												echo "<a href=friends_profile.php?friends_user_id=".$friend_id.">".$member3['first_name']." ".$member3['last_name']."</a><br>";
 												$file3 = $member3['profile_picture'];
 												echo $file3;
 												$bucket3 = "mytrive_files";
@@ -502,7 +502,7 @@ File Drop
 											}
 											else
 											{
-												echo "<a href=friends_profile.php?friends_user_id=".$friend_id.">".$member3['username']."</a>";
+												echo "<a href=friends_profile.php?friends_user_id=".$friend_id.">".$member3['username']."</a><br>";
 												$file3 = $member3['profile_picture'];
 												echo $file3;												
 												$bucket3 = "mytrive_files";
@@ -771,12 +771,12 @@ File Drop
 		$qry4 = "SELECT * FROM friends WHERE (friend1 = '$user_id' OR friend2 = '$user_id') AND accepted = 0";
 		$result4 = mysql_query($qry4);
 		$x = 0;
-		echo"<h2>Pending Friends</h2>";
+		
 		if($result4)
 		{
 			if(mysql_num_rows($result4) > 0)
 			{
-				
+				echo"<h2>Pending Friends</h2>";
 				while($x < mysql_num_rows($result4))
 				{
 					$member4 = mysql_fetch_assoc($result4);
@@ -953,7 +953,7 @@ File Drop
 			
 			
 			
-	echo  "<h2>Shared Files</h2>";
+	echo  "<br><br><h2>Shared Files</h2>";
 
 
 	$qry2 = "SELECT * FROM files WHERE share_with = '$username'";
