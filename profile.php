@@ -84,18 +84,6 @@
 
 $(document).ready(function(){
 
-$("#filter").bind("keyup",function(){
-	var text = $(this).val().toLowerCase();
-	var items = $(".file_type");
-	
-	    items.parent().hide();
-
-	
-	items.filter(function(){
-		return
-		$(this).text().toLowerCase().indexOf(text) == 0;
-	}).parent().show();
-});
 
 	
 
@@ -180,6 +168,105 @@ $("#filter").bind("keyup",function(){
 	
 	
 });
+
+
+
+	function() {
+
+  $("#uploader").plupload({
+
+      // General settings
+
+      runtimes : 'gears,flash,silverlight,browserplus,html5',
+
+      url : 'upload_file.php',
+
+      max_file_size : '10mb',
+
+      chunk_size : '1mb',
+
+      unique_names : true,
+
+
+
+      // Resize images on clientside if we can
+
+      resize : {width : 320, height : 240, quality : 90},
+
+
+
+      // Specify what files to browse for
+
+      filters : [
+
+          {title : "Image files", extensions : "jpg,gif,png"},
+
+          {title : "Zip files", extensions : "zip"}
+
+      ],
+
+
+
+      // Flash settings
+
+      flash_swf_url : '/plupload/js/plupload.flash.swf',
+
+
+
+      // Silverlight settings
+
+      silverlight_xap_url : '/plupload/js/plupload.silverlight.xap'
+
+  });
+
+
+
+  // Client side form validation
+
+  $('form').submit(function(e) {
+
+      var uploader = $('#uploader').plupload('getUploader');
+
+
+
+      // Files in queue upload them first
+
+      if (uploader.files.length > 0) {
+
+          // When all files are uploaded submit form
+
+          uploader.bind('StateChanged', function() {
+
+              if (uploader.files.length === (uploader.total.uploaded + uploader.total.failed)) {
+
+                  $('form')[0].submit();
+
+              }
+
+          });
+
+               
+
+          uploader.start();
+
+      } else
+
+          alert('You must at least upload one file.');
+
+
+
+      return false;
+
+  });
+
+});
+
+
+
+
+
+
+
 
 		/*		
 		
@@ -824,12 +911,18 @@ $("#filter").bind("keyup",function(){
 		-->
 		
 		<div id="container">
-	    <div id="filelist">No runtime found.</div>
+	   <!-- <div id="filelist">No runtime found.</div>
 	    <br />
 	    <a id="pickfiles" href="javascript:;">[Select files]</a> 
 	    <a id="uploadfiles" href="javascript:;">[Upload files]</a>
 	    </div>
-		</center>
+		</center>-->
+		
+		<div id="uploader">
+		<style type="text/css">@import url(/js/jquery.ui.plupload/css/jquery.ui.plupload.css);</style>
+        <p>You browser doesn't have Flash, Silverlight, Gears, BrowserPlus or HTML5 support.</p>
+    </div>
+
 		</div>
 <!--
 		<script>
