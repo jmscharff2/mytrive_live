@@ -87,18 +87,6 @@
 $(document).ready(function(){
 
 
-	$("#filter").bind("keyup", function() {
-    var text = $(this).val().toLowerCase();
-    var items = $(".file_type");
-    
-    //first, hide all:
-    items.parent().hide();
-    
-    //show only those matching user input:
-    items.filter(function () {
-        return $(this).text().toLowerCase().indexOf(text) == 0;
-    }).parent().show();
-    });
 	
 		
 	
