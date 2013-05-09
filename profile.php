@@ -340,8 +340,7 @@ $(document).ready(function(){
 		<a href=logout.php>logout</a>
 		</section>
 	<section id="file_drop">
-		<style type="text/css">@import url(/js/jquery.plupload.queue/css/jquery.plupload.queue.css);</style>
-<div id="html5_uploader">You browser doesn't support native upload. Try Firefox 3 or Safari 4.</div>	
+		File Drop
 	</section>
 	
 		<section id="friend_content" style="display: none;">
