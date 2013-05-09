@@ -25,20 +25,22 @@ $uploadfile = $uploaddir . basename($_FILES['userfile']['name']);
 $file_info = $username.'/'.basename($_FILES['userfile']['name']);
 
 $ext = end(explode('.', $uploadfile));
-echo $ext;
+//echo $ext;
 
 
 if (move_uploaded_file($_FILES['userfile']['tmp_name'], $uploadfile)) {
-    echo "File is valid, and was successfully uploaded.\n";
+    //echo "File is valid, and was successfully uploaded.\n";
     
    	$qry = "UPDATE users SET background_image = '".$file_info."' WHERE users.user_id = '".$user_id."'";
 	$result = mysql_query($qry);
-	echo $qry."<br>";
-	
+	//echo $qry."<br>";
+				echo '<meta http-equiv="Refresh" content="1; URL=http://www.mytrive.com/settings.php">';
+
     
 } else {
-    echo "Possible file upload attack!\n";
-    
+   // echo "Possible file upload attack!\n";
+    			echo '<meta http-equiv="Refresh" content="1; URL=http://www.mytrive.com/settings.php">';
+
 }
 
 echo $uploadfile;

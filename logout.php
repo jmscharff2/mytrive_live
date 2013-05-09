@@ -77,7 +77,7 @@ $DateOfRequest = date('Y-m-d H:i:s');
 		  }
 		  echo "</div>";
 		
-		echo '<meta http-equiv="Refresh" content="5; URL=http://www.mytrive.com/index_redesign.php">';
+		echo '<meta http-equiv="Refresh" content="5; URL=http://www.mytrive.com/index.php">';
 
 		
 		
