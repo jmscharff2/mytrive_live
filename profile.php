@@ -190,7 +190,7 @@ $(document).ready(function(){
 			     url : 'upload_file.php',
 			     max_file_size : '10000mb',
 			     chunk_size : '1mb',
-			     unique_names : true,
+			     unique_names : false,
 			     // Resize images on clientside if we can
 			     resize : {width : 320, height : 240, quality : 90},
 			     // Specify what files to browse for
