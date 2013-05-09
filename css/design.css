@@ -247,6 +247,34 @@ body
 	width: 20%;
 	height: 20%;
 }
+
+@media all and (max-width: 500px)
+{
+	#file_drop
+	{
+		display: none;
+	}
+	#nav-banner
+	{
+		height: 100px;
+	}
+	nav ul
+	{
+		list-style-type: none;
+		margin-left: 30%;
+		margin-top: -60px;
+	}
+	nav ul li
+	{
+		display: block;
+		padding: 20px;
+	
+	}
+
+	
+}
+
+
 /*
 #friend_files img
 {
@@ -297,31 +325,7 @@ body
 
 /*Media Queries below for nice responsive design stuffs*/
 
-@media all and (max-width: 500px)
-{
-	#file_drop
-	{
-		display: none;
-	}
-	#nav-banner
-	{
-		height: 100px;
-	}
-	nav ul
-	{
-		list-style-type: none;
-		margin-left: 30%;
-		margin-top: -60px;
-	}
-	nav ul li
-	{
-		display: block;
-		padding: 20px;
-	
-	}
 
-	
-}
 /*
 @media screen {
 	body {
