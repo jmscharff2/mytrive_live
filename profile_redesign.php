@@ -300,7 +300,44 @@ Drag and Drop your files here!
 	<section id="profile_content">
 		<section id="profile_picture">
 
-		<img src='../images/placeholder.jpg' height='100px'/>
+		<?php 
+		$qry = "SELECT * FROM users WHERE username = '$username'";
+		$result = mysql_query($qry);
+		$x = 0;
+		
+		if($result)
+		{
+			if(mysql_num_rows($result) > 0)
+			{
+			echo "<table  width='100%' border='1'> ";
+			echo "<form action='update_profile_script.php' method='POST'>";
+				while ($x < mysql_num_rows($result))
+				{
+					$member = mysql_fetch_assoc($result);
+					if($member['profile_picture'] != '')
+					{
+						echo "<img src='".$member['profile_picture']."' height='100px'/>";
+					}
+					else
+					{
+						echo "<img src='../images/placeholder.jpg' height='100px'/>";
+					}
+					$x++;
+				}
+			}
+		}
+		
+		
+		?>	
+
+
+
+
+
+
+
+
+
 		</section>	
 		Username: <?php echo $username; ?><br>
 		
