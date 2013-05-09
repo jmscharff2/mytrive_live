@@ -23,17 +23,16 @@ session_start();
 
 	//$qry3 = "INSERT INTO friends (friend1, friend2) VALUES('$user_id', '$friend_id')";
 	$qry3 = "INSERT INTO file_request (file_id, request_user_id, request_username) VALUES('$file_id', '$user_id','$username')";
-	echo $qry3;
 	$result3 = mysql_query($qry3);
 	$x = 0;
 	
 	if($result3)
 	{
-		//header("location: profile.php");
+		header("location: profile.php");
 	}
 	else
 	{
-		//header("location: profile.php");
+		header("location: profile.php");
 	}
 		
 
