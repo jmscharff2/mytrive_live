@@ -917,7 +917,7 @@ File Drop
 			}
 		
 		
-				<?php
+				
 		$qry6 = "SELECT * FROM files INNER JOIN file_request ON files.file_id = file_request.file_id INNER JOIN users ON file_request.request_user_id = users.user_id WHERE files.owner_user_id = '$user_id' ORDER BY users.username";
 		$result6 = mysql_query($qry6);
 		$x = 0;
