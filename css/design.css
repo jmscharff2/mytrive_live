@@ -150,6 +150,8 @@ body
 	float: right;
 	height: 50%;
 /*	-webkit-column-count: 2;*/
+	word-wrap: break-word;
+
 }
 
 #settings_edit
