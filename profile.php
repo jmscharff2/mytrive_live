@@ -127,30 +127,7 @@ $(document).ready(function(){
 	    }
 	});
 	
-	/*filtering for files*/
-	var  $files = $('#file_list'),
-     $filesAll = $files.find('li'),
-     $filter = $('#filters_menu');
-
-	$filter.change(function() {
-	
-	    //var val1 = $filter.val();
-	    var val1 = $filter.val();
-	        
-	    $files.empty();
-	    
-	    if ( val1 == 'ALL') {
-	        $files.append( $namesAll );
-	    }
-	    else {
-	        $filesAll.filter(function(i, el) {
-	            var $el = $(el);
-	            return ~$el.text().indexOf( val1 );
-	            
-	        }).appendTo( $files );
-	    }
-	});
-	
+		
 	
 	/*file drop jquery*/
 	$('#file_drop').on(
@@ -923,7 +900,7 @@ uploader.init();
 						echo "<li class='files'>";
 						
 						/*$member['file_name'];*/
-						echo "<a href='file_settings.php?file_id=".$member['file_id']."'>".$member['file_name']."</a>";
+						echo "<a href='file_settings.php?file_id=".$member['file_id']."'><span class='file_type'>".$member['file_name']."</span></a>";
 
 						$file2 = $member['owner_id']."/".$member['file_name'];
 						$bucket2 = "mytrive_files";
@@ -1073,15 +1050,20 @@ uploader.init();
 </section>
 
 <div id ="filters">
-<select id="filters_menu">
-<option selected> All</option>
-<option>m4v</option>
-<option>JPG</option>
-<option>PNG</option>
-<option>Custom Filter</option>
-<option>Custom Filter</option>
-</select>
+<input id="filer" type="text" name="fname" /><br>
 </div>
+
+<script>
+$("#filter").bind("keyup",function(){
+	var text = $(this).val().toLowerCase();
+	var items = $(".file_type");
+	
+	items.filter(function(){
+		return
+		$(this).text().toLowerCase().indexOf(text) == 0;
+	}).parent().show();
+});
+</script>
 
 </BODY>
 
