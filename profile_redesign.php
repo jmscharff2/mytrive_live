@@ -314,7 +314,7 @@ Drag and Drop your files here!
 				{
 					$member = mysql_fetch_assoc($result);
 					
-					$file2 = $member2['owner_id']."/".$member2['file_name'];
+					$file2 = $member['owner_id']."/".$member['file_name'];
 					$bucket2 = "mytrive_files";
 					$download_file_string2 = gs_prepareS3URL($file2, $bucket2);
 					
@@ -677,7 +677,7 @@ Drag and Drop your files here!
 						
 						echo "<li class='files'>".$member['file_name'];
 						
-						$file2 = $member['owner_id']."/".$member2['file_name'];
+						$file2 = $member['owner_id']."/".$member['file_name'];
 						$bucket2 = "mytrive_files";
 						$download_file_string2 = gs_prepareS3URL($file2, $bucket2);	 
 						 ?>
