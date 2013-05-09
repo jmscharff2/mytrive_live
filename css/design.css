@@ -294,7 +294,15 @@ body
 }
 
 
+
 /*Media Queries below for nice responsive design stuffs*/
+
+@media all and (max-width: 400px)
+{
+	#file_drop{
+		display: none;
+	}
+}
 /*
 @media screen {
 	body {
@@ -407,4 +415,4 @@ body
 	}
 }
 
-*/s
+*/
