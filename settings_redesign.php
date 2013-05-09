@@ -97,6 +97,7 @@ if($result)
 			echo "</td>";
 			echo "</tr>";
 			
+			
 
 			//echo "/".$member['location']."/".$member['file_name'];
 			
@@ -121,7 +122,13 @@ if($result)
 		<input type=submit value="Update"/>
 		</form>
 
-
+		<form enctype="multipart/form-data" action="upload_profile_picture.php" method="POST">
+	    <!-- MAX_FILE_SIZE must precede the file input field -->
+	    <input type="hidden" name="MAX_FILE_SIZE" value="30000" />
+	    <!-- Name of input element determines name in $_FILES array -->
+	    Upload your picture: <input name="userfile" type="file" />
+	    <input type="submit" value="Send File" />
+	    </form>
 
 </section>
 
