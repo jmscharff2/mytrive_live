@@ -17,32 +17,7 @@
 	
 	$username = $_SESSION['username'];
 
-		$qry = "SELECT background_image FROM users WHERE username = '$username'";
-		$result = mysql_query($qry);
-		$x = 0;
-		
-		if($result)
-		{
-			if(mysql_num_rows($result) > 0)
-			{
-				while ($x < mysql_num_rows($result))
-				{
-					$member = mysql_fetch_assoc($result);
-					
-					$file4 = $member['background_image'];
-					$bucket4 = "mytrive_files";
-					$download_file_string4 = gs_prepareS3URL($file4, $bucket4);
-					
-					if($member['background_image'] != '')
-					{
-						$background_image = $download_file_string4;
-					}
-					$x++;
-				}
-			}
-		}
-
-
+	
 
 
 ?>
