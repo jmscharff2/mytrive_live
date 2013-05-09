@@ -27,11 +27,11 @@
 		//echo "upload/".$username."/".$delete_file;
 		$file_to_delete = "upload/$username/$delete_file";
 		unlink($file_to_delete);
-		header("location: files.php");
+		header("location: profile.php");
 	}
 	else
 	{
-		header("location: files_error.php");
+		header("location: profile.php");
 	}
 
 
