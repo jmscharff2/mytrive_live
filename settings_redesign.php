@@ -1,3 +1,7 @@
+<?php
+	session_start();
+?>
+
 <HTML>
 
 <HEAD>
@@ -34,15 +38,9 @@
 </div>
 
 <section id="content">
-	<h1>How To Get Started.</h1>
-	
-	<section id="images">
-		<center><img src = "../images/placeholder.jpg" width="80%"/></center>
-	</section>
-	
-	<section id="info">
+
 <?php
-				require_once('config.php');
+require_once('config.php');
 
 echo $_SESSION['username']."'s user information:</br></br></br>";
 $link = mysql_connect(DB_HOST, DB_USER, DB_PASSWORD);
