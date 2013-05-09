@@ -301,8 +301,8 @@ Drag and Drop your files here!
 		<section id="profile_picture">
 			<img src="../images/placeholder.jpg" height="100px"/>
 		</section>
-		Username: Jonathan Scharff<br>
-		Storage: 2Gb/10Gb<br>
+		Username: <?php echo $username; ?><br>
+		
 		<a href="#">Settings</a>
 	</section>
 	<section id="file_drop">
@@ -691,12 +691,13 @@ Drag and Drop your files here!
 					<li class="files" id="Documents"><h3 style="display:none;">Documents</h3><img src="../images/placeholder.jpg"/></li>
 					-->
 					</ul>
-					
+				<!--	
 				<div id="file_information"> 
 				<img src="images/Stop.png" height="5%"/>
 				<img src="images/Delete.png"height="20%"/>
 				<img src="images/Share.png"height="20%"/>
-				<img src="images/Play.png"height="20%"/>	
+				<img src="images/Play.png"height="20%"/>
+				-->	
 			</div>
 			
 		</section>
