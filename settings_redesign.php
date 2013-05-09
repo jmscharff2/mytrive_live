@@ -122,7 +122,7 @@ if($result)
 		<input type=submit value="Update"/>
 		</form>
 
-		<form enctype="multipart/form-data" action="upload.php" method="POST">
+		<form enctype="multipart/form-data" action="upload_profile_picture.php" method="POST">
 	    <input type="hidden" name="MAX_FILE_SIZE" value="512000" />
 	    Upload Picture <input name="userfile" type="file" />
 	    <input type="submit" value="Upload" />
