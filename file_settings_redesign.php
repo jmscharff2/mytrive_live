@@ -58,6 +58,7 @@
 			$username = $_SESSION['username'];
 			$user_id = $_SESSION['user_id'];
 			$qry = "SELECT * FROM files WHERE owner_id = '$username' and file_id = '$file_id'";
+			echo $qry."<br>";
 			$result = mysql_query($qry);
 			$x = 0;
 			
