@@ -915,6 +915,51 @@ File Drop
 					}
 				}
 			}
+			
+			
+			
+	echo  "<h2>Shared Files</h2>";
+
+
+	$qry2 = "SELECT * FROM files WHERE share_with = '$username'";
+	$result2 = mysql_query($qry2);
+	$x = 0;
+	if($result2)
+	{
+	if(mysql_num_rows($result2) > 0)
+	{
+		while ($x < mysql_num_rows($result2))
+		{
+			$member2 = mysql_fetch_assoc($result2);
+			
+			$ext = end(explode('.', $member2['file_name']));
+
+			
+			echo "<a href='file_settings.php?file_id=".$member2['file_id']."'>".$member2['file_name']."</a>";
+			echo "Shared by:	 ".$member2['owner_id'];
+			 
+			$file2 = $member2['owner_id']."/".$member2['file_name'];
+			$bucket2 = "mytrive_files";
+			$download_file_string2 = gs_prepareS3URL($file2, $bucket2);
+
+			 
+			 ?>
+			 <a href="<?php echo $download_file_string2; ?>"><img src="images/Download.png" height="25"/> </a>
+
+			 <?php
+			if($ext == 'm4v' || $ext == 'avi' || $ext == 'mkv')
+			{
+				echo "<td><a href='play_video.php?file_id=".$member2['file_id']."'><img src='images/Play.png'height='25'/></a></td>";	
+			}
+					
+			$x++;
+			
+		}
+	}
+
+
+}
+
 		
 		
 				
@@ -932,7 +977,7 @@ File Drop
 					$member6 = mysql_fetch_assoc($result6);
 					echo "File Name: <a href='file_settings.php?file_id=".$member6['file_id']."'>".$member6['file_name']."</a>, Requested by: <a href=friends_profile.php?friends_user_id=".$member6['user_id'].">".$member6['username']."</a>       ";
 					
-					echo "<a href=approve_file_share_script.php?request_id=".$member6['request_id'].">Approve</a>";
+					echo "<a href=approve_file_share_script.php?request_id=".$member6['request_id'].">Approve</a>/";
 					echo "<a href=reject_file_share_script.php?request_id=".$member6['request_id'].">Reject</a>";
 					$x++;
 				}
@@ -942,7 +987,7 @@ File Drop
 		
 		
 		
-		?>
+	
 		
 		
 		
