@@ -84,20 +84,7 @@
 
 $(document).ready(function(){
 
-	$(window).scroll(function(){
-		var scrollTop= $(document).scrollTop();
-		if(scrollTop > 100)
-		{
-			$('#file_drop_menu_bar').show("slow");
-			/*$('#file_drop').hide("fast");*/
-		}
-		if(scrollTop < 100)
-		{
-			$('#file_drop_menu_bar').hide("fast");
-			/*$('#file_drop').show("slow");*/
-		}	
-		
-	});
+	
 	
 
 
@@ -198,39 +185,8 @@ $(document).ready(function(){
 		   document.getElementById("#drop_submit").click();
 		   
 		}
-	/*file drop menu bar*/
-		$('#file_drop_menu_bar').on(
-    'dragover',
-    function(e) {
-        e.preventDefault();
-        e.stopPropagation();
-		    }
-		)
-		$('#file_drop_menu_bar').on(
-		    'dragenter',
-		    function(e) {
-		        e.preventDefault();
-		        e.stopPropagation();
-		    }
-		)
-		$('#file_drop_menu_bar').on(
-		    'drop',
-		    function(e){
-		        if(e.originalEvent.dataTransfer){
-		            if(e.originalEvent.dataTransfer.files.length) {
-		                e.preventDefault();
-		                e.stopPropagation();
-		                /*UPLOAD FILES HERE*/
-		                upload(e.originalEvent.dataTransfer.files);
-		            }   
-		        }
-		    }
-		);
-		function upload(files){
-		   alert('Upload '+files.length+' File(s).');  
-		}
 		
-		
+
 
 	
 	
