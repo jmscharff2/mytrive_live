@@ -327,7 +327,8 @@ Drag and Drop your files here!
 		}
 		
 		
-		?>		
+		?>	
+		</section>	
 		Username: <?php echo $username; ?><br>
 		
 		<a href="settings_redesign.php">Settings</a>
@@ -638,7 +639,7 @@ Drag and Drop your files here!
 		
 		
 		
-			<section id="file_content">
+		<section id="file_content">
 		<h2>Files</h2>
 		
 		<ul id ="file_list">
@@ -655,7 +656,6 @@ Drag and Drop your files here!
 			{
 				if(mysql_num_rows($result) > 0)
 				{
-				echo "<table  width='100%'>";
 					while ($x < mysql_num_rows($result))
 					{
 						$member = mysql_fetch_assoc($result);
