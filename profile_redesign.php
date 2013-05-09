@@ -634,8 +634,20 @@ Drag and Drop your files here!
 						$member = mysql_fetch_assoc($result);
 						$ext = end(explode('.', $member['file_name']));
 						
-						echo "<li class='files'>".$member['file_name']."<li><br>";
+						echo "<li class='files'>".$member['file_name'];
+						echo "<a href='file_delete.php?file=".$member['file_name']."'><img src='images/Delete.png'height='25'/></a>";
+						echo "<a href='share_file.php?file=".$member['file_name']."'><img src='images/Share.png'height='25'/></a>";
+				
+						if($ext == 'm4v' || $ext == 'avi' || $ext == 'mkv')
+						{
+							echo "<a href='play_video.php?file_id=".$member['file_id']."'><img src='images/Play.png'height='25'/></a>";	
+						}
+						if($member['share_with'] != '')
+						{
+							echo "<a href='file_settings.php?file_id=".$member['file_id']."'>".$member['file_name']."</a>";
+						}
 						
+						echo "<li><br>";
 						/*
 						if($ext == 'png' || $ext == 'jpg' || $ext == 'gif' || $ext == 'psd')
 						{
