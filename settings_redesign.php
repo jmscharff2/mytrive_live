@@ -38,7 +38,7 @@
 </div>
 
 <section id="content">
-
+<section id="settings_edit">
 <?php
 require_once('config.php');
 
@@ -123,25 +123,12 @@ if($result)
 
 
 
-
+</section>
 
 	</section>
 	
 
-<nav id="small">
-	<ul>
-	<li><a href="index_redesign.php">Signup</a></li>
-	<li><a href="info_redesign.php">Steps</a></li>
-	<li><a href="faq_redesign.php">FAQ</a></li>
-	</ul>
-	<form action = "login.php" method ="post">
-	<input type="text" name="username" placeholder="username" onkeypress="return submitenter(this,event)"/><br>
-	<input type="password" name="username" placeholder="password" onkeypress="return submitenter(this,event)"/>
-	</form>
-</nav>
 
-
-</section>
 
 </BODY>
 </HTML>
