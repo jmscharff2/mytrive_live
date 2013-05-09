@@ -341,7 +341,7 @@ $(document).ready(function(){
 												$bucket3 = "mytrive_files";
 												$download_file_string3 = gs_prepareS3URL($file3, $bucket3);
 												
-												if($member['profile_picture'] != '')
+												if($member['profile_picture'] != null)
 												{
 													echo "<img src='".$download_file_string3."' height='100px'/><br>";
 												}
@@ -359,7 +359,7 @@ $(document).ready(function(){
 												$bucket3 = "mytrive_files";
 												$download_file_string3 = gs_prepareS3URL($file3, $bucket3);
 												
-												if($member['profile_picture'] != '')
+												if($member['profile_picture'] != null)
 												{
 													echo "<img src='".$download_file_string3."' height='100px'/><br>";
 												}
@@ -400,7 +400,7 @@ $(document).ready(function(){
 												$bucket3 = "mytrive_files";
 												$download_file_string3 = gs_prepareS3URL($file3, $bucket3);
 												
-												if($member['profile_picture'] != '')
+												if($member['profile_picture'] != null)
 												{
 													echo "<img src='".$download_file_string3."' height='100px'/><br>";
 												}
@@ -416,7 +416,7 @@ $(document).ready(function(){
 												$bucket3 = "mytrive_files";
 												$download_file_string3 = gs_prepareS3URL($file3, $bucket3);
 												
-												if($member['profile_picture'] != '')
+												if($member['profile_picture'] != null)
 												{
 													echo "<img src='".$download_file_string3."' height='100px'/><br>";
 												}
