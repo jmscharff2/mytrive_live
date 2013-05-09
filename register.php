@@ -1,33 +1,42 @@
 <?php
 	session_start();
+
 ?>
 
 <HTML>
-<?php
-	//session_start();
+
+<HEAD>
+
+<TITLE>mytrive redesign</TITLE>
+
+<link rel="stylesheet" type="text/css" href="css/design.css" />
+<script type="text/javascript" src="includes/submitenter.js" language="javascript"></script>
 
 
-	if(isset($_SESSION['username']) && $_SESSION['username'] != '')
-	{
-		include 'includes/loggedin.html';
-	}
-	elseif(!(isset($_SESSION['username'])))
-	{
-		include 'includes/loggedout.html';
-	}
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
 
-?>
-	<BODY>
-		</div>
-		  <div class="scroll"></div>
-        
-        <?php include 'includes/sidenav.html';?>
-       		
-	
-		<div id="main-content-wrapper">
-		
-		
-<?php
+<link rel="icon" 
+      type="image/png" 
+      href="images/favicon.ico">
+
+</HEAD>
+
+<BODY>
+<!--top banner-->
+<div id="nav-banner">
+<nav>
+<a href="index_redesign.php" ><img src = "images/trive.png" id="logo"></a>
+<ul>
+<li><a href="profile.php">Profile</a></li>
+<li><a href="profile.php#friends">Friends</a></li>
+<li><a href="profile.php#friends_files">Friends Files</a></li>
+<li><a href="profile.php#upload" >Upload</a></li>
+</ul>
+</div>
+
+<section id="content">
+	<section id="settings_edit">
+	<?php
 	
 	//Include database connection details
 	require_once('config.php');
@@ -194,18 +203,14 @@
 		}
 	}
 	
-?>
-
-
-		
-		</div>
-		
-		
-		
-				
-      	
-	</div>
-
-	</body>
+?>	
 	
+	
+	</section>
+</section>
+	
+
+
+
+</BODY>
 </HTML>
