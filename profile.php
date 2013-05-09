@@ -193,7 +193,7 @@ $(document).ready(function(){
 });
 
 				
-		/*
+		
 		
 		$(function() {
 
@@ -216,7 +216,7 @@ $(document).ready(function(){
 					{title : "Book Files", extensions : "mobi"}	
 			     ]	
 			     });
-			 });*/
+			 });
 			 
 			 function showDiv(section) {
 			if(section == "friend_content")
@@ -280,7 +280,9 @@ $(document).ready(function(){
 <li><a href="#upload" onclick="showDiv('upload')">Upload</a></li>
 </ul>
 <div id="file_drop_menu_bar">
-File Drop
+ <style type="text/css">@import url(/js/jquery.plupload.queue/css/jquery.plupload.queue.css);</style>
+		<div id="html5_uploader">You browser doesn't support native upload. Try Firefox 3 or Safari 4.</div>	
+	
 </div>
 
 
