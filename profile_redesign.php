@@ -494,22 +494,24 @@ File Drop
 											{
 												echo "<a href=friends_profile.php?friends_user_id=".$friend_id.">".$member3['first_name']." ".$member3['last_name']."</a>";
 												$file3 = $member3['profile_picture'];
+												echo $file3;
 												$bucket3 = "mytrive_files";
 												$download_file_string3 = gs_prepareS3URL($file3, $bucket3);
 												
 												if($member['profile_picture'] != '')
 												{
-													echo "<img src='".$download_file_string3."' height='100px'/>";
+													echo "<img src='".$download_file_string3."' height='100px'/><br>";
 												}
 												else
 												{
-													echo "<img src='../images/placeholder.jpg' height='100px'/>";
+													echo "<img src='../images/placeholder.jpg' height='100px'/><br>";
 												}
 											}
 											else
 											{
 												echo "<a href=friends_profile.php?friends_user_id=".$friend_id.">".$member3['username']."</a>";
 												$file3 = $member3['profile_picture'];
+												echo $file3;												
 												$bucket3 = "mytrive_files";
 												$download_file_string3 = gs_prepareS3URL($file3, $bucket3);
 												
