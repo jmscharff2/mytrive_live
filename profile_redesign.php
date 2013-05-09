@@ -623,11 +623,11 @@ File Drop
 																
 																if($friends_files_member['share_with'] != $username)
 																{
-																	echo "<a href=request_file_share.php?file_id=".$file_id.">     Request file to be shared from owner</a><br>";
+																	echo "<a href=request_file_share.php?file_id=".$file_id.">: Request file to be shared from owner</a><br>";
 																}
 																else
 																{
-																	echo "    Currently shared with you.<br>";
+																	echo ": Currently shared with you.<br>";
 																}
 																
 																
@@ -654,13 +654,12 @@ File Drop
 																
 																if($friends_files_member['share_with'] != $username)
 																{
-																	echo "<a href=request_file_share.php?file_id=".$file_id.">     Request file to be shared from owner</a><br>";
+																	echo "<a href=request_file_share.php?file_id=".$file_id.">: Request file to be shared from owner</a><br>";
 																}
 																else
 																{
-																	echo "    Currently shared with you.<br>";
+																	echo ": Currently shared with you.<br>";
 																}
-																
 																$z++;
 															}
 														}
@@ -709,11 +708,11 @@ File Drop
 																
 																if($friends_files_member['share_with'] != $username)
 																{
-																	echo "<a href=request_file_share.php?file_id=".$file_id.">     Request file to be shared from owner</a><br>";
+																	echo "<a href=request_file_share.php?file_id=".$file_id.">: Request file to be shared from owner</a><br>";
 																}
 																else
 																{
-																	echo "    Currently shared with you.<br>";
+																	echo ": Currently shared with you.<br>";
 																}
 																
 																
@@ -740,11 +739,11 @@ File Drop
 																
 																if($friends_files_member['share_with'] != $username)
 																{
-																	echo "<a href=request_file_share.php?file_id=".$file_id.">     Request file to be shared from owner</a><br>";
+																	echo "<a href=request_file_share.php?file_id=".$file_id.">: Request file to be shared from owner</a><br>";
 																}
 																else
 																{
-																	echo "    Currently shared with you.<br>";
+																	echo ": Currently shared with you.<br>";
 																}
 																
 																
