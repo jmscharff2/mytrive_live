@@ -299,40 +299,13 @@ Drag and Drop your files here!
 
 	<section id="profile_content">
 		<section id="profile_picture">
-		<?php 
-		$qry = "SELECT * FROM users WHERE username = '$username'";
-		$result = mysql_query($qry);
-		$x = 0;
-		
-		if($result)
-		{
-			if(mysql_num_rows($result) > 0)
-			{
-			echo "<table  width='100%' border='1'> ";
-			echo "<form action='update_profile_script.php' method='POST'>";
-				while ($x < mysql_num_rows($result))
-				{
-					$member = mysql_fetch_assoc($result);
-					if($member['profile_picture'] != '')
-					{
-						echo "<img src='".$member['profile_picture']."' height='100px'/>";
-					}
-					else
-					{
-						echo "<img src='../images/placeholder.jpg' height='100px'/>";
-					}
-					$x++;
-				}
-			}
-		}
-		
-		
-		?>	
+
+		<img src='../images/placeholder.jpg' height='100px'/>
 		</section>	
 		Username: <?php echo $username; ?><br>
 		
 		<a href="settings_redesign.php">Settings</a>
-	</section>
+		</section>
 	<section id="file_drop">
 		<h2>Drag and Drop your files here!</h2>
 	</section>
@@ -639,7 +612,7 @@ Drag and Drop your files here!
 		
 		
 		
-		<section id="file_content">
+	<section id="file_content">
 		<h2>Files</h2>
 		
 		<ul id ="file_list">
