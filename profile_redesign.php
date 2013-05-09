@@ -313,15 +313,9 @@ Drag and Drop your files here!
 				while ($x < mysql_num_rows($result))
 				{
 					$member = mysql_fetch_assoc($result);
-					
-					$file2 = $member['owner_id']."/".$member['file_name'];
-					$bucket2 = "mytrive_files";
-					$download_file_string2 = gs_prepareS3URL($file2, $bucket2);
-
-					
 					if($member['profile_picture'] != '')
 					{
-						echo "<img src='".$download_file_string2."' height='100px'/>";
+						echo "<img src='".$member['profile_picture']."' height='100px'/>";
 					}
 					else
 					{
@@ -332,8 +326,7 @@ Drag and Drop your files here!
 			}
 		}
 		
-			 
-			 ?>
+		
 		
 		</section>
 		Username: <?php echo $username; ?><br>
@@ -670,8 +663,6 @@ Drag and Drop your files here!
 						$ext = end(explode('.', $member['file_name']));
 						
 						echo "<li class='files'>".$member['file_name'];
-						
-									
 						echo "<a href='file_delete.php?file=".$member['file_name']."'><img src='images/Delete.png'height='20'/></a>";
 						echo "<a href='share_file.php?file=".$member['file_name']."'><img src='images/Share.png'height='20'/></a>";
 				
