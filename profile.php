@@ -1075,7 +1075,7 @@ uploader.init();
 <div id ="filters">
 <select id="filters_menu">
 <option selected> All</option>
-<option>M4V</option>
+<option>m4v</option>
 <option>JPG</option>
 <option>PNG</option>
 <option>Custom Filter</option>
