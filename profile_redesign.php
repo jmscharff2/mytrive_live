@@ -871,8 +871,11 @@ File Drop
 						$member = mysql_fetch_assoc($result);
 						$ext = end(explode('.', $member['file_name']));
 						
-						echo "<li class='files'>".$member['file_name'];
+						echo "<li class='files'>";
 						
+						/*$member['file_name'];*/
+						echo "<a href='file_settings.php?file_id=".$member['file_id']."'>".$member['file_name']."</a>";
+
 						$file2 = $member['owner_id']."/".$member['file_name'];
 						$bucket2 = "mytrive_files";
 						$download_file_string2 = gs_prepareS3URL($file2, $bucket2);	 
@@ -949,9 +952,9 @@ File Drop
 			 <?php
 			if($ext == 'm4v' || $ext == 'avi' || $ext == 'mkv')
 			{
-				echo "<td><a href='play_video.php?file_id=".$member2['file_id']."'><img src='images/Play.png'height='25'/></a></td>";	
+				echo "<td><a href='play_video.php?file_id=".$member2['file_id']."'><img src='images/Play.png'height='25'/></a>";	
 			}
-					
+			echo "<br>";	
 			$x++;
 			
 		}
