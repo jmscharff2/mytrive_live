@@ -40,7 +40,7 @@ if (move_uploaded_file($_FILES['userfile']['tmp_name'], $uploadfile)) {
     
 } else {
    // echo "Possible file upload attack!\n";
-   			echo '<meta http-equiv="Refresh" content="1; URL=http://www.mytrive.com/settings.php">';
+   			echo '<meta http-equiv="Refresh" content="1; URL=http://www.mytrive.com/settings_error.php">';
 
     
 }

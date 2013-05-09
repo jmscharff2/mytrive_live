@@ -65,7 +65,6 @@ if($result)
 {
 	if(mysql_num_rows($result) > 0)
 	{
-	echo "<table  width='100%' border='1'> ";
 	echo "<form action='update_profile_script.php' method='POST'>";
 		while ($x < mysql_num_rows($result))
 		{
@@ -77,25 +76,15 @@ if($result)
 			//echo "</br>";
 			
 			
-			echo "<tr>";
-			echo "<td>";
-			echo "Username:".$member['username'];
-			echo "</td>";
-			echo "<td>";
-			echo "Email: <input type='text' name='email' value=". $member['email'].">";
-			echo "</td>";
-			echo "</tr>";
-			echo "<tr>";
-			echo "<td>";
-			echo "<br>";
+
+			echo "Username:".$member['username']."<br>";
+			echo "Email: <input type='text' name='email' value=". $member['email']."><br>";
+
 			echo "Name: <input type='text' name='first_name' value=". $member['first_name']."><input type='text' name='last_name' value=".$member['last_name'].">";
-			echo "</td>";
-			echo "<td>";
+
 			echo "<br>";
 			echo "City: <input type='text' name='city' value=".$member['city']."><br> State: <input type='text' name='state' value=".$member['state']."><br> Country: <input type='text' name='country' value=".$member['country'].">";
-			echo "</td>";
-			echo "</tr>";
-			
+
 			
 
 			//echo "/".$member['location']."/".$member['file_name'];
@@ -117,7 +106,7 @@ if($result)
 		
 			
 ?>
-		</table>
+
 		<input type=submit value="Update"/>
 		</form>
 
