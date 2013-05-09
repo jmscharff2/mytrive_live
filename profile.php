@@ -828,7 +828,7 @@ $("#filter").bind("keyup",function(){
 	    </div>
 		</center>
 		</div>
-
+<!--
 		<script>
 		
 function $(id) {
@@ -878,7 +878,7 @@ $('uploadfiles').onclick = function() {
 uploader.init();
 
 </script>
-		
+		-->
 			
 		</section>
 		
