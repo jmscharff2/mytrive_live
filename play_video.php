@@ -1,3 +1,68 @@
+<?php
+session_start();
+
+if(isset($_SESSION['username']) && $_SESSION['username'] != '')
+	{
+		include 'includes/loggedin.html';
+	}
+	elseif(!(isset($_SESSION['username'])))
+	{
+		include 'includes/loggedout.html';
+	}
+
+	require_once('config.php');
+	require_once('includes/amazon.php');
+
+	$link = mysql_connect(DB_HOST, DB_USER, DB_PASSWORD);
+	if(!$link)
+	{
+		die('Failed to connect to server: '. mysql_error());
+	}
+	
+	$db = mysql_select_db(DB_DATABASE);
+	if(!$db)
+	{
+		die("Unable to select database");
+	}
+	
+	$username = $_SESSION['username'];
+	$file_id = $_GET['file_id'];
+
+
+	//so.addVariable('file','http://www.hawkitics.com/mytrive/live/upload/jon@mytrive.com/movie.m4v');
+		$qry = "SELECT * from files WHERE file_id = '$file_id' LIMIT 1";
+		
+		$result = mysql_query($qry);
+		
+		if($result)
+		{
+			if(mysql_num_rows($result) > 0)
+			{
+				while ($x < mysql_num_rows($result))
+				{
+					$member = mysql_fetch_assoc($result);
+					//this will need to change once the domain name is fixed
+					//need some way of checking to make sure the user has permission
+					//$play_video = "http://www.mytrive.com/upload/".$member['owner_id']."/".$member['file_name'];
+					//$play_video = "https://s3.amazonaws.com/mytrive_files/".$member['owner_id']."/".$member['file_name'];
+					//$play_video = "../../../../mnt/s3_mytrive_files/".$member['owner_id']."/".$member['file_name'];
+					
+					
+					$file = $member['owner_id']."/".$member['file_name'];
+					$bucket = "mytrive_files";
+					
+					$play_video = gs_prepareS3URL($file, $bucket);
+									
+					$x++;
+				}
+			}
+		}
+		else
+		{
+			echo "error";
+		}
+?>
+
 <!DOCTYPE html>
 <HTML lang="en-us">
 
