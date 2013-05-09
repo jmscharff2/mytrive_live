@@ -21,17 +21,18 @@ session_start();
 	$request_id = $_GET['request_id'];
 
 	$qry = "UPDATE files INNER JOIN file_request ON files.file_id = file_request.file_id SET share_with = request.request_username WHERE files.owner_user_id = '$user_id' AND file_request.request_id = '$request_id'";
+	echo $qry;
 	$result = mysql_query($qry);
 	
 	if($result)
 	{
 		$qry2 = "DELETE FROM file_request WHERE request_id = '$request_id'";
 		$result2 = mysql_query($qry2);
-		header("location: profile.php");
+		//header("location: profile.php");
 	}
 	else
 	{
-		header("location: profile_error.php");
+		//header("location: profile_error.php");
 	}
 	
 ?>
