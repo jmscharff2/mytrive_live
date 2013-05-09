@@ -297,7 +297,7 @@ body
 
 /*Media Queries below for nice responsive design stuffs*/
 
-@media all and (min-width: 400px)
+@media all and (max-width: 500px)
 {
 	#file_drop
 	{
