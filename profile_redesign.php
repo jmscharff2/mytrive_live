@@ -303,7 +303,7 @@ Drag and Drop your files here!
 		</section>
 		Username: <?php echo $username; ?><br>
 		
-		<a href="#">Settings</a>
+		<a href="settings_redesign.php">Settings</a>
 	</section>
 	<section id="file_drop">
 		<h2>Drag and Drop your files here!</h2>

@@ -41,18 +41,92 @@
 	</section>
 	
 	<section id="info">
-	<center>
-	</center>
-		<ul>
-			<li><h1>Step 1</h1><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam commodo accumsan faucibus. Donec non nisi sed turpis consequat molestie laoreet a mi. Aenean elementum, urna a volutpat ullamcorper, nibh sem tempor elit, ut pharetra elit dolor quis lorem. In hac habitasse platea dictumst. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In hac habitasse platea dictumst. Vivamus consequat diam at sapien ultrices sodales suscipit arcu imperdiet. Curabitur luctus congue erat ut tempus.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam commodo accumsan faucibus. Donec non nisi sed turpis consequat molestie laoreet
-</p></li>
-			<li><h1>Step 2</h1><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam commodo accumsan faucibus. Donec non nisi sed turpis consequat molestie laoreet a mi. Aenean elementum, urna a volutpat ullamcorper, nibh sem tempor elit, ut pharetra elit dolor quis lorem. In hac habitasse platea dictumst. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In hac habitasse platea dictumst. Vivamus consequat diam at sapien ultrices sodales suscipit arcu imperdiet. Curabitur luctus congue erat ut tempus.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam commodo accumsan faucibus. Donec non nisi sed turpis consequat molestie laoreet
-</p></li>
-			<li><h1>Step 3</h1><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam commodo accumsan faucibus. Donec non nisi sed turpis consequat molestie laoreet a mi. Aenean elementum, urna a volutpat ullamcorper, nibh sem tempor elit, ut pharetra elit dolor quis lorem. In hac habitasse platea dictumst. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In hac habitasse platea dictumst. Vivamus consequat diam at sapien ultrices sodales suscipit arcu imperdiet. Curabitur luctus congue erat ut tempus.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam commodo accumsan faucibus. Donec non nisi sed turpis consequat molestie laoreet
-</p></li>
-			<li><h1>Step 4</h1><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam commodo accumsan faucibus. Donec non nisi sed turpis consequat molestie laoreet a mi. Aenean elementum, urna a volutpat ullamcorper, nibh sem tempor elit, ut pharetra elit dolor quis lorem. In hac habitasse platea dictumst. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In hac habitasse platea dictumst. Vivamus consequat diam at sapien ultrices sodales suscipit arcu imperdiet. Curabitur luctus congue erat ut tempus.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam commodo accumsan faucibus. Donec non nisi sed turpis consequat molestie laoreet
-</p></li>
-		</ul>
+<?php
+				require_once('config.php');
+
+echo $_SESSION['username']."'s user information:</br></br></br>";
+$link = mysql_connect(DB_HOST, DB_USER, DB_PASSWORD);
+if(!$link)
+{
+	die('Failed to connect to server: '. mysql_error());
+}
+
+$db = mysql_select_db(DB_DATABASE);
+if(!$db)
+{
+	die("Unable to select database");
+}
+
+$username = $_SESSION['username'];
+
+ 
+$qry = "SELECT * FROM users WHERE username = '$username'";
+$result = mysql_query($qry);
+$x = 0;
+
+if($result)
+{
+	if(mysql_num_rows($result) > 0)
+	{
+	echo "<table  width='100%' border='1'> ";
+	echo "<form action='update_profile_script.php' method='POST'>";
+		while ($x < mysql_num_rows($result))
+		{
+			$member = mysql_fetch_assoc($result);
+			
+			//echo $member['file_name'];
+		
+			//echo $member['location'];
+			//echo "</br>";
+			
+			
+			echo "<tr>";
+			echo "<td>";
+			echo "Username:".$member['username'];
+			echo "</td>";
+			echo "<td>";
+			echo "Email: <input type='text' name='email' value=". $member['email'].">";
+			echo "</td>";
+			echo "</tr>";
+			echo "<tr>";
+			echo "<td>";
+			echo "<br>";
+			echo "Name: <input type='text' name='first_name' value=". $member['first_name']."><input type='text' name='last_name' value=".$member['last_name'].">";
+			echo "</td>";
+			echo "<td>";
+			echo "<br>";
+			echo "City: <input type='text' name='city' value=".$member['city']."><br> State: <input type='text' name='state' value=".$member['state']."><br> Country: <input type='text' name='country' value=".$member['country'].">";
+			echo "</td>";
+			echo "</tr>";
+			
+
+			//echo "/".$member['location']."/".$member['file_name'];
+			
+			//echo $result[$x];
+			
+			//file_put_contents($member['file_name'], file_get_contents("/".$member['location']."/".$member['file_name']))
+			
+			
+			$x++;
+			
+		}
+	}
+
+
+}
+
+
+		
+			
+?>
+		</table>
+		<input type=submit value="Update"/>
+		</form>
+
+
+
+
+
 	</section>
 	
 
