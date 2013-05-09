@@ -671,14 +671,6 @@ Drag and Drop your files here!
 						
 						echo "<li class='files'>".$member['file_name'];
 						
-						$file2 = $member['owner_id']."/".$member['file_name'];
-						$bucket2 = "mytrive_files";
-						$download_file_string2 = gs_prepareS3URL($file2, $bucket2);
-			
-						 
-						 ?>
-						 <a href="<?php echo $download_file_string2; ?>"><img src="images/Download.png" height="25"/> </a><?php
-									
 									
 						echo "<a href='file_delete.php?file=".$member['file_name']."'><img src='images/Delete.png'height='20'/></a>";
 						echo "<a href='share_file.php?file=".$member['file_name']."'><img src='images/Share.png'height='20'/></a>";
