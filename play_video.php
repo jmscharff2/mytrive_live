@@ -1,15 +1,5 @@
 <?php
 session_start();
-
-if(isset($_SESSION['username']) && $_SESSION['username'] != '')
-	{
-		include 'includes/loggedin.html';
-	}
-	elseif(!(isset($_SESSION['username'])))
-	{
-		include 'includes/loggedout.html';
-	}
-
 	require_once('config.php');
 	require_once('includes/amazon.php');
 
@@ -119,7 +109,6 @@ if(isset($_SESSION['username']) && $_SESSION['username'] != '')
 	// ]]>
 	</script>
 	<?php
-	echo $play_video;
 	?>
 </center>
 </section>
