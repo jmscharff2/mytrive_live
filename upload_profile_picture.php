@@ -22,6 +22,7 @@ $user_id = $_SESSION['user_id'];
 $uploaddir = '/mnt/s3_mytrive_files/'.$username.'/';
 $uploadfile = $uploaddir . basename($_FILES['userfile']['name']);
 
+$file_info = $username.'.'.basename($_FILES['userfile']['name']);
 
 $ext = end(explode('.', $uploadfile));
 echo $ext;
@@ -30,7 +31,7 @@ echo $ext;
 if (move_uploaded_file($_FILES['userfile']['tmp_name'], $uploadfile)) {
     echo "File is valid, and was successfully uploaded.\n";
     
-   	$qry = "UPDATE users SET profile_picture = '".$uploadfile."' WHERE users.user_id = '".$user_id."'";
+   	$qry = "UPDATE users SET profile_picture = '".$file_info."' WHERE users.user_id = '".$user_id."'";
 	$result = mysql_query($qry);
 	echo $qry."<br>";
 	
