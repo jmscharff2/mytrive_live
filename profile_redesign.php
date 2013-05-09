@@ -635,16 +635,16 @@ Drag and Drop your files here!
 						$ext = end(explode('.', $member['file_name']));
 						
 						echo "<li class='files'>".$member['file_name'];
-						echo "<a href='file_delete.php?file=".$member['file_name']."'><img src='images/Delete.png'height='10'/></a>";
-						echo "<a href='share_file.php?file=".$member['file_name']."'><img src='images/Share.png'height='10'/></a>";
+						echo "<a href='file_delete.php?file=".$member['file_name']."'><img src='images/Delete.png'height='20'/></a>";
+						echo "<a href='share_file.php?file=".$member['file_name']."'><img src='images/Share.png'height='20'/></a>";
 				
 						if($ext == 'm4v' || $ext == 'avi' || $ext == 'mkv')
 						{
-							echo "<a href='play_video.php?file_id=".$member['file_id']."'><img src='images/Play.png'height='10'/></a>";	
+							echo "<a href='play_video.php?file_id=".$member['file_id']."'><img src='images/Play.png'height='20'/></a>";	
 						}
 						if($member['share_with'] != '')
 						{
-							echo "<a href='stop_sharing.php?file=".$member['file_name']."'><img src='images/Stop.png' height='10'/></a>";
+							echo "<a href='stop_sharing.php?file=".$member['file_name']."'><img src='images/Stop.png' height='20'/></a>";
 						}
 						
 						echo "<li><br>";
