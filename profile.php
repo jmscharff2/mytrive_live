@@ -56,7 +56,7 @@
 	<TITLE>mytrive profile redesign</TITLE>
 
 <link rel="stylesheet" type="text/css" href="css/design.css" />
-<style type="text/css">@import url(/js/jquery.ui.plupload/css/jquery.ui.plupload.css);</style>
+<style type="text/css">@import url(/js/jquery.plupload.queue/css/jquery.plupload.queue.css);</style>
 
 <script type="text/javascript" src="includes/submitenter.js" language="javascript"></script>
 	<script src="js/jquery.js"></script>
@@ -188,7 +188,7 @@ $(document).ready(function(){
 			     // General settings
 			     runtimes : 'html5',
 			     url : 'upload_file.php',
-			     max_file_size : '10mb',
+			     max_file_size : '10000mb',
 			     chunk_size : '1mb',
 			     unique_names : true,
 			     // Resize images on clientside if we can
