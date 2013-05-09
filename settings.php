@@ -107,12 +107,12 @@ if($result)
 			
 ?>
 
-		<input type=submit value="Update"/>
+		<input type=submit value="Update"/><br><br>
 		</form>
 
 		<form enctype="multipart/form-data" action="upload_profile_picture.php" method="POST">
 	    <input type="hidden" name="MAX_FILE_SIZE" value="5120000" />
-	    Upload Picture <input name="userfile" type="file" />
+	    Profile Picture <input name="userfile" type="file" />
 	    <input type="submit" value="Upload" />
 	    </form>
 	    
@@ -120,7 +120,7 @@ if($result)
 
 		<form enctype="multipart/form-data" action="upload_background_image.php" method="POST">
 	    <input type="hidden" name="MAX_FILE_SIZE" value="5120000" />
-	    Upload Background Image <input name="userfile" type="file" />
+	    Background Image <input name="userfile" type="file" />
 	    <input type="submit" value="Upload" />
 	    </form>
 
