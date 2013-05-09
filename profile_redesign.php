@@ -166,7 +166,8 @@ $(document).ready(function(){
 		    }
 		);
 		function upload(files){
-		   alert('Upload '+files.length+' File(s).');  
+		   alert('Upload '+files.length+' File(s).'); 
+		   document.getElementById("#dropsubmit").click();
 		   
 		}
 	/*file drop menu bar*/
@@ -288,7 +289,17 @@ $(document).ready(function(){
 <li><a href="#upload" onclick="showDiv('upload')">Upload</a></li>
 </ul>
 <div id="file_drop_menu_bar">
-Drag and Drop your files here!
+File Drop
+
+</form style="display: none;">
+
+		<form enctype="multipart/form-data" action="upload_profile_picture.php" method="POST">
+	    <input type="hidden" name="MAX_FILE_SIZE" value="512000" />
+	    Upload Picture <input name="userfile" type="file" />
+	    <input type="submit" id="drop_submit" value="Upload" />
+	    </form>
+
+
 </div>
 
 
