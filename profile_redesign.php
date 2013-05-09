@@ -327,16 +327,6 @@ $(document).ready(function(){
 </ul>
 <div id="file_drop_menu_bar">
 File Drop
-
-</form style="display: none;">
-
-		<form enctype="multipart/form-data" action="upload_profile_picture.php" method="POST">
-	    <input type="hidden" name="MAX_FILE_SIZE" value="512000" />
-	    Upload Picture <input name="userfile" type="file" />
-	    <input type="submit" id="drop_submit" value="Upload" />
-</form>
-
-
 </div>
 
 
