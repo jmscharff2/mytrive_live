@@ -305,8 +305,22 @@ body
 	}
 	#nav-banner
 	{
-		height: 75px;
+		height: 100px;
 	}
+	nav ul
+	{
+		list-style-type: none;
+		margin-left: 30%;
+		margin-top: -60px;
+	}
+	nav ul li
+	{
+		display: block;
+		padding: 20px;
+	
+	}
+
+	
 }
 /*
 @media screen {
