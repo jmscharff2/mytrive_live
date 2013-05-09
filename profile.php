@@ -209,13 +209,13 @@ $(function() {
 
       // Flash settings
 
-      flash_swf_url : '/plupload/js/plupload.flash.swf',
+      flash_swf_url : '/js/plupload.flash.swf',
 
 
 
       // Silverlight settings
 
-      silverlight_xap_url : '/plupload/js/plupload.silverlight.xap'
+      silverlight_xap_url : '/js/plupload.silverlight.xap'
 
   });
 
