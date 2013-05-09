@@ -1028,11 +1028,11 @@ uploader.init();
 
 	
 </section>
-
+<!--
 <div id ="filters">
 <input id="filer" type="text" name="fname" /><br>
 </div>
-
+-->
 
 
 </BODY>
