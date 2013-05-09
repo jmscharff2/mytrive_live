@@ -619,15 +619,15 @@ File Drop
 															while ($z < mysql_num_rows($friends_files_result))
 															{
 																$friends_files_member = mysql_fetch_assoc($friends_files_result);
-																echo "<a href='file_settings.php?file_id=".$friends_files_member['file_id']."'>".$friends_files_member['file_name']."</a><br>";
+																echo "<a href='file_settings.php?file_id=".$friends_files_member['file_id']."'>".$friends_files_member['file_name']."</a>";
 																
 																if($friends_files_member['share_with'] != $username)
 																{
-																	echo "<a href=request_file_share.php?file_id=".$file_id.">Request file to be shared from owner</a>";
+																	echo "<a href=request_file_share.php?file_id=".$file_id.">     Request file to be shared from owner</a><br>";
 																}
 																else
 																{
-																	echo "    Currently shared with you.";
+																	echo "    Currently shared with you.<br>";
 																}
 																
 																
@@ -650,15 +650,15 @@ File Drop
 															while ($z < mysql_num_rows($friends_files_result))
 															{
 																$friends_files_member = mysql_fetch_assoc($friends_files_result);
-																echo "<a href='file_settings.php?file_id=".$friends_files_member['file_id']."'>".$friends_files_member['file_name']."</a><br>";
+																echo "<a href='file_settings.php?file_id=".$friends_files_member['file_id']."'>".$friends_files_member['file_name']."</a>";
 																
 																if($friends_files_member['share_with'] != $username)
 																{
-																	echo "<a href=request_file_share.php?file_id=".$file_id.">Request file to be shared from owner</a>";
+																	echo "<a href=request_file_share.php?file_id=".$file_id.">     Request file to be shared from owner</a><br>";
 																}
 																else
 																{
-																	echo "    Currently shared with you.";
+																	echo "    Currently shared with you.<br>";
 																}
 																
 																$z++;
@@ -705,15 +705,15 @@ File Drop
 															while ($z < mysql_num_rows($friends_files_result))
 															{
 																$friends_files_member = mysql_fetch_assoc($friends_files_result);
-																echo "<a href='file_settings.php?file_id=".$friends_files_member['file_id']."'>".$friends_files_member['file_name']."</a><br>";
+																echo "<a href='file_settings.php?file_id=".$friends_files_member['file_id']."'>".$friends_files_member['file_name']."</a>";
 																
 																if($friends_files_member['share_with'] != $username)
 																{
-																	echo "<a href=request_file_share.php?file_id=".$file_id.">Request file to be shared from owner</a>";
+																	echo "<a href=request_file_share.php?file_id=".$file_id.">     Request file to be shared from owner</a><br>";
 																}
 																else
 																{
-																	echo "    Currently shared with you.";
+																	echo "    Currently shared with you.<br>";
 																}
 																
 																
@@ -736,15 +736,15 @@ File Drop
 															while ($z < mysql_num_rows($friends_files_result))
 															{
 																$friends_files_member = mysql_fetch_assoc($friends_files_result);
-																echo "<a href='file_settings.php?file_id=".$friends_files_member['file_id']."'>".$friends_files_member['file_name']."</a><br>";
+																echo "<a href='file_settings.php?file_id=".$friends_files_member['file_id']."'>".$friends_files_member['file_name']."</a>";
 																
 																if($friends_files_member['share_with'] != $username)
 																{
-																	echo "<a href=request_file_share.php?file_id=".$file_id.">Request file to be shared from owner</a>";
+																	echo "<a href=request_file_share.php?file_id=".$file_id.">     Request file to be shared from owner</a><br>";
 																}
 																else
 																{
-																	echo "    Currently shared with you.";
+																	echo "    Currently shared with you.<br>";
 																}
 																
 																
