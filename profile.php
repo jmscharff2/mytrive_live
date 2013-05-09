@@ -256,9 +256,9 @@ $(document).ready(function(){
 			     // Specify what files to browse for
 			     filters : [	
 			        {title : "Image files", extensions : "jpg,gif,png"},
-					{title : "Zip files", extensions : "zip, gzip, tar.gz, gz"},
+					{title : "Zip files", extensions : "zip, gzip,tar.gz, gz"},
 					{title : "Video files", extensions : "m4v,avi,mkv, mp4"},
-					{title : "Document Files", extensions : "doc, docx, odt, xls, xlsx, ppt, pptx"},
+					{title : "Document Files", extensions : "doc,docx,odt,xls,xlsx,ppt,pptx"},
 					{title : "Book Files", extensions : "mobi"}	
 			     ]	
 			     });
