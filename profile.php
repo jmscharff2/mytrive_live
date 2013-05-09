@@ -70,7 +70,7 @@
 <script type="text/javascript" src="http://bp.yahooapis.com/2.4.21/browserplus-min.js"></script>
 <script type="text/javascript" src="/js/jquery.plupload.queue/jquery.plupload.queue.js"></script>
 <script type="text/javascript" src="/js/plupload.full.js"></script>
-
+<script type="text/javascript" src="/js/jquery.ui.plupload/jquery.ui.plupload.js"></script>
 
 
 <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
