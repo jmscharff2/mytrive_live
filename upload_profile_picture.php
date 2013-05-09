@@ -18,8 +18,7 @@ if(!db)
 }
 $username = $_SESSION['username'];
 
-//$uploaddir = '/mnt/s3_mytrive_files/'.$username;
-$uploaddir = '/var/www/';
+$uploaddir = '/mnt/s3_mytrive_files/'.$username;
 $uploadfile = $uploaddir . basename($_FILES['userfile']['name']);
 
 
@@ -36,5 +35,6 @@ if (move_uploaded_file($_FILES['userfile']['tmp_name'], $uploadfile)) {
     
 }
 
+echo $uploadfile;
 
 ?>
