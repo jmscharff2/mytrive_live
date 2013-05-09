@@ -17,6 +17,33 @@
 	{	
 		die("Unable to select database");
 	}
+	
+	
+	$qry = "SELECT * FROM users WHERE username = '$username'";
+		$result = mysql_query($qry);
+		$x = 0;
+		
+		if($result)
+		{
+			if(mysql_num_rows($result) > 0)
+			{
+				while ($x < mysql_num_rows($result))
+				{
+					$member = mysql_fetch_assoc($result);
+					
+					$file4 = $member['background_image'];
+					$bucket4 = "mytrive_files";
+					$download_file_string4 = gs_prepareS3URL($file4, $bucket4);
+					
+					if($member['background_image'] != '')
+					{
+						$background_image = $download_file_string4;
+					}
+				}
+			}
+		}
+
+	
 
 ?>
 
@@ -278,6 +305,15 @@ $(document).ready(function(){
 </HEAD>
 
 <BODY>
+
+<style type="text/css">
+	body
+	{
+		background-image: url('<?php echo $background_image; ?>');
+	}
+</style>
+
+
 <!--top banner-->
 <div id="nav-banner">
 <nav>
@@ -320,7 +356,6 @@ File Drop
 		{
 			if(mysql_num_rows($result) > 0)
 			{
-			echo "<form action='update_profile_script.php' method='POST'>";
 				while ($x < mysql_num_rows($result))
 				{
 					$member = mysql_fetch_assoc($result);
@@ -383,7 +418,7 @@ File Drop
 							if($member4['friend1'] != $user_id)
 							{
 								$friend_id = $member4['friend1'];
-								$qry3 = "SELECT username, first_name, last_name FROM users WHERE user_id = '$friend_id'";
+								$qry3 = "SELECT username, first_name, last_name, profile_picture FROM users WHERE user_id = '$friend_id'";
 								$result3 = mysql_query($qry3);
 								$y = 0;
 								if($result3)
@@ -396,10 +431,36 @@ File Drop
 											if($member3['first_name'] != '' && $member3['last_name'] != '')
 											{
 												echo "<a href=friends_profile.php?friends_user_id=".$friend_id.">".$member3['first_name']." ".$member3['last_name']."</a>";
+												$file3 = $member3['profile_picture'];
+												$bucket3 = "mytrive_files";
+												$download_file_string3 = gs_prepareS3URL($file3, $bucket3);
+												
+												if($member['profile_picture'] != '')
+												{
+													echo "<img src='".$download_file_string3."' height='100px'/>";
+												}
+												else
+												{
+													echo "<img src='../images/placeholder.jpg' height='100px'/>";
+												}
+
+												
 											}
 											else
 											{
 												echo "<a href=friends_profile.php?friends_user_id=".$friend_id.">".$member3['username']."</a>";
+												$file3 = $member3['profile_picture'];
+												$bucket3 = "mytrive_files";
+												$download_file_string3 = gs_prepareS3URL($file3, $bucket3);
+												
+												if($member['profile_picture'] != '')
+												{
+													echo "<img src='".$download_file_string3."' height='100px'/>";
+												}
+												else
+												{
+													echo "<img src='../images/placeholder.jpg' height='100px'/>";
+												}
 		
 											}
 											$y++;
@@ -429,10 +490,34 @@ File Drop
 											if($member3['first_name'] != '' && $member3['last_name'] != '')
 											{
 												echo "<a href=friends_profile.php?friends_user_id=".$friend_id.">".$member3['first_name']." ".$member3['last_name']."</a>";
+												$file3 = $member3['profile_picture'];
+												$bucket3 = "mytrive_files";
+												$download_file_string3 = gs_prepareS3URL($file3, $bucket3);
+												
+												if($member['profile_picture'] != '')
+												{
+													echo "<img src='".$download_file_string3."' height='100px'/>";
+												}
+												else
+												{
+													echo "<img src='../images/placeholder.jpg' height='100px'/>";
+												}
 											}
 											else
 											{
 												echo "<a href=friends_profile.php?friends_user_id=".$friend_id.">".$member3['username']."</a>";
+												$file3 = $member3['profile_picture'];
+												$bucket3 = "mytrive_files";
+												$download_file_string3 = gs_prepareS3URL($file3, $bucket3);
+												
+												if($member['profile_picture'] != '')
+												{
+													echo "<img src='".$download_file_string3."' height='100px'/>";
+												}
+												else
+												{
+													echo "<img src='../images/placeholder.jpg' height='100px'/>";
+												}
 											}
 											$y++;
 										}

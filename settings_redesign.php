@@ -1,5 +1,22 @@
 <?php
 	session_start();
+	
+	require_once('config.php');
+
+	$link = mysql_connect(DB_HOST, DB_USER, DB_PASSWORD);
+	if(!$link)
+	{
+		die('Failed to connect to server: '. mysql_error());
+	}
+	
+	$db = mysql_select_db(DB_DATABASE);
+	if(!$db)
+	{
+		die("Unable to select database");
+	}
+	
+	$username = $_SESSION['username'];
+
 ?>
 
 <HTML>
@@ -36,24 +53,10 @@
 <section id="content">
 <section id="settings_edit">
 <?php
-require_once('config.php');
+
 
 echo $_SESSION['username']."'s user information:</br></br></br>";
-$link = mysql_connect(DB_HOST, DB_USER, DB_PASSWORD);
-if(!$link)
-{
-	die('Failed to connect to server: '. mysql_error());
-}
 
-$db = mysql_select_db(DB_DATABASE);
-if(!$db)
-{
-	die("Unable to select database");
-}
-
-$username = $_SESSION['username'];
-
- 
 $qry = "SELECT * FROM users WHERE username = '$username'";
 $result = mysql_query($qry);
 $x = 0;
@@ -119,6 +122,14 @@ if($result)
 		</form>
 
 		<form enctype="multipart/form-data" action="upload_profile_picture.php" method="POST">
+	    <input type="hidden" name="MAX_FILE_SIZE" value="512000" />
+	    Upload Picture <input name="userfile" type="file" />
+	    <input type="submit" value="Upload" />
+	    </form>
+	    
+		</form>
+
+		<form enctype="multipart/form-data" action="upload_background_image.php" method="POST">
 	    <input type="hidden" name="MAX_FILE_SIZE" value="512000" />
 	    Upload Picture <input name="userfile" type="file" />
 	    <input type="submit" value="Upload" />
