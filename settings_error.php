@@ -52,9 +52,11 @@
 
 <section id="content">
 <section id="settings_edit">
+<h1 style="color: red">Error With Update<h1>
+
 <?php
 
-<h1 style="color: red">Error With Update<h1>
+
 echo $_SESSION['username']."'s user information:</br></br></br>";
 
 $qry = "SELECT * FROM users WHERE username = '$username'";
