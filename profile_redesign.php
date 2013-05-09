@@ -852,9 +852,9 @@ File Drop
 <div id ="filters">
 <select id="filters_menu">
 <option selected> All</option>
-<option>Movie</option>
-<option>Documents</option>
-<option>Books</option>
+<option>M4V</option>
+<option>JPG</option>
+<option>PNG</option>
 <option>Custom Filter</option>
 <option>Custom Filter</option>
 </select>

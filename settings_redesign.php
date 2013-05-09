@@ -131,7 +131,7 @@ if($result)
 
 		<form enctype="multipart/form-data" action="upload_background_image.php" method="POST">
 	    <input type="hidden" name="MAX_FILE_SIZE" value="5120000" />
-	    Upload Picture <input name="userfile" type="file" />
+	    Upload Background Image <input name="userfile" type="file" />
 	    <input type="submit" value="Upload" />
 	    </form>
 
