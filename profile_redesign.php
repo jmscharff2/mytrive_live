@@ -427,7 +427,6 @@ File Drop
 											{
 												echo "<a href=friends_profile.php?friends_user_id=".$friend_id.">".$member3['first_name']." ".$member3['last_name']."</a><br>";
 												$file3 = $member3['profile_picture'];
-												echo $file3;
 												$bucket3 = "mytrive_files";
 												$download_file_string3 = gs_prepareS3URL($file3, $bucket3);
 												
@@ -487,7 +486,6 @@ File Drop
 											{
 												echo "<a href=friends_profile.php?friends_user_id=".$friend_id.">".$member3['first_name']." ".$member3['last_name']."</a><br>";
 												$file3 = $member3['profile_picture'];
-												echo $file3;
 												$bucket3 = "mytrive_files";
 												$download_file_string3 = gs_prepareS3URL($file3, $bucket3);
 												
@@ -504,7 +502,6 @@ File Drop
 											{
 												echo "<a href=friends_profile.php?friends_user_id=".$friend_id.">".$member3['username']."</a><br>";
 												$file3 = $member3['profile_picture'];
-												echo $file3;												
 												$bucket3 = "mytrive_files";
 												$download_file_string3 = gs_prepareS3URL($file3, $bucket3);
 												
@@ -607,7 +604,7 @@ File Drop
 											$member3 = mysql_fetch_assoc($result3);
 											if($member3['first_name'] != '' && $member3['last_name'] != '')
 											{
-												echo "<a href=friends_profile.php?friends_user_id=".$friend_id.">".$member3['first_name']." ".$member3['last_name']."</a>";
+												echo "<a href=friends_profile.php?friends_user_id=".$friend_id.">".$member3['first_name']." ".$member3['last_name']."</a><br>";
 												//Display friends files willing to share
 												$friends_files_qry = "SELECT * FROM files WHERE owner_user_id = '$friend_id' AND want_to_share = 1";
 													$friends_files_result = mysql_query($friends_files_qry);
@@ -639,7 +636,7 @@ File Drop
 											}
 											else
 											{
-												echo "<a href=friends_profile.php?friends_user_id=".$friend_id.">".$member3['username']."</a>";
+												echo "<a href=friends_profile.php?friends_user_id=".$friend_id.">".$member3['username']."</a><br>";
 												//Display friends files willing to share
 												$friends_files_qry = "SELECT * FROM files WHERE owner_user_id = '$friend_id' AND want_to_share = 1";
 													$friends_files_result = mysql_query($friends_files_qry);
@@ -694,7 +691,7 @@ File Drop
 											$member3 = mysql_fetch_assoc($result3);
 											if($member3['first_name'] != '' && $member3['last_name'] != '')
 											{
-												echo "<a href=friends_profile.php?friends_user_id=".$friend_id.">".$member3['first_name']." ".$member3['last_name']."</a>";
+												echo "<a href=friends_profile.php?friends_user_id=".$friend_id.">".$member3['first_name']." ".$member3['last_name']."</a><br>";
 												//Display friends files willing to share
 												$friends_files_qry = "SELECT * FROM files WHERE owner_user_id = '$friend_id' AND want_to_share = 1";
 													$friends_files_result = mysql_query($friends_files_qry);
@@ -726,7 +723,7 @@ File Drop
 											}
 											else
 											{
-												echo "<a href=friends_profile.php?friends_user_id=".$friend_id.">".$member3['username']."</a>";
+												echo "<a href=friends_profile.php?friends_user_id=".$friend_id.">".$member3['username']."</a><br>";
 												//Display friends files willing to share
 												$friends_files_qry = "SELECT * FROM files WHERE owner_user_id = '$friend_id' AND want_to_share = 1";
 													$friends_files_result = mysql_query($friends_files_qry);
@@ -1019,6 +1016,7 @@ File Drop
 					
 					echo "<a href=approve_file_share_script.php?request_id=".$member6['request_id'].">Approve</a>/";
 					echo "<a href=reject_file_share_script.php?request_id=".$member6['request_id'].">Reject</a>";
+					echo "<br>";
 					$x++;
 				}
 			}
