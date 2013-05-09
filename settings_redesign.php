@@ -26,10 +26,10 @@
 <nav>
 <a href="index_redesign.php" ><img src = "images/trive.png" id="logo"></a>
 <ul>
-<li><a href="#profile" onclick="showDiv('file_content')">Profile</a></li>
-<li><a href="#friends" onclick="showDiv('friend_content')">Friends</a></li>
-<li><a href="#friends_files" onclick="showDiv('friend_files')">Friends Files</a></li>
-<li><a href="#upload" onclick="showDiv('upload')">Upload</a></li>
+<li><a href="profile_redesign.php">Profile</a></li>
+<li><a href="profile_redesign.php#friends">Friends</a></li>
+<li><a href="profile_redesign.php#friends_files">Friends Files</a></li>
+<li><a href="profile_redesign.php#upload">Upload</a></li>
 </ul>
 </div>
 
