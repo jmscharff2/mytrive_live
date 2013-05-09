@@ -433,11 +433,11 @@ File Drop
 												
 												if($member['profile_picture'] != '')
 												{
-													echo "<img src='".$download_file_string3."' height='100px'/>";
+													echo "<img src='".$download_file_string3."' height='100px'/><br>";
 												}
 												else
 												{
-													echo "<img src='../images/placeholder.jpg' height='100px'/>";
+													echo "<img src='../images/placeholder.jpg' height='100px'/><br>";
 												}
 
 												
@@ -451,11 +451,11 @@ File Drop
 												
 												if($member['profile_picture'] != '')
 												{
-													echo "<img src='".$download_file_string3."' height='100px'/>";
+													echo "<img src='".$download_file_string3."' height='100px'/><br>";
 												}
 												else
 												{
-													echo "<img src='../images/placeholder.jpg' height='100px'/>";
+													echo "<img src='../images/placeholder.jpg' height='100px'/><br>";
 												}
 		
 											}
@@ -510,11 +510,11 @@ File Drop
 												
 												if($member['profile_picture'] != '')
 												{
-													echo "<img src='".$download_file_string3."' height='100px'/>";
+													echo "<img src='".$download_file_string3."' height='100px'/><br>";
 												}
 												else
 												{
-													echo "<img src='../images/placeholder.jpg' height='100px'/>";
+													echo "<img src='../images/placeholder.jpg' height='100px'/><br>";
 												}
 											}
 											$y++;
