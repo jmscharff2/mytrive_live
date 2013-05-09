@@ -56,6 +56,8 @@
 	<TITLE>mytrive profile redesign</TITLE>
 
 <link rel="stylesheet" type="text/css" href="css/design.css" />
+<style type="text/css">@import url(/js/jquery.ui.plupload/css/jquery.ui.plupload.css);</style>
+
 <script type="text/javascript" src="includes/submitenter.js" language="javascript"></script>
 	<script src="js/jquery.js"></script>
 	<script src="js/jquery-ui.js"></script>
@@ -916,12 +918,11 @@ $(function() {
 	    <a id="uploadfiles" href="javascript:;">[Upload files]</a>
 	    </div>
 		</center>-->
-		
+		<form>
 		<div id="uploader">
-		<style type="text/css">@import url(/js/jquery.ui.plupload/css/jquery.ui.plupload.css);</style>
         <p>You browser doesn't have Flash, Silverlight, Gears, BrowserPlus or HTML5 support.</p>
-    </div>
-
+        </div>
+		</form>
 		</div>
 <!--
 		<script>
