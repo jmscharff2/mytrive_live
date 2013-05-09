@@ -327,7 +327,7 @@ Drag and Drop your files here!
 		}
 		
 		
-		
+		?>		
 		</section>
 		Username: <?php echo $username; ?><br>
 		
