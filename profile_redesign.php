@@ -167,7 +167,7 @@ $(document).ready(function(){
 		);
 		function upload(files){
 		   alert('Upload '+files.length+' File(s).'); 
-		   document.getElementById("#dropsubmit").click();
+		   document.getElementById("#drop_submit").click();
 		   
 		}
 	/*file drop menu bar*/
@@ -297,7 +297,7 @@ File Drop
 	    <input type="hidden" name="MAX_FILE_SIZE" value="512000" />
 	    Upload Picture <input name="userfile" type="file" />
 	    <input type="submit" id="drop_submit" value="Upload" />
-	    </form>
+</form>
 
 
 </div>
