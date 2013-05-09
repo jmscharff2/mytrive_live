@@ -237,8 +237,6 @@ $(document).ready(function(){
 <li><a href="#upload" onclick="showDiv('upload')">Upload</a></li>
 </ul>
 
-	
-
 
 
 </nav>
