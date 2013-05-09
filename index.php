@@ -85,7 +85,7 @@
 <label>Username</label>
 <input type="text" name="username" placeholder="username"/>
 <label>Email</label>
-<input type="text" name="email" placeholder="email"/>
+<input type="text" name="email" placeholder="email" pattern=".+@.+\..+"/>
 <label>Password</label>
 <input type="password" name="password" placeholder="password"/>
 <label>Confirm Password</label>
