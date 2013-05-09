@@ -43,10 +43,10 @@
 <nav>
 <a href="index_redesign.php" ><img src = "images/trive.png" id="logo"></a>
 <ul>
-<li><a href="profile_redesign.php">Profile</a></li>
-<li><a href="profile_redesign.php#friends">Friends</a></li>
-<li><a href="profile_redesign.php#friends_files">Friends Files</a></li>
-<li><a href="profile_redesign.php#upload" >Upload</a></li>
+<li><a href="profile.php">Profile</a></li>
+<li><a href="profile.php#friends">Friends</a></li>
+<li><a href="profile.php#friends_files">Friends Files</a></li>
+<li><a href="profile.php#upload" >Upload</a></li>
 </ul>
 </div>
 
