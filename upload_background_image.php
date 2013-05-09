@@ -43,6 +43,6 @@ if (move_uploaded_file($_FILES['userfile']['tmp_name'], $uploadfile)) {
 
 }
 
-echo $uploadfile;
+//echo $uploadfile;
 
 ?>
