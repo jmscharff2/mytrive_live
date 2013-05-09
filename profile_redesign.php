@@ -619,6 +619,7 @@ File Drop
 															while ($z < mysql_num_rows($friends_files_result))
 															{
 																$friends_files_member = mysql_fetch_assoc($friends_files_result);
+																$file_id = $friends_files_member['file_id'];
 																echo "<a href='file_settings.php?file_id=".$friends_files_member['file_id']."'>".$friends_files_member['file_name']."</a>";
 																
 																if($friends_files_member['share_with'] != $username)
@@ -650,6 +651,7 @@ File Drop
 															while ($z < mysql_num_rows($friends_files_result))
 															{
 																$friends_files_member = mysql_fetch_assoc($friends_files_result);
+																$file_id = $friends_files_member['file_id'];
 																echo "<a href='file_settings.php?file_id=".$friends_files_member['file_id']."'>".$friends_files_member['file_name']."</a>";
 																
 																if($friends_files_member['share_with'] != $username)
@@ -704,6 +706,7 @@ File Drop
 															while ($z < mysql_num_rows($friends_files_result))
 															{
 																$friends_files_member = mysql_fetch_assoc($friends_files_result);
+																$file_id = $friends_files_member['file_id'];
 																echo "<a href='file_settings.php?file_id=".$friends_files_member['file_id']."'>".$friends_files_member['file_name']."</a>";
 																
 																if($friends_files_member['share_with'] != $username)
@@ -735,6 +738,7 @@ File Drop
 															while ($z < mysql_num_rows($friends_files_result))
 															{
 																$friends_files_member = mysql_fetch_assoc($friends_files_result);
+																$file_id = $friends_files_member['file_id'];
 																echo "<a href='file_settings.php?file_id=".$friends_files_member['file_id']."'>".$friends_files_member['file_name']."</a>";
 																
 																if($friends_files_member['share_with'] != $username)
