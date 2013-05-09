@@ -24,17 +24,13 @@
 <!--top banner-->
 <div id="nav-banner">
 <nav>
-<a href="#nav-banner" ><img src = "images/trive.png" id="logo"></a>
+<a href="index_redesign.php" ><img src = "images/trive.png" id="logo"></a>
 <ul>
-<li><a href="index_redesign.php">Signup</a></li>
-<li><a href="info_redesign.php">Steps</a></li>
-<li><a href="faq_redesign.php">FAQ</a></li>
+<li><a href="#profile" onclick="showDiv('file_content')">Profile</a></li>
+<li><a href="#friends" onclick="showDiv('friend_content')">Friends</a></li>
+<li><a href="#friends_files" onclick="showDiv('friend_files')">Friends Files</a></li>
+<li><a href="#upload" onclick="showDiv('upload')">Upload</a></li>
 </ul>
-<form action = "login.php" method ="post">
-<input type="text" name="username" placeholder="username" onkeypress="return submitenter(this,event)"/>
-<input type="password" name="username" placeholder="password" onkeypress="return submitenter(this,event)"/>
-</form>
-</nav>
 </div>
 
 <section id="content">
