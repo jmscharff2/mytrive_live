@@ -88,46 +88,6 @@ $(document).ready(function(){
 
 
 	
-
-
-	
-	var shown = false;
-	
-	$(".files").hover( function() {
-	    if ( shown === false ) {
-	        var that = $(this),
-	            offset = that.offset(),
-	            tooltipElement = $("#file_information");
-	            
-	        tooltipElement.css({
-	            top: offset.top + that.height()-5,
-	            left: offset.left + that.width()/2 - tooltipElement.width()/2
-	        }).show();
-	    }
-	}, function() {
-	    if ( shown === false ) {   
-	        $("#file_information").hide();
-	    }
-	}).bind('click', function() {
-	    var tooltipElement = $("#file_information"),
-	        that = $(this);
-	    
-	    if ( shown === that.index() ) {
-	        tooltipElement.hide();
-	        shown = false;
-	    } else {
-	        shown = $(this).index();
-	        
-	        var that = $(this),
-	            offset = that.offset(),
-	            tooltipElement = $("#file_information");
-	            
-	        tooltipElement.css({
-	            top: offset.top + that.height()-5,
-	            left: offset.left + that.width()/2 - tooltipElement.width()/2
-	        }).show();
-	    }
-	});
 	
 		
 	
