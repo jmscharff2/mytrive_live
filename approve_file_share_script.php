@@ -20,7 +20,7 @@ session_start();
 	$user_id = $_SESSION['user_id'];
 	$request_id = $_GET['request_id'];
 
-	$qry = "UPDATE files INNER JOIN file_request ON files.file_id = file_request.file_id SET share_with = request.request_username WHERE files.owner_user_id = '$user_id' AND file_request.request_id = '$request_id'";
+	$qry = "UPDATE files INNER JOIN file_request ON files.file_id = file_request.file_id SET share_with = file_request.request_username WHERE files.owner_user_id = '$user_id' AND file_request.request_id = '$request_id'";
 	echo $qry;
 	$result = mysql_query($qry);
 	
