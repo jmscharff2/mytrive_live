@@ -328,7 +328,6 @@ Drag and Drop your files here!
 		
 		
 		?>		
-		</section>
 		Username: <?php echo $username; ?><br>
 		
 		<a href="settings_redesign.php">Settings</a>
