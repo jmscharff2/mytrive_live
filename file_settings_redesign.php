@@ -123,7 +123,7 @@
 						$x++;
 						
 					}
-					echo "</table><input type=submit value='Update'/></form>";
+					echo "</table><input type=submit value='Update'/></form><br><br>";
 				}
 			
 				$qry4 = "SELECT * FROM files JOIN file_request ON files.file_id = file_request.file_id WHERE owner_user_id = '$user_id'";
@@ -180,10 +180,11 @@
 					while($x < mysql_num_rows($result3))
 					{
 						$member3 = mysql_fetch_assoc($result3);
-						
+						if($member3['owner_user_id'] != $user_id)
+						{
 						echo "File Name: ".$member3['file_name']."<br>";
 						echo "<a href=request_file_share.php?file_id=".$file_id.">Request file to be shared from owner</a>";
-
+						}
 						$x++;
 					}
 				}
