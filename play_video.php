@@ -29,16 +29,13 @@
 <nav>
 <a href="index_redesign.php" ><img src = "images/trive.png" id="logo"></a>
 <ul>
-<li><a href="index_redesign.php">Profile</a></li>
-<li><a href="info_redesign.php">Files</a></li>
-<li><a href="faq_redesign.php">Upload</a></li>
+<li><a href="profile.php">Profile</a></li>
+<li><a href="profile.php#friends">Friends</a></li>
+<li><a href="profile.php#friends_files">Friends Files</a></li>
+<li><a href="profile.php#upload" >Upload</a></li>
 </ul>
-<form action = "login.php" method ="post">
-<input type="text" name="username" placeholder="username" onkeypress="return submitenter(this,event)"/>
-<input type="password" name="username" placeholder="password" onkeypress="return submitenter(this,event)"/>
-</form>
-</nav>
 </div>
+
 
 <section id="content">
 <center>
@@ -56,6 +53,9 @@
 	so.write('mediaspace');
 	// ]]>
 	</script>
+	<?php
+	echo $play_video;
+	?>
 </center>
 </section>
 
