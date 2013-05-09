@@ -938,7 +938,7 @@ File Drop
 			$ext = end(explode('.', $member2['file_name']));
 
 			
-			echo "<a href='file_settings.php?file_id=".$member2['file_id']."'>".$member2['file_name']."</a>";
+			echo "<a href='file_settings.php?file_id=".$member2['file_id']."'>".$member2['file_name']."</a><br>";
 			echo "Shared by:	 ".$member2['owner_id'];
 			 
 			$file2 = $member2['owner_id']."/".$member2['file_name'];
