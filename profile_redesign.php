@@ -309,7 +309,6 @@ Drag and Drop your files here!
 		{
 			if(mysql_num_rows($result) > 0)
 			{
-			echo "<table  width='100%' border='1'> ";
 			echo "<form action='update_profile_script.php' method='POST'>";
 				while ($x < mysql_num_rows($result))
 				{
