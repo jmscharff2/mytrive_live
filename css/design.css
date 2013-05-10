@@ -262,11 +262,10 @@ body
 	{
 		list-style-type: none;
 		margin-left: 30%;
-		margin-top: -60px;
+		margin-top: -30px;
 	}
 	nav ul li
 	{
-		display: block;
 		padding: 20px;
 	
 	}
