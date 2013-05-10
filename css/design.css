@@ -261,13 +261,16 @@ body
 	nav ul
 	{
 		list-style-type: none;
-		margin-left: 30%;
 		margin-top: -30px;
 	}
 	nav ul li
 	{
 		padding: 20px;
 	
+	}
+	#content
+	{
+		margin-top: 100px;
 	}
 
 
