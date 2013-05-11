@@ -2,9 +2,9 @@
 <?php
 
 	try{
-		$connection = new Mongo('23.21.69.235:27017');
+		$connection = new MongoClinet();
 		$db = $connection -> mytrive;
-		$collection = $db -> mytrive;
+		//$collection = $db -> mytrive;
 	}catch(MongoConnectionException $e){
 		die('Error connecting to MongoDB server');
 	}catch(MongoException $e){
