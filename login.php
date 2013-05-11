@@ -82,7 +82,16 @@
 			//echo "<br><a href='test.html'>testhtml</a>";
 			//echo "You have sucessfully logged in as ".$_SESSION['username']." please navigate around!";
 			
+			
 			$DateOfRequest = date('Y-m-d H:i:s'); 
+			
+			/*Mongo DB script for logging users actions*/
+			$mdb = new MongoClient();
+			$db = $mdb -> mytrive;
+			$coll = $db -> users;
+			
+			$insert = array( "username" => $login, "date" => $dateOfRequest, "page" => "login");
+			$coll -> insert($insert);
 
 			//echo $DateOfRequest;
 		$qry2 = "UPDATE users SET last_logged_in = '$DateOfRequest', loggedin = 1 WHERE username = '$login'";
@@ -101,21 +110,7 @@
 			exit();
 		}else {
 		
-		
-		/*Mongo DB script for logging users actions*/
-			$mdb = new MongoClient();
-			$db = $mdb -> mytrive;
-			$coll = $db -> users;
-			
-			$insert = array( "username" => $login, "date" => $dateOfRequest, "page" => "login");
-			$coll -> insert($insert);
-		
-		
-
-
-		
-		
-			//Login failed
+				//Login failed
 			//echo "error: " . $result . "num_rows: " . mysql_num_rows($result);
 			//header("location: login.html");
 			header("location: index.php");
