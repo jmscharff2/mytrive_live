@@ -148,7 +148,7 @@ if($result)
 	    
 	    <?php
 	    
-	     $cursor = $coll->find(array("username" => $username)).sort( {age: -1});
+	     $cursor = $coll->find(array("username" => $username)).sort( {"username": -1});
 	    
 	    // $cursor_r = array_reverse($cursor,true);
 	     echo "<br><br>Your Recent Activity<br><br>";
