@@ -3,7 +3,7 @@
 
 <?php
 
-	$connection = new Mongo();
+	$connection = new MongoClient();
 	$db = $connection -> mytrive -> users;
 
 
