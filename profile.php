@@ -208,7 +208,7 @@ $(document).ready(function(){
 
 <?php
 
-$connection = new Mongo("mongodb://localhost:27017");
+$connection = new Mongo('localhost');
 $db = $connection -> mytrive;
 $collection = $db -> mytrive;
 
