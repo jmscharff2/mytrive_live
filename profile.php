@@ -208,9 +208,16 @@ $(document).ready(function(){
 
 <?php
 
-$connection = new Mongo('localhost');
-$db = $connection -> mytrive;
-$collection = $db -> mytrive;
+	try{
+		$connection = new Mongo('localhost');
+		$db = $connection -> mytrive;
+		$collection = $db -> mytrive;
+	}catch(MongoConnectionException $e){
+		die('Error connecting to MongoDB server');
+	}catch(MongoException $e){
+		die('Error: '.$e->getMessage());
+	}
+
 
 //$document = ( "user" => "jon");
 
