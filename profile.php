@@ -2,13 +2,12 @@
 <?php
 
 	$connection = new MongoClient();
-	$db = $connection -> mytrive;
-	$collection = $db ->users;
+	$db = $connection -> mytrive -> users;
 
 
-$document = ( "user" => "jon");
+//$document = ( "user" => "jon");
 
-$collection -> insert($document);
+//$collection -> insert($document);
 
 
 ?>
