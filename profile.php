@@ -1,17 +1,4 @@
 <!DOCTYPE html>
-<?php
-
-	$connection = new MongoClient();
-	$db = $connection -> mytrive;
-	$collection $db -> mytrive;
-
-
-//$document = ( "user" => "jon");
-
-//$collection -> insert($document);
-
-
-?>
 
 
 <?php

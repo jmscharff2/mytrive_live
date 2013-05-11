@@ -1,6 +1,21 @@
 <!DOCTYPE html>
 <HTML lang="en-us">
 
+<?php
+
+	$connection = new MongoClient();
+	$db = $connection -> mytrive;
+	$collection $db -> mytrive;
+
+
+//$document = ( "user" => "jon");
+
+//$collection -> insert($document);
+
+
+?>
+
+
 <HEAD>
 	<meta charset="utf-8"/>
 	
