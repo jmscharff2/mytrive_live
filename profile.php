@@ -208,7 +208,7 @@ $(document).ready(function(){
 
 <?php
 
-$m = newMongoClient();
+$m = new Mongo();
 
 $db = $m -> mytrive;
 
