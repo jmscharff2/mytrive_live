@@ -157,7 +157,7 @@ if($result)
 			    //var_dump($doc);
 			    
 			    echo "Page Viewed: ".$doc['page']."<br>";
-			    if($z == 10)
+			    if($z < 10)
 			    {
 				    break;
 			    }
