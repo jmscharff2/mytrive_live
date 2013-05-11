@@ -86,13 +86,13 @@
 <section>
 <form action = "register.php" method = "POST" id="signup">
 <label>Username</label>
-<input type="text" name="username" placeholder="username"/>
+<input type="text" name="username" placeholder="username"required/>
 <label>Email</label>
-<input type="text" name="email" placeholder="email" pattern=".+@.+\..+"/>
+<input type="text" name="email" placeholder="email" pattern=".+@.+\..+"required/>
 <label>Password</label>
-<input type="password" name="password" placeholder="password" pattern=".+@.+\..+" onkeypress="return submitenter(this,event)"/>
+<input type="password" name="password" placeholder="password" pattern=".+@.+\..+" onkeypress="return submitenter(this,event)"required/>
 <label>Confirm Password</label>
-<input type="password" name="cpassword" placeholder="confirm password"/>
+<input type="password" name="cpassword" placeholder="confirm password"required/>
 <label>Registration Code</label>
 <input type="text" name="code" placeholder="registration code"  onkeypress="return submitenter(this,event)"/>
 </form>
