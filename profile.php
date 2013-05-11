@@ -1,19 +1,5 @@
 <!DOCTYPE html>
-<?php
 
-	$mdb = new MongoClient();
-	$db = $mdb -> mytrive;
-	$coll = $db -> users;
-	
-	$test = array('test' => 'mytrive!');
-	$coll -> insert($test);
-
-//$document = ( "user" => "jon");
-
-//$collection -> insert($document);
-
-
-?>
 
 <?php
 	session_start();

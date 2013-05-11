@@ -100,6 +100,21 @@
 		}
 			exit();
 		}else {
+		
+		
+		/*Mongo DB script for logging users actions*/
+			$mdb = new MongoClient();
+			$db = $mdb -> mytrive;
+			$coll = $db -> users;
+			
+			$login = array( $login => $dateOfRequest, "page" => "login");
+			$coll -> insert($login);
+		
+		
+
+
+		
+		
 			//Login failed
 			//echo "error: " . $result . "num_rows: " . mysql_num_rows($result);
 			//header("location: login.html");
