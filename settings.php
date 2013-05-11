@@ -151,7 +151,7 @@ if($result)
 	     $cursor = $coll->find(array("username" => $username));
 	     
 	     foreach ($cursor as $doc) {
-			    var_dump($doc);
+			    //var_dump($doc);
 			    
 			    echo $doc["page"]."<br>";
 			}
