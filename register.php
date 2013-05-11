@@ -183,11 +183,11 @@
 			//header("location: register-success.php");
 			echo $login. " created";
 			echo "This page will load your profile in 5 seconds. </br>";
-			echo '<meta http-equiv="Refresh" content="1; URL=http://www.mytrive.com/profile.php">';
+			echo '<meta http-equiv="Refresh" content="1; URL=http://www.mytrive.com/index.php">';
 			//exit();
 		}else {
 			echo $login. "not created please try again</br>";
-			echo "<a href='index.html'>Register Here</a>";
+			echo "<a href='index.php'>Register Here</a>";
 			}
 		//$directory = "upload/".$login."/";
 		$directory = "/mnt/s3_mytrive_files/".$login."/";

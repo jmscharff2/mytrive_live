@@ -5,6 +5,17 @@
 	session_start();
 	$username = $_SESSION['username'];
 	
+	$DateOfRequest = date('Y-m-d H:i:s'); 
+			
+			/*Mongo DB script for logging users actions*/
+			$mdb = new MongoClient();
+			$db = $mdb -> mytrive;
+			$coll = $db -> users;
+			
+			$insert = array( "username" => $login, "date" => $DateOfRequest, "page" => "profile");
+			$coll -> insert($insert);
+	
+	
 	require_once('config.php');
 	require_once('includes/amazon.php');
 
@@ -51,6 +62,13 @@
 ?>
 
 <HTML lang="en-us">
+<?php
+	if(!(isset($_SESSION['username'])))
+	{
+		echo '<meta http-equiv="Refresh" content="1; URL=http://www.mytrive.com/index.php">';
+
+	}
+	?>
 
 <HEAD>
 	<meta charset="utf-8"/>

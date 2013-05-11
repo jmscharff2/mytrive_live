@@ -17,6 +17,16 @@
 	
 	$username = $_SESSION['username'];
 
+	$DateOfRequest = date('Y-m-d H:i:s'); 
+			
+			/*Mongo DB script for logging users actions*/
+			$mdb = new MongoClient();
+			$db = $mdb -> mytrive;
+			$coll = $db -> users;
+			
+			$insert = array( "username" => $login, "date" => $DateOfRequest, "page" => "settings_error");
+			$coll -> insert($insert);
+
 ?>
 
 <HTML>
