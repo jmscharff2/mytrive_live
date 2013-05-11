@@ -107,8 +107,8 @@
 			$db = $mdb -> mytrive;
 			$coll = $db -> users;
 			
-			$login = array( $login => $dateOfRequest, "page" => "login");
-			$coll -> insert($login);
+			$insert = array( "username" => $login, "date" => $dateOfRequest, "page" => "login");
+			$coll -> insert($insert);
 		
 		
 
