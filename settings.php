@@ -149,19 +149,15 @@ if($result)
 	    <?php
 	    
 	     $cursor = $coll->find(array("username" => $username));
-	     $cursor -> sort( array( 'created' => -1 ));
+	    
 	    // $cursor_r = array_reverse($cursor,true);
-	     echo "Your last 10 pages viewed";
+	     echo "Your activity";
 	     $z = 0;
 	     foreach ($cursor as $doc) {
 			    //var_dump($doc);
 			    
-			    echo $doc['page']."<br>";
-			    $z++;
-			    if($z == 10)
-			    {
-				    break;
-			    }
+			    echo "Page Viewed: ".$doc['page']."<br>";
+			    
 			}
 	    
 	    ?>
