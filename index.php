@@ -5,7 +5,7 @@
 
 	$connection = new MongoClient();
 	$db = $connection -> mytrive;
-	$collection $db -> mytrive;
+	$collection $db -> users;
 
 
 //$document = ( "user" => "jon");
