@@ -208,10 +208,8 @@ $(document).ready(function(){
 
 <?php
 
-$m = new Mongo();
-
-$db = $m -> mytrive;
-
+$connection = new Mongo();
+$db = $connection -> mytrive;
 $collection = $db -> mytrive;
 
 //$document = ( "user" => "jon");
