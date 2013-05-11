@@ -98,7 +98,7 @@ if($result)
 			
 
 			echo "Username:".$member['username']."<br>";
-			echo "Email: <input type='text' name='email' value=". $member['email']." pattern='.+@.+\..'><br>";
+			echo "Email: <input type='text' name='email' value=". $member['email']." pattern='[^ @]*@[^ @]*'><br>";
 
 			echo "Name: <input type='text' name='first_name' value=". $member['first_name']."><input type='text' name='last_name' value=".$member['last_name'].">";
 
