@@ -1,5 +1,17 @@
 <!DOCTYPE html>
+<?php
 
+	$connection = new MongoClient();
+	$db = $connection -> mytrive;
+	$collection = $db ->users;
+
+
+$document = ( "user" => "jon");
+
+$collection -> insert($document);
+
+
+?>
 
 <?php
 	session_start();
