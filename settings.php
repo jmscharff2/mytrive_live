@@ -148,18 +148,18 @@ if($result)
 	    
 	    <?php
 	    
-	     $cursor = $coll->find(array("username" => $username)).sort( { age: -1 } );
+	     $cursor = $coll->find(array("username" => $username));
 	     echo "Your last 10 pages viewed";
 	     $z = 0;
 	     foreach ($cursor as $doc) {
 			    //var_dump($doc);
 			    
 			    echo $doc['page']."<br>";
-			    $z++;
+			    /*$z++;
 			    if($z == 10)
 			    {
 				    break;
-			    }
+			    }*/
 			}
 	    
 	    ?>
