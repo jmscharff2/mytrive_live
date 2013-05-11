@@ -148,10 +148,10 @@ if($result)
 	    
 	    <?php
 	    
-	     $cursor = $coll->find(array("username" => $username));
+	     $cursor = $coll->find(array("username" => $username)).sort( {age: -1});
 	    
 	    // $cursor_r = array_reverse($cursor,true);
-	     echo "Your activity";
+	     echo "<br><br>Your Recent Activity<br><br>";
 	     $z = 0;
 	     foreach ($cursor as $doc) {
 			    //var_dump($doc);
