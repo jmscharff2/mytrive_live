@@ -1,15 +1,9 @@
 <!DOCTYPE html>
 <?php
 
-	try{
-		$connection = new MongoClinet();
-		$db = $connection -> mytrive;
-		//$collection = $db -> mytrive;
-	}catch(MongoConnectionException $e){
-		die('Error connecting to MongoDB server');
-	}catch(MongoException $e){
-		die('Error: '.$e->getMessage());
-	}
+	$connection = new MongoClient();
+	$db = $connection -> mytrive;
+	$collection $db -> mytrive;
 
 
 //$document = ( "user" => "jon");
