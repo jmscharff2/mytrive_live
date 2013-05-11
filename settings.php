@@ -153,7 +153,7 @@ if($result)
 	     foreach ($cursor as $doc) {
 			    //var_dump($doc);
 			    
-			    echo $doc["page"]."<br>";
+			    echo $doc['page']."<br>";
 			}
 	    
 	    ?>
