@@ -206,6 +206,24 @@ $(document).ready(function(){
 
 <BODY>
 
+<?php
+
+$m = newMongoClient();
+
+$db = $m -> mytrive;
+
+$collection = $db -> mytrive;
+
+$document = ( "user" => "jon");
+
+$collection -> insert($document);
+
+
+?>
+
+
+
+
 <style type="text/css">
 	body
 	{
