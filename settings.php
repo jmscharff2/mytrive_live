@@ -152,7 +152,7 @@ if($result)
 	    // $cursor_r = array_reverse($cursor,true);
 	     echo "Your last 10 pages viewed";
 	     $z = 0;
-	     foreach ($cursor as $doc) {
+	     foreach (array_reverse($cursor) as $doc) {
 			    //var_dump($doc);
 			    
 			    echo $doc['page']."<br>";
