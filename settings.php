@@ -32,6 +32,15 @@
 
 <HTML>
 
+<?php
+	if(!(isset($_SESSION['username'])))
+	{
+		echo '<meta http-equiv="Refresh" content="0; URL=http://www.mytrive.com/index.php">';
+
+	}
+	?>
+
+
 <HEAD>
 
 <TITLE>mytrive redesign</TITLE>
