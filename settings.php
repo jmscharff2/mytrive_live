@@ -148,7 +148,7 @@ if($result)
 	    
 	    <?php
 	    
-	     $cursor = $coll->find(array("username" => $username));
+	     $cursor = $coll->find(array("username" => $username)).sort( { age: -1 } );
 	     echo "Your last 10 pages viewed";
 	     $z = 0;
 	     foreach ($cursor as $doc) {
