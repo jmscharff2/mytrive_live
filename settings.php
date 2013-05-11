@@ -24,7 +24,7 @@
 			$db = $mdb -> mytrive;
 			$coll = $db -> users;
 			
-			$insert = array( "username" => $login, "date" => $DateOfRequest, "page" => "settings");
+			$insert = array( "username" => $username, "date" => $DateOfRequest, "page" => "settings");
 			$coll -> insert($insert);
 
 
@@ -143,6 +143,18 @@ if($result)
 	    Background Image <input name="userfile" type="file" />
 	    <input type="submit" value="Upload" />
 	    </form>
+	    
+	    
+	    
+	    <?php
+	    
+	     $cursor = $coll->find(array("username" => $username));
+	     
+	     foreach ($cursor as $doc) {
+			    var_dump($doc);
+			}
+	    
+	    ?>
 
 </section>
 

@@ -24,7 +24,7 @@
 			$db = $mdb -> mytrive;
 			$coll = $db -> users;
 			
-			$insert = array( "username" => $login, "date" => $DateOfRequest, "page" => "settings_error");
+			$insert = array( "username" => $username, "date" => $DateOfRequest, "page" => "settings_error");
 			$coll -> insert($insert);
 
 ?>

@@ -90,7 +90,7 @@
 <label>Email</label>
 <input type="text" name="email" placeholder="email" pattern=".+@.+\..+"/>
 <label>Password</label>
-<input type="password" name="password" placeholder="password"/>
+<input type="password" name="password" placeholder="password" pattern=".+@.+\..+" onkeypress="return submitenter(this,event)"/>
 <label>Confirm Password</label>
 <input type="password" name="cpassword" placeholder="confirm password"/>
 <label>Registration Code</label>
