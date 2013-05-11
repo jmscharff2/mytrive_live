@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <?php
 
-	$connection = new MongoClient();
-	$db = $connection -> mytrive -> users;
+	$mdb = new MongoClient();
+	$db = $mdb -> mytrive;
+	$coll = $db -> users;
 
 
 //$document = ( "user" => "jon");
