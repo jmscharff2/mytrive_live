@@ -210,14 +210,16 @@ $(document).ready(function(){
 
 $m = newMongoClient();
 
-$db = $m -> mytrive;
-
-$collection = $db -> mytrive;
-
-$document = ( "user" => "jon");
-
-$collection -> insert($document);
-
+if($m)
+{
+	$db = $m -> mytrive;
+	
+	$collection = $db -> mytrive;
+	
+	$document = ( "user" => "jon");
+	
+	$collection -> insert($document);
+}
 
 ?>
 
