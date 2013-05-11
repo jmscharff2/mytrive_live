@@ -206,22 +206,6 @@ $(document).ready(function(){
 
 <BODY>
 
-<?php
-
-$m = newMongoClient();
-
-if($m)
-{
-	$db = $m -> mytrive;
-	
-	$collection = $db -> mytrive;
-	
-	$document = ( "user" => "jon");
-	
-	$collection -> insert($document);
-}
-
-?>
 
 
 
