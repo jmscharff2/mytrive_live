@@ -2,6 +2,7 @@
 <?php
 
 	try{
+		echo "test";
 		$connection = new Mongo('localhost');
 		$db = $connection -> mytrive;
 		$collection = $db -> mytrive;
