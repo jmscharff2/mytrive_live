@@ -1,5 +1,26 @@
 <!DOCTYPE html>
 <?php
+
+	try{
+		$connection = new Mongo('localhost');
+		$db = $connection -> mytrive;
+		$collection = $db -> mytrive;
+	}catch(MongoConnectionException $e){
+		die('Error connecting to MongoDB server');
+	}catch(MongoException $e){
+		die('Error: '.$e->getMessage());
+	}
+
+
+//$document = ( "user" => "jon");
+
+//$collection -> insert($document);
+
+
+?>
+
+
+<?php
 	session_start();
 	$username = $_SESSION['username'];
 	
@@ -205,29 +226,6 @@ $(document).ready(function(){
 </HEAD>
 
 <BODY>
-
-<?php
-
-	try{
-		$connection = new Mongo('localhost');
-		$db = $connection -> mytrive;
-		$collection = $db -> mytrive;
-	}catch(MongoConnectionException $e){
-		die('Error connecting to MongoDB server');
-	}catch(MongoException $e){
-		die('Error: '.$e->getMessage());
-	}
-
-
-//$document = ( "user" => "jon");
-
-//$collection -> insert($document);
-
-
-?>
-
-
-
 
 <style type="text/css">
 	body
