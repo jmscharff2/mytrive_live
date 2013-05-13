@@ -34,13 +34,13 @@ if (move_uploaded_file($_FILES['userfile']['tmp_name'], $uploadfile)) {
    	$qry = "UPDATE users SET profile_picture = '".$file_info."' WHERE users.user_id = '".$user_id."'";
 	$result = mysql_query($qry);
 	//echo $qry."<br>";
-	echo '<meta http-equiv="Refresh" content="1; URL=http://www.mytrive.com/settings.php">';
+	echo '<meta http-equiv="Refresh" content="0; URL=http://www.mytrive.com/settings.php">';
 
 	
     
 } else {
    // echo "Possible file upload attack!\n";
-   			echo '<meta http-equiv="Refresh" content="1; URL=http://www.mytrive.com/settings_error.php">';
+   			echo '<meta http-equiv="Refresh" content="0; URL=http://www.mytrive.com/settings_error.php">';
 
     
 }
