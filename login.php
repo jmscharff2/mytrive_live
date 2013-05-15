@@ -86,12 +86,12 @@
 			$DateOfRequest = date('Y-m-d H:i:s'); 
 			
 			/*Mongo DB script for logging users actions*/
-		//	$mdb = new MongoClient();
-		//	$db = $mdb -> mytrive;
-		//	$coll = $db -> users;
+			$mdb = new MongoClient();
+			$db = $mdb -> mytrive;
+			$coll = $db -> users;
 			
-		//	$insert = array( "username" => $login, "date" => $DateOfRequest, "page" => "login");
-		//	$coll -> insert($insert);
+			$insert = array( "username" => $login, "date" => $DateOfRequest, "page" => "login");
+			$coll -> insert($insert);
 
 			//echo $DateOfRequest;
 		$qry2 = "UPDATE users SET last_logged_in = '$DateOfRequest', loggedin = 1 WHERE username = '$login'";
