@@ -8,6 +8,7 @@
 	$DateOfRequest = date('Y-m-d H:i:s'); 
 			
 			/*Mongo DB script for logging users actions*/
+			echo "Test;";
 			$mdb = new MongoClient();
 			$db = $mdb -> mytrive;
 			$coll = $db -> users;
