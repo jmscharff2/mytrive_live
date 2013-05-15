@@ -4,10 +4,13 @@
 <?php
 	session_start();
 	$username = $_SESSION['username'];
-		
+	
+	echo $username;
+	
 	require_once('config.php');
 	require_once('includes/amazon.php');
 
+	echo "BAM";
 	$link = mysql_connect(DB_HOST, DB_USER, DB_PASSWORD);
 	if(!$link)
 	{
@@ -20,7 +23,6 @@
 		die("Unable to select database");
 	}
 	
-	echo "YAY";
 	$qry = "SELECT background_image FROM users WHERE username = '$username'";
 		$result = mysql_query($qry);
 		$x = 0;
@@ -47,7 +49,6 @@
 		}
 
 	
-		echo "BAM";
 ?>
 
 <HTML lang="en-us">
