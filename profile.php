@@ -5,12 +5,20 @@
 	session_start();
 	$username = $_SESSION['username'];
 	
-	echo $username;
+	$DateOfRequest = date('Y-m-d H:i:s'); 
+			
+			/*Mongo DB script for logging users actions*/
+			$mdb = new MongoClient();
+			$db = $mdb -> mytrive;
+			$coll = $db -> users;
+			
+			$insert = array( "username" => $username, "date" => $DateOfRequest, "page" => "profile");
+			$coll -> insert($insert);
+	
 	
 	require_once('config.php');
 	require_once('includes/amazon.php');
 
-	echo "BAM";
 	$link = mysql_connect(DB_HOST, DB_USER, DB_PASSWORD);
 	if(!$link)
 	{
@@ -22,6 +30,7 @@
 	{	
 		die("Unable to select database");
 	}
+	
 	
 	$qry = "SELECT background_image FROM users WHERE username = '$username'";
 		$result = mysql_query($qry);
@@ -49,6 +58,7 @@
 		}
 
 	
+
 ?>
 
 <HTML lang="en-us">
