@@ -4,17 +4,16 @@
 <?php
 	session_start();
 	$username = $_SESSION['username'];
-	
+	/*
 	$DateOfRequest = date('Y-m-d H:i:s'); 
 			
-			/*Mongo DB script for logging users actions*/
 			$mdb = new MongoClient();
 			$db = $mdb -> mytrive;
 			$coll = $db -> users;
 			
 			$insert = array( "username" => $username, "date" => $DateOfRequest, "page" => "profile");
 			$coll -> insert($insert);
-	
+	*/
 	
 	require_once('config.php');
 	require_once('includes/amazon.php');
