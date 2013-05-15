@@ -20,7 +20,7 @@
 		die("Unable to select database");
 	}
 	
-	
+	echo "YAY";
 	$qry = "SELECT background_image FROM users WHERE username = '$username'";
 		$result = mysql_query($qry);
 		$x = 0;
@@ -47,7 +47,7 @@
 		}
 
 	
-
+		echo "BAM";
 ?>
 
 <HTML lang="en-us">
